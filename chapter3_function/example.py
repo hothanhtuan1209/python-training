@@ -1,9 +1,7 @@
-#function calls
-type(42)
-int(3.9)
-
 #Math functions
 import math
+signal_power = 4
+noise_power = 5
 ratio = signal_power / noise_power
 decibels = 10*math.log10(ratio)
 
@@ -13,9 +11,6 @@ height = math.sin(radians)
 #add new function
 def print_myconpanyname():
     print('Agility')
-
-type(print_myconpanyname)
-
 print_myconpanyname()
 
 
