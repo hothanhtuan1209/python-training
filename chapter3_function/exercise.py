@@ -32,17 +32,17 @@ do_four(print,'spam')
 
 #Exercise 3-3:
 # Write a function that draws a grid like the following:   
-def ve_hangngang(a):
+def row(a):
     print(a)
-def ve_hangdoc(b):
+def column(b):
     print(b)
     print(b)
     print(b)
     print(b)
 a = "+ - - - - + - - - - +"
 b = "|         |         |"
-ve_hangngang(a)
-ve_hangdoc(b)
-ve_hangngang(a)
-ve_hangdoc(b)
-ve_hangngang(a)
+row(a)
+column(b)
+row(a)
+column(b)
+row(a)
