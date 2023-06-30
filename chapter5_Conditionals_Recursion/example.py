@@ -1,4 +1,4 @@
-#Alternative Execution
+# Alternative Execution
 x=10
 y=15
 if x % 2 == 0:
@@ -6,7 +6,7 @@ if x % 2 == 0:
 else:
     print('x is odd')
 
-#Chained Conditionals
+# Chained Conditionals
 if x < y:
     print('x is less than y')
 elif x > y:
@@ -14,7 +14,7 @@ elif x > y:
 else:
     print('x and y are equal')
 
-#Nested Conditionals
+# Nested Conditionals
 if x == y:
     print('x and y are equal')
 else:
@@ -24,7 +24,7 @@ else:
         print('x is greater than y')
 
 
-#Recursion
+# Recursion
 def countdown(n):
     if n <= 0:
         print('Blastoff!')
@@ -33,6 +33,6 @@ def countdown(n):
         countdown(n-1)
 
 
-#Keyboard Input
+# Keyboard Input
 text = input()
 print(text)

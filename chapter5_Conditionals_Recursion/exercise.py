@@ -1,4 +1,4 @@
-#Exercise 5-1.
+# Exercise 5-1.
 import time
 print(time.time())
 
@@ -14,19 +14,19 @@ seconds_left=current_seconds - total_days*24*60*60
 # Calculate the time of day in hours, minutes and seconds using the remaining seconds after subtracting complete days
 hours = int(seconds_left // (60 * 60)) 
 
-#divide the number of seconds by the remainder by the complete number of hours to get the seconds then calculate the minutes
+# Divide the number of seconds by the remainder by the complete number of hours to get the seconds then calculate the minutes
 minutes = int((seconds_left % (60 * 60)) // 60) 
 
-#Divide the number of seconds by the remainder by the number of complete minutes to get seconds
+# Divide the number of seconds by the remainder by the number of complete minutes to get seconds
 second = int(seconds_left % 60)
 
-# result
+# Result
 print('The present time:',hours,':',minutes,':',second)
 print('Number of days since epoch:', total_days)
 
 
 
-#Exercise 5-2.
+# Exercise 5-2.
 """1. Write a function named check_fermat that takes four parameters—a, b, c and n and checks
 to see if Fermat’s theorem holds. If n is greater than 2 and the program should print, “Holy smokes, 
 Fermat was wrong!” Otherwise the program should print, “No, that doesn’t work.” """
@@ -54,7 +54,7 @@ def input_check_fermat():
 input_check_fermat()   
 
 
-#Exercise 5-3.
+# Exercise 5-3.
 """1.Write a function named is_triangle that takes three integers as arguments, and that prints either “Yes” or “No”, 
 depending on whether you can or cannot form a triangle from sticks with the given lengths."""
 def is_triangle(a,b,c):
@@ -77,7 +77,7 @@ def is_triangle():
          print('Yes')
 is_triangle()
 
-#Exercise 5-4.
+# Exercise 5-4.
 """What is the output of the following program? Draw a stack diagram 
 that shows the state of the program when it prints the result.
 _main_ 
