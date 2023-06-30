@@ -23,7 +23,6 @@ else:
     else:
         print('x is greater than y')
 
-
 # Recursion
 def countdown(n):
     if n <= 0:
@@ -31,7 +30,6 @@ def countdown(n):
     else:
         print(n)
         countdown(n-1)
-
 
 # Keyboard Input
 text = input()

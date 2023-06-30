@@ -24,8 +24,6 @@ second = int(seconds_left % 60)
 print('The present time:',hours,':',minutes,':',second)
 print('Number of days since epoch:', total_days)
 
-
-
 # Exercise 5-2.
 """1. Write a function named check_fermat that takes four parameters—a, b, c and n and checks
 to see if Fermat’s theorem holds. If n is greater than 2 and the program should print, “Holy smokes, 
@@ -52,7 +50,6 @@ def input_check_fermat():
     n = int(input('n='))
     check_fermat(a,b,c,n)
 input_check_fermat()   
-
 
 # Exercise 5-3.
 """1.Write a function named is_triangle that takes three integers as arguments, and that prints either “Yes” or “No”, 
@@ -86,7 +83,6 @@ recurse  (2-1, 3+2)
 recurse  (1-1, 5+1)
 print 	6 
 """
-
 
 """1. What would happen if you called this function like this: recurse(-1, 0)?
 --> Python reports an error message when the maximum recursion depth is reached"""
