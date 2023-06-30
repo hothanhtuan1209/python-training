@@ -1,4 +1,4 @@
-#exercise 8-2
+# Exercise 8-2
 def count_a():
     word = 'banana'
     count = 0
@@ -9,16 +9,14 @@ def count_a():
 count_a()
 
 
-#exercise 8-3
+# EXercise 8-3
 def print_letter(word):
     return word[0:9:2]
 result=print_letter('responsibility')
 print(result)
 
 
-
-#exercise 8-4
-
+# Exercise 8-4
 def any_lowercase1(s):
     for c in s:
         if c.isupper():
@@ -56,5 +54,19 @@ def any_lowercase5(s):
 result=any_lowercase5('banAna')
 print(result)
 # →This is the correct function
-#exercise 8-5
 
+
+# Exercise 8-5
+def caesar_cipher(word, n):
+    result = ""
+    for letter in word:
+        if letter.isalpha():
+            if letter.isupper():
+                result += chr((ord(letter) - 65 + n) % 26 + 65)
+            else:
+                result += chr((ord(letter) - 97 + n) % 26 + 97)
+        else:
+            result += letter
+    return result
+cipher_word = caesar_cipher("Agility.io", 3)
+print(cipher_word)
