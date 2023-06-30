@@ -8,7 +8,6 @@ def right_justify(s):
     print(right_justify)
 right_justify('Agility')
 
-
 # Exercise 3-2:
 """1.A function object is a value you can assign to a variable or pass as an argument. For example, do_twice 
 is a function that takes a function object as an argument and calls it twice:
@@ -25,12 +24,11 @@ def do_twice(f, values):
 def print_twice(values):
     print(values)
     print(values)
-do_twice(print_twice, 'spam')
 def do_four(f, values):
     do_twice(f, values)
     do_twice(f,values)
+do_twice(print_twice, 'spam')
 do_four(print,'spam')
-
 
 # Exercise 3-3:
 # Write a function that draws a grid like the following:   
