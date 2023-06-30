@@ -1,4 +1,4 @@
-#Exercise 3-1:
+# Exercise 3-1:
 """Write a function named right_justify that takes a string named s as a parameter
 and prints the string with enough leading spaces so that the last letter of the 
 string is in column 70 of the display:"""
@@ -8,7 +8,8 @@ def right_justify(s):
     print(right_justify)
 right_justify('Agility')
 
-#Exercise 3-2:
+
+# Exercise 3-2:
 """1.A function object is a value you can assign to a variable or pass as an argument. For example, do_twice 
 is a function that takes a function object as an argument and calls it twice:
    2. Modify do_twice so that it takes two arguments, a function object 
@@ -30,7 +31,8 @@ def do_four(f, values):
     do_twice(f,values)
 do_four(print,'spam')
 
-#Exercise 3-3:
+
+# Exercise 3-3:
 # Write a function that draws a grid like the following:   
 def row(a):
     print(a)
