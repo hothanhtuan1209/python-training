@@ -23,7 +23,7 @@ print(c(x, y+3, x+y))
 6. Assign the value of prod = a (z, z) = 90
 7. finally returns the value b(total)**2 =90**2=8100 """
 
-#Exercise 6-2.
+# Exercise 6-2.
 def ack(m, n):
     if m == 0:
         return n + 1
@@ -34,11 +34,11 @@ def ack(m, n):
 result = ack(8, 9)
 print(result)
 
-#Exercise 6-3.
+# Exercise 6-3.
 """1. Type these functions into a file named palindrome.py and test them out. 
 What happens if you call middle with a string with two letters? One letter? 
-What about the empty string, which is written '' and contains no letters?"""
-#In all 3 cases, middle function returns empty string because there is no value in between strings.
+What about the empty string, which is written '' and contains no letters?
+--> In all 3 cases, middle function returns empty string because there is no value in between strings."""
 
 """2. Write a function called is_palindrome that takes a string argument and returns
 True if it is a palindrome and False otherwise. Remember that you can use the built-in 
@@ -59,8 +59,9 @@ def is_palindrome(word):
 result = is_palindrome('noon')
 print(result) 
 
-#Exercise 6-4.
-"""A number, a, is a power of b if it is divisible by b and a/b is a power of b.
+
+# Exercise 6-4.
+""" A number, a, is a power of b if it is divisible by b and a/b is a power of b.
 Write a function called is_power that takes parameters a and b and returns True 
 if a is a power of b. Note: you will have to think about the base case."""
 def checknumber(a,b):
@@ -72,11 +73,10 @@ result = checknumber(9,3)
 print(result)
 
 
-#Exerecise 6-5:
-"""The greatest common divisor (GCD) of a and b is the largest number that divides both of them with no remainder.
+# Exerecise 6-5:
+""" The greatest common divisor (GCD) of a and b is the largest number that divides both of them with no remainder.
 One way to find the GCD of two numbers is based on the observation that if r is the remainder when a is divided by b,
 then gcd a, b = gcd b,r . As a base case, we can use gcd a, 0 = a."""
-
 def gcd(a,b):
     if b == 0:
         return a
