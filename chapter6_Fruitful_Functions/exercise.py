@@ -3,9 +3,11 @@ def b(z):
     prod = a(z, z)
     print(z, prod)
     return prod
+
 def a(x, y):
     x = x + 1
     return x * y
+
 def c(x, y, z):
     total = x + y + z
     square = b(total)**2
@@ -59,7 +61,6 @@ def is_palindrome(word):
 result = is_palindrome('noon')
 print(result) 
 
-
 # Exercise 6-4.
 """ A number, a, is a power of b if it is divisible by b and a/b is a power of b.
 Write a function called is_power that takes parameters a and b and returns True 
@@ -71,7 +72,6 @@ def checknumber(a,b):
         return False
 result = checknumber(9,3)
 print(result)
-
 
 # Exerecise 6-5:
 """ The greatest common divisor (GCD) of a and b is the largest number that divides both of them with no remainder.

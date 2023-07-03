@@ -1,7 +1,6 @@
 # Return Values
 import math
 
-
 def area(radius):
     a = math.pi * radius**2
     return a
@@ -12,7 +11,6 @@ def absolute_value(x):
     else:
         return x
     
-
 # Incremental Development
 def distance(x1, y1, x2, y2):
     dx = x2 - x1
@@ -29,7 +27,6 @@ def is_divisible(x, y):
         return False
 is_divisible(6,4) # False 
 
-
 # More Recursion
 def factorial(n):
     if n == 0:
@@ -40,7 +37,6 @@ def factorial(n):
     return result
 factorial(5)
 
-
 # One More Example
 def fibonacci (n):
     if n == 0:
@@ -49,3 +45,4 @@ def fibonacci (n):
         return 1
     else:
         return fibonacci(n-1) + fibonacci(n-2)
+    
