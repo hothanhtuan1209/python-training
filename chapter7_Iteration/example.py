@@ -15,7 +15,6 @@ def sequence(n):
             n = n*3 + 1
 sequence(3)
 
-
 while True:
     line = input('> ')
     if line == 'done':

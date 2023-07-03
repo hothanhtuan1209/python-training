@@ -7,7 +7,6 @@ def mysqrt(a):
         y = (x + a/x) / 2
         return y 
 
-
 def math_sqrt():
     print('a     mysqrt(a)     math.sqrt(a)    diff')
     print('-     ----------   -------------    -----')
@@ -20,7 +19,6 @@ def math_sqrt():
         a+=1
 math_sqrt()        
 
-
 # Exercise 7-2:
 def eval_loop():
     while True:
@@ -32,7 +30,6 @@ def eval_loop():
             print(result)
 eval_loop()
 
-
 # Exercise 7-3:
 def factorial(n):
     if n == 0:
@@ -41,7 +38,6 @@ def factorial(n):
         recurse = factorial(n-1)
         result = n * recurse
         return result
-
 
 def estimate_pi():
     total = 0
@@ -57,7 +53,6 @@ def estimate_pi():
         if abs(term) < 1e-15:
             break
         k += 1
-    
     return 1 / (factor * total)
 print(estimate_pi())
 print(math.pi)
