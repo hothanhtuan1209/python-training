@@ -1,4 +1,3 @@
-
 fruit = 'banana'
 index = 0
 while index < len(fruit):
@@ -25,7 +24,6 @@ for letter in prefixes:
         print(letter +'u'+suffix)
     else:   
         print(letter + suffix)
-
 s = 'Monty Python'
 a = s[2:2]
 print(a)

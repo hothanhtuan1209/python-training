@@ -8,13 +8,11 @@ def count_a():
     print(count)
 count_a()
 
-
 # EXercise 8-3
 def print_letter(word):
     return word[0:9:2]
 result=print_letter('responsibility')
 print(result)
-
 
 # Exercise 8-4
 def any_lowercase1(s):
@@ -54,7 +52,6 @@ def any_lowercase5(s):
 result=any_lowercase5('banAna')
 print(result)
 # →This is the correct function
-
 
 # Exercise 8-5
 def caesar_cipher(word, n):
