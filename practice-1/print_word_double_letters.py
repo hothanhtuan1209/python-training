@@ -19,6 +19,5 @@ def find_triple_double():
         word = line.strip()
         if is_triple_double(word):
             print(word)
-
-print('three consecutive double letters i:s')
+print('three consecutive double letters is: ')
 find_triple_double()
