@@ -16,7 +16,7 @@ while True:
         letter = fruit[0]
         print(letter)
         break
-
+    
 prefixes = 'JKLMNOPQ'
 suffix = 'ack'
 for letter in prefixes:
