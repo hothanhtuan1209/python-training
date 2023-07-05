@@ -5,7 +5,6 @@ def uses_all(word, required_letters):
         if letter not in word:
             return False
     return True
-# print(uses_all())
 
 """ How many words are there that use all the vowels aeiou? How about aeiouy?"""
 def count_words_vowel(required_letters):
@@ -15,5 +14,5 @@ def count_words_vowel(required_letters):
         if uses_all(word, required_letters):
             count += 1
     return count
-# print(count_words_vowel('aeiou'))
-print(count_words_vowel('aeiouy'))
+print(count_words_vowel('aeiou')) # Check tratures with the field 'aeiouy'
+

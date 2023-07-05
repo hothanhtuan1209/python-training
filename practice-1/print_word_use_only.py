@@ -6,6 +6,3 @@ def used_only(word, string_letter):
             return False
     return True
 print(used_only('hello','leo'))
-
-"""Can you make a sentence using only the letters acefhlo ->>(hello face)? 
-Other than “Hoe alfalfa?-->(Floaf each)"""
