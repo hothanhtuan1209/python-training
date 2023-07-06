@@ -15,7 +15,7 @@ def is_triple_double(word):
     return False
 
 def find_triple_double():
-    """Reads a word list and prints words with triple double letters."""
+    # Reads a word list and prints words with triple double letters.
     fin = open('D:/forGit/training_python\practice-1/words.txt')
     for line in fin:
         word = line.strip()

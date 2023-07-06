@@ -1,7 +1,8 @@
-"""Write a function called is_abecedarian that returns True if the letters in a word
+"""
+Write a function called is_abecedarian that returns True if the letters in a word
 appear in alphabetical order (double letters are okay). How many abecedarian words
-are there?"""
-
+are there?
+"""
 def is_abecedarian(word):
     # Check alphabetical order
     index = 0
