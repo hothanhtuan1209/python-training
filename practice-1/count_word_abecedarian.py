@@ -15,8 +15,10 @@ def is_abecedarian(word):
 
 list_word = input('Enter a list word:').split()
 count = 0
+
 for word in list_word:
     # Check and count the number of letters that satisfy the condition
     if is_abecedarian(word):
         count += 1
+
 print('Abecedarian words:',count)   

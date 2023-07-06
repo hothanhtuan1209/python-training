@@ -7,6 +7,7 @@ def used_only(word, string_letter):
     for letter in word:
         if letter not in string_letter:
             return False
+    
     return True
 
 print(used_only('hello','leo'))

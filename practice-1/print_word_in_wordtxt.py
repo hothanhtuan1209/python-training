@@ -4,6 +4,7 @@ characters (not counting whitespace).
 """
 def print_words(file):
     fin = open(file)
+    
     for line in fin:
         word = line.strip()
         if len(word) > 20:
