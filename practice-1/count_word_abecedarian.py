@@ -6,6 +6,7 @@ are there?
 def is_abecedarian(word):
     # Check alphabetical order
     index = 0
+
     while index < len(word) -1:
         if word[index] > word[index+1]:
             return False

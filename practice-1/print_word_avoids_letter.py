@@ -27,6 +27,7 @@ def avoids():
         if any(letter in word for letter in letters):
             continue
         total += 1
+    
     print(total)
 
 avoids()
