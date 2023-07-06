@@ -6,6 +6,7 @@ def has_no_e():
         if letter == 'e' or letter == 'E':
             return False
     return True
+
 result = has_no_e()
 print(result)
 
@@ -21,4 +22,5 @@ def count_words():
             words_has_no_e +=1
     percentage = (words_has_no_e/count_word) * 100
     print('Percentage of words without the letter e',percentage)
+
 count_words()

@@ -6,4 +6,5 @@ def print_words(file):
         word = line.strip()
         if len(word) > 20:
             print(word)
+            
 print_words('D:/forGit/training_python\chapter9_practice1/words.txt')

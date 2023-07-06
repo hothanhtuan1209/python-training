@@ -15,4 +15,3 @@ def count_words_vowel(required_letters):
             count += 1
     return count
 print(count_words_vowel('aeiou')) # Check tratures with the field 'aeiouy'
-

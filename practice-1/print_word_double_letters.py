@@ -1,7 +1,9 @@
 def is_triple_double(word):
+    # Find three consecutive double letters
     i = 0
     count = 0
     while i < len(word)-1:
+        # Check through 2 characters next to each other
         if word[i] == word[i+1]:
             count += 1
             if count == 3:
@@ -19,5 +21,6 @@ def find_triple_double():
         word = line.strip()
         if is_triple_double(word):
             print(word)
+
 print('three consecutive double letters is: ')
 find_triple_double()

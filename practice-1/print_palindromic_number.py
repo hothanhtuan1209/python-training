@@ -11,4 +11,5 @@ def check_odometer():
         # Call function is_palindrome to check condition
         if is_palindrome(digits[2:]) or is_palindrome(digits[1:]) or is_palindrome(digits):
             print(number)
+            
 check_odometer()
