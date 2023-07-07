@@ -6,9 +6,9 @@ t = [1, 2, 3, 4, 5]
 def is_sorted(t):
     # Check ascending order
     index = 0
+    
     while index < len(t)-1:
         # Iterate over each element in the list 't'
-        
         if t[index] > t[index+1]:
             return False
         else:
@@ -17,4 +17,3 @@ def is_sorted(t):
     return True
 
 print(is_sorted(t))
- 

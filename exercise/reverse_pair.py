@@ -9,6 +9,7 @@ def reverse_pair():
 
     for word in word_list:
         reverse_word = word[::-1]
+        
         if reverse_word in word_list  and word != reverse_word:
             # Add pairs of elements to the new list
             reverse_word_list.append((word,reverse_word))            
