@@ -11,9 +11,11 @@ list_input = [5, 7, 9]
 
 def cumsum(list_input):
     """
-    Take in a number list 'lits_input"
+    Transform a list with the rule: i + n = i + (i + 1) + (i+2) +...+ (i+n-1)
 
-    return: List_output have elements are calculated from the elements of list_input 
+    list_input: list of int
+
+    return: list 
     """
 
     sum = 0
