@@ -11,6 +11,7 @@ list_input = [1, 2, 3, 4, 5]
 
 def chop(list_input):
     """
+    Print list after removing the first and last characters of the list
     Take in a list have name 'list_input'
 
     print 'list_input' after remove the first and last element 
