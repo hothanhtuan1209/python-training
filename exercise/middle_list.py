@@ -7,15 +7,16 @@ Takes a list and returns a new list that contains all
 but the first and last elements.
 """
 
-t = [1, 2, 3, 4, 5, 6, 7]
+list_input = [1, 2, 3, 4, 5, 6, 7]
 
-def middle(t):
+def middle(list_input):
     """
-    Input list 't'
+    Enter a list have name 'add a detailed description of the function'
 
-    Take elements have index 1 to index len(1)-1 from 't' add to new_list
+    Take elements have index 1 to index len(1)-1 from 'list_input' add to new_list
     """
-    new_list = t[1:(len(t)-1)]
+    
+    new_list = list_input[1:(len(list_input)-1)]
     print(new_list)
 
-middle(t)
+middle(list_input)
