@@ -11,7 +11,7 @@ list_input = [[1, 2], [3], [4, 5, 6]]
 
 def nested_sum(list_input):
     """
-    Enter a list number or list in list
+    Take in a list of numbers or list nested lists
 
     return:  calculate total all number in list 
     """
@@ -20,6 +20,7 @@ def nested_sum(list_input):
     
     for i in (list_input):
         total += sum(i)
+    
     print(total)
 
 nested_sum(list_input)
