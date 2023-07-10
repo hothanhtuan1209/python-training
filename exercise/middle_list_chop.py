@@ -11,11 +11,11 @@ list_input = [1, 2, 3, 4, 5]
 
 def chop(list_input):
     """
-    input list 'list_input'
+    Take in a list have name 'list_input'
 
-    return: list 'list_input' is removed the first and last element 
+    print 'list_input' after remove the first and last element 
     """
-    
+
     del list_input[:1]
     del list_input[-1:]
     print(list_input)
