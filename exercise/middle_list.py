@@ -11,6 +11,8 @@ list_input = [1, 2, 3, 4, 5, 6, 7]
 
 def middle(list_input):
     """
+    Print a new list after removing the first and last characters of the list string
+    
     Take in a list number
 
     Take elements have index 1 to index len(list)-1 from 'list_input' add to new_list
