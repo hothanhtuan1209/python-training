@@ -9,11 +9,11 @@ any element that appears more than once.
 
 def has_duplicates():
     """
-    Input a list 
+    Enter a list from keyboard   
 
-    Return True if list has any element appears more than once.
+    return: True if list has any element appears more than once.
     """
-    
+
     list_input = list(input('Enter list:'))
     set_list_input = set(set_list_input)
 
