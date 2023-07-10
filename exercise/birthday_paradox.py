@@ -10,39 +10,43 @@ generating random samples of 23 birthdays and checking for matches.
 
 import random
 
-def has_duplicates(t):
-    """Returns True if any element appears more than once in a sequence.
+def has_duplicates(list_input):
+    """
+    Returns True if any element appears more than once in a sequence.
 
-    t: list
+    list_input: list
 
     returns: bool
     """
+
     # make a copy of t to avoid modifying the parameter
-    s = t[:]
-    s.sort()
+    list_copy = list_input[:]
+    list_copy.sort()
 
     # check for adjacent elements that are equal
-    for i in range(len(s)-1):
-        if s[i] == s[i+1]:
+    for i in range(len(list_copy)-1):
+        if list_copy[i] == list_copy[i+1]:
             return True
     
     return False
 
-def random_bdays(n):
-    """Returns a list of integers between 1 and 365, with length n.
+def random_birthdays(n):
+    """
+    Create a list of integers between 1 and 365, with length n.
 
     n: int
 
     returns: list of int
     """
-    t = []
+    birthday_random_list = []
     for i in range(n):
-        bday = random.randint(1, 365)
-        t.append(bday)
-    return t
+        birthday = random.randint(1, 365)
+        birthday_random_list.append(birthday)
+    return birthday_random_list
 
 def count_matches(num_students, num_simulations):
-    """Generates a sample of birthdays and counts duplicates.
+    """
+    Generates a sample of birthdays and counts duplicates.
 
     num_students: how many students in the group
     num_samples: how many groups to simulate
@@ -51,17 +55,19 @@ def count_matches(num_students, num_simulations):
     """
     count = 0
     for i in range(num_simulations):
-        t = random_bdays(num_students)
+        list_birthday_simulations = random_birthdays(num_students)
         
-        if has_duplicates(t):
+        if has_duplicates(list_birthday_simulations):
             count += 1
     
     return count
 
 def main():
-    """Runs the birthday simulation and prints the number of matches."""
+    """
+    Runs the birthday simulation and prints the number of matches.
+    """
     num_students = 23
-    num_simulations = 100
+    num_simulations = 500
     count = count_matches(num_students, num_simulations)
 
     print('After %d simulations' % num_simulations)
