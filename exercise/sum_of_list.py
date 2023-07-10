@@ -7,18 +7,19 @@ The exercise asks you to calculate the sum of
 all the elements in the list
 """
 
-t = [[1, 2], [3], [4, 5, 6]]
+list_input = [[1, 2], [3], [4, 5, 6]]
 
-def nested_sum(t):
+def nested_sum(list_input):
     """
-    Enter a list
+    Enter a list number or list in list
 
-    Return sum of list 
+    return:  calculate total all number in list 
     """
+
     total = 0 
     
-    for i in (t):
+    for i in (list_input):
         total += sum(i)
     print(total)
 
-nested_sum(t)
+nested_sum(list_input)
