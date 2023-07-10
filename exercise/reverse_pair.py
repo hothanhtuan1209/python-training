@@ -11,7 +11,7 @@ def reverse_pair():
     """
     Enter a Word list
 
-    Return 1 new list containing only reversed word pairs
+    return: 1 new list containing only reversed word pairs
     """
     word_list = input('Enter a word list:').split()
     reverse_word_list = []
