@@ -12,7 +12,7 @@ def word_list_append():
     """"
     Enter a word list
 
-    Return new word list using 'append'
+    return: create new word list using 'append' to add word from flie 
     """
     word_list = []
     read_file = open('D:/forGit/training_python\practice-1/words.txt')
@@ -29,7 +29,7 @@ def word_list_concatenate():
     """"
     Enter a word list
 
-    Return new word list using the idiom t = t + [x]
+    return: create new word list using the idiom t = t + [x] to add word from file
     """
 
     word_list = []
