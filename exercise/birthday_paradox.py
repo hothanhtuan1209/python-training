@@ -12,14 +12,11 @@ import random
 
 def has_duplicates(list_input):
     """
-    Returns True if any element appears more than once in a sequence.
+    Take in a list and make a copy of list_copy to avoid modifying the parameter
 
-    list_input: list
-
-    returns: bool
+    return: True if any element appears more than once in a sequence.
     """
 
-    # make a copy of t to avoid modifying the parameter
     list_copy = list_input[:]
     list_copy.sort()
 
@@ -32,9 +29,7 @@ def has_duplicates(list_input):
 
 def random_birthdays(num_student):
     """
-    Create a list of integers between 1 and 365, with length n.
-
-    n: int
+    Create a list of integers between 1 and 365, with length num_student.
 
     returns: list of int
     """
