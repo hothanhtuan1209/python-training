@@ -38,6 +38,7 @@ def random_birthdays(n):
 
     returns: list of int
     """
+    
     birthday_random_list = []
     for i in range(n):
         birthday = random.randint(1, 365)
@@ -53,6 +54,7 @@ def count_matches(num_students, num_simulations):
 
     returns: int
     """
+
     count = 0
     for i in range(num_simulations):
         list_birthday_simulations = random_birthdays(num_students)
@@ -66,6 +68,7 @@ def main():
     """
     Runs the birthday simulation and prints the number of matches.
     """
+
     num_students = 23
     num_simulations = 500
     count = count_matches(num_students, num_simulations)
