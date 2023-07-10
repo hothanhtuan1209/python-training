@@ -9,6 +9,8 @@ from one to spell the other. Takes two strings and returns True if they are anag
 
 def is_anagram():
     """
+    Check if one word is the reverse of the other
+
     Enter 2 words from keyboard.
     
     returns: True if anagram, False for otherwise
