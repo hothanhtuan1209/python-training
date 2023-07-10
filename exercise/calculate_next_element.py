@@ -7,21 +7,21 @@ This exercise requires entering a list and printing a
 new list with the i + n = i + (i + 1) + (i+2) +...+ (i+n-1)
 """
 
-list_a = [5, 7, 9]
+list_input = [5, 7, 9]
 
-def cumsum(list_a):
+def cumsum(list_input):
     """
-    Input: list_a
+    Enter a number list 'lits_input"
 
-    Return list_b
+    return: the elements in the list are calculated from the elements of list_input 
     """
     sum = 0
-    list_b = []
+    list_output = []
     
-    for number in list_a:
+    for number in list_input:
         sum += number
-        list_b.append(sum)
+        list_output.append(sum)
     
-    return list_b
+    return list_output
 
-print(cumsum(list_a))
+print(cumsum(list_input))
