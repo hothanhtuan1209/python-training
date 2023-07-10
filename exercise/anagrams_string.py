@@ -6,12 +6,14 @@ Chapter 10: Lists
 Two words are anagrams if you can rearrange the letters
 from one to spell the other. Takes two strings and returns True if they are anagrams.
 """
+
 def is_anagram():
     """
     Enter 2 words from keyboard.
     
     returns: True if anagram, False for otherwise
     """
+    
     first_word = list(input('Enter first word:'))
     second_word = list(input('Enter second word :'))
     
