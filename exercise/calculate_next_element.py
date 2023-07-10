@@ -15,6 +15,7 @@ def cumsum(list_input):
 
     return: the elements in the list are calculated from the elements of list_input 
     """
+    
     sum = 0
     list_output = []
     
