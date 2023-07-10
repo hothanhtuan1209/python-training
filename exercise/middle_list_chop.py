@@ -7,16 +7,17 @@ Takes a list, modifies it by removing the first and last
 elements, and returns None.
 """
 
-t = [1, 2, 3, 4, 5]
+list_input = [1, 2, 3, 4, 5]
 
-def chop(t):
+def chop(list_input):
     """
-    input list 't'
+    input list 'list_input'
 
-    Return list 't' is removed the first and last element 
+    return: list 'list_input' is removed the first and last element 
     """
-    del t[:1]
-    del t[-1:]
-    print(t)
+    
+    del list_input[:1]
+    del list_input[-1:]
+    print(list_input)
 
-chop(t)
+chop(list_input)
