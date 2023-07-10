@@ -30,7 +30,7 @@ def has_duplicates(list_input):
     
     return False
 
-def random_birthdays(n):
+def random_birthdays(num_student):
     """
     Create a list of integers between 1 and 365, with length n.
 
@@ -38,11 +38,12 @@ def random_birthdays(n):
 
     returns: list of int
     """
-    
+
     birthday_random_list = []
-    for i in range(n):
+    for i in range(num_student):
         birthday = random.randint(1, 365)
         birthday_random_list.append(birthday)
+    
     return birthday_random_list
 
 def count_matches(num_students, num_simulations):
@@ -52,7 +53,7 @@ def count_matches(num_students, num_simulations):
     num_students: how many students in the group
     num_samples: how many groups to simulate
 
-    returns: int
+    returns count
     """
 
     count = 0
