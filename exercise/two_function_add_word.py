@@ -14,6 +14,7 @@ def word_list_append():
 
     return: create new word list using 'append' to add word from flie 
     """
+    
     word_list = []
     read_file = open('D:/forGit/training_python\practice-1/words.txt')
 
