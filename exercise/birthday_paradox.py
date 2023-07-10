@@ -1,8 +1,13 @@
 """
+This module contains a code for exercises 10-8 related to:
+Think Python, 2nd Edition
+Chapter 10: Lists
+
 If there are 23 students in your class, what are the chances that two
 of you have thes same birthday? You can estimate this probability by 
 generating random samples of 23 birthdays and checking for matches.
 """
+
 import random
 
 def has_duplicates(t):
@@ -20,8 +25,8 @@ def has_duplicates(t):
     for i in range(len(s)-1):
         if s[i] == s[i+1]:
             return True
+    
     return False
-
 
 def random_bdays(n):
     """Returns a list of integers between 1 and 365, with length n.
@@ -36,7 +41,6 @@ def random_bdays(n):
         t.append(bday)
     return t
 
-
 def count_matches(num_students, num_simulations):
     """Generates a sample of birthdays and counts duplicates.
 
@@ -48,10 +52,11 @@ def count_matches(num_students, num_simulations):
     count = 0
     for i in range(num_simulations):
         t = random_bdays(num_students)
+        
         if has_duplicates(t):
             count += 1
+    
     return count
-
 
 def main():
     """Runs the birthday simulation and prints the number of matches."""

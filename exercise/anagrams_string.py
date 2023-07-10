@@ -1,17 +1,23 @@
 """
+This module contains a code for exercises 10-6 related to:
+Think Python, 2nd Edition
+Chapter 10: Lists
+
 Two words are anagrams if you can rearrange the letters
-from one to spell the other. Takes two strings and returns 
-True if they are anagrams.
+from one to spell the other. Takes two strings and returns True if they are anagrams.
 """
 def is_anagram():
-    # Enter two list a and b, then check them out
-    a = list(input('Enter word a:'))
-    b = list(input('Enter word b:'))
+    """
+    Enter 2 words from keyboard.
     
-    if a == b[::-1]:
+    returns: True if anagram, False for otherwise
+    """
+    first_word = list(input('Enter first word:'))
+    second_word = list(input('Enter second word :'))
+    
+    if first_word == second_word[::-1]:
         return True
     else:
         return False
 
-result = is_anagram()
-print(result)
+print(is_anagram())

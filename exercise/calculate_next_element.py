@@ -1,18 +1,27 @@
 """
+This module contains a code for exercises 10-2 related to:
+Think Python, 2nd Edition
+Chapter 10: Lists
+
 This exercise requires entering a list and printing a 
 new list with the i + n = i + (i + 1) + (i+2) +...+ (i+n-1)
 """
-numbers_a = [5, 7, 9]
 
-def cumsum(numbers_a):
-    # This function calculate list 'number_b' based on list 'number_a'
+list_a = [5, 7, 9]
+
+def cumsum(list_a):
+    """
+    Input: list_a
+
+    Return list_b
+    """
     sum = 0
-    numbers_b = []
+    list_b = []
     
-    for number in numbers_a:
+    for number in list_a:
         sum += number
-        numbers_b.append(sum)
+        list_b.append(sum)
     
-    return numbers_b
+    return list_b
 
-print(cumsum(numbers_a))
+print(cumsum(list_a))

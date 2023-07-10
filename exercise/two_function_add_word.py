@@ -1,12 +1,21 @@
 """
+This module contains a code for exercises 10-9 related to:
+Think Python, 2nd Edition
+Chapter 10: Lists
+
 Reads the file words.txt and builds a list with one element per
 word. Write two versions of this function, one using the append
 method and the other using the idiom t = t + [x].
 """
+
 def word_list_append():
+    """"
+    Enter a word list
+
+    Return new word list using 'append'
+    """
     word_list = []
     read_file = open('D:/forGit/training_python\practice-1/words.txt')
-    # This function adds words to word_list using 'append'
 
     for line in read_file:
         word = line.strip()
@@ -17,9 +26,14 @@ def word_list_append():
 word_list_append()
 
 def word_list_concatenate():
+    """"
+    Enter a word list
+
+    Return new word list using the idiom t = t + [x]
+    """
+
     word_list = []
     read_file = open('D:/forGit/training_python\practice-1/words.txt')
-    # This function adds words to word_list using the idiom t = t + [x]
 
     for line in read_file:
         word = line.strip()
