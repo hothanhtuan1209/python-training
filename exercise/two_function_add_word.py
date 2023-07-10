@@ -12,7 +12,7 @@ Download the word.txt file before running the program
 
 def word_list_append():
     """"
-    Take word list from file word.txt 
+    Get word in word.txt file, remove spaces and add to new list 
 
     return: new word list using 'append' to add word from flie 
     """
@@ -30,7 +30,7 @@ word_list_append()
 
 def word_list_concatenate():
     """"
-    Take word list from file word.txt 
+    Get word in word.txt file, remove spaces and add to new list 
 
     return: new word list using the idiom word_list = word_list + [word] to add word from file
     """
