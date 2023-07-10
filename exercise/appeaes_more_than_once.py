@@ -9,6 +9,8 @@ any element that appears more than once.
 
 def has_duplicates():
     """
+    Check if there are any duplicate elements
+    
     Enter a list from keyboard   
 
     return: True if list has any element appears more than once.
