@@ -11,11 +11,11 @@ list_input = [1, 2, 3, 4, 5, 6, 7]
 
 def middle(list_input):
     """
-    Enter a list have name 'add a detailed description of the function'
+    Take in a list number
 
-    Take elements have index 1 to index len(1)-1 from 'list_input' add to new_list
+    Take elements have index 1 to index len(list)-1 from 'list_input' add to new_list
     """
-    
+
     new_list = list_input[1:(len(list_input)-1)]
     print(new_list)
 
