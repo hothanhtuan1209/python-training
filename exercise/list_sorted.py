@@ -7,23 +7,24 @@ Takes a list as a parameter and returns True if
 the list is sorted in ascending order and False otherwise.
 """
 
-t = [1, 2, 3, 4, 5]
+list_input = [1, 2, 3, 4, 5]
 
-def is_sorted(t):
+def is_sorted(list_input):
     """
-    Input a list 't'
+    Enter a list 'list_input'
 
-    Return True if the list is sorted and False otherwise
+    return: True if the list is sorted and False otherwise
     """
+
     index = 0
     
-    while index < len(t)-1:
-        # Iterate over each element in the list 't'
-        if t[index] > t[index+1]:
+    while index < len(list_input)-1:
+        # Iterate over each element in the list 'list_input'
+        if list_input[index] > list_input[index+1]:
             return False
         else:
             index +=1
 
     return True
 
-print(is_sorted(t))
+print(is_sorted(list_input))
