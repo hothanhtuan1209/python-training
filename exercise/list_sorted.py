@@ -11,7 +11,10 @@ list_input = [1, 2, 3, 4, 5]
 
 def is_sorted(list_input):
     """
-    Take in a list have name 'list_input'
+    Checks if the list is sorted or not, returns True True 
+    if the list is sorted and False otherwise
+
+    list_input: list of int
 
     return: True if the list is sorted and False otherwise
     """
