@@ -11,7 +11,7 @@ list_input = [1, 2, 3, 4, 5]
 
 def is_sorted(list_input):
     """
-    Enter a list 'list_input'
+    Take in a list have name 'list_input'
 
     return: True if the list is sorted and False otherwise
     """
