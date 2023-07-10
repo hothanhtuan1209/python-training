@@ -8,15 +8,15 @@ any element that appears more than once.
 """
 
 def has_duplicates():
-    t = list(input('Enter list:'))
-    set_t = set(t)
+    list_input = list(input('Enter list:'))
+    set_list_input = set(set_list_input)
     """
     Input a list 
 
     Return True if list has any element appears more than once.
     """
 
-    if len(t) == len(set_t):
+    if len(list_input) == len(set_list_input):
         return False
     
     return True
