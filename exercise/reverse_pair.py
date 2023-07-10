@@ -9,6 +9,8 @@ Write a program that finds all the reverse pairs in the word list.
 
 def reverse_pair():
     """
+    Find the words that are the reverse of each other and add them to a new list
+    
     Enter a Word list from keyboard
 
     return: 1 new list containing only reversed word pairs
