@@ -12,7 +12,8 @@ import random
 
 def has_duplicates(list_input):
     """
-    Take in a list and make a copy of list_copy to avoid modifying the parameter
+    Check if the list contains duplicate elements.
+    list_input: list of int
 
     return: True if any element appears more than once in a sequence.
     """
@@ -29,7 +30,8 @@ def has_duplicates(list_input):
 
 def random_birthdays(num_student):
     """
-    Create a list of integers between 1 and 365, with length num_student.
+    Random a list of integers between 1 and 365.
+    The length of the list is passed as an argument.
 
     returns: list of int
     """
