@@ -11,11 +11,9 @@ list_input = [1, 2, 3, 4, 5, 6, 7]
 
 def middle(list_input):
     """
-    Print a new list after removing the first and last characters of the list
-    
-    Take in a list number
+    Using slice operator to remove the first and last items from the list.
 
-    Take elements have index 1 to index len(list)-1 from 'list_input' add to new_list
+    list_input: list of int
     """
 
     new_list = list_input[1:(len(list_input)-1)]
