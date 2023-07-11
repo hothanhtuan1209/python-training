@@ -12,9 +12,9 @@ Download the word.txt file before running the program
 
 def word_list_append():
     """"
-    Get word in word.txt file, remove spaces and add to new list 
+    Get word list from file, using append function.
 
-    return: new word list using 'append' to add word from flie 
+    return: list of string
     """
 
     word_list = []
@@ -30,9 +30,9 @@ word_list_append()
 
 def word_list_concatenate():
     """"
-    Get word in word.txt file, remove spaces and add to new list 
+    Get word list from file, using the plus operator.
 
-    return: new word list using the idiom word_list = word_list + [word] to add word from file
+    return: list of string
     """
 
     word_list = []
