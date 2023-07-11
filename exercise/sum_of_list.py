@@ -12,8 +12,6 @@ list_input = [[1, 2], [3], [4, 5, 6]]
 def nested_sum(list_input):
     """
     Sum the elements in the list, including the nested list
-    
-    print: int 
     """
 
     total = 0 
