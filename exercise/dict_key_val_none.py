@@ -11,8 +11,6 @@ def create_word_dictionary():
     """
     Returns a new dictionary that takes the words in the words.txt as keys
 
-    Input: words.txt
-
     return: dict
     """
 
