@@ -9,7 +9,6 @@ word appears in the file, then print the original word, the number
 of hops and the rotated word.
 """
 
-
 def make_word_dict():
     """
     Read the words in words.txt and return a dictionary
