@@ -14,6 +14,7 @@ def has_duplicates(list_input):
 
     return: True if list has any element appears more than once. 
     """
+    
     count = {}
     
     for item in list_input:
