@@ -6,6 +6,7 @@ Chapter 11: Dictionaries
 Takes a list as a parameter and returns True if there is any object that appears more
 than once in the list.
 """
+
 def has_duplicates(list_input):
     """
     Check if there are any duplicate elements
