@@ -18,6 +18,7 @@ def has_duplicates(list_input):
     count = {}
     
     for item in list_input:
+        
         if item in count:
             return True
         count[item] = 1
