@@ -11,7 +11,7 @@ def invert_dict(dict_in):
     """
     Reverse the dictionaries, using the method setdefault()
 
-    Input: dict
+    dict_in: dict
 
     return: reverse dict 
     """
