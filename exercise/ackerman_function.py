@@ -9,27 +9,26 @@ possible to evaluate the function with bigger arguments.
 
 dict_variable = {}
 
-def ackermann(m, n):
+def ackermann(second_number, first_number):
     """
     Computes the Ackermann function 
 
-    n, m: non-negative integers
+    first_number, second_number: non-negative integers
 
     return: integers
     """
     
-    if m == 0:
-        return n+1
+    if second_number == 0:
+        return first_number+1
     
-    if n == 0:
-        return ackermann(m-1, 1)
+    if first_number == 0:
+        return ackermann(second_number-1, 1)
     
-    if (m, n) in dict_variable:
-        return dict_variable[m, n]
+    if (second_number, first_number) in dict_variable:
+        return dict_variable[second_number, first_number]
     
     else:
-        dict_variable[m, n] = ackermann(m-1, ackermann(m, n-1))
-        return dict_variable[m, n]
-
+        dict_variable[second_number, first_number] = ackermann(second_number-1, ackermann(second_number, first_number-1))
+        return dict_variable[second_number, first_number]
 
 print(ackermann(3, 4))
