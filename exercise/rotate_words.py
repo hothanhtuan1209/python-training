@@ -42,14 +42,11 @@ def caesar_cipher(word, n):
     result = ""
     
     for letter in word:
-        
         if letter.isalpha():
-            
             if letter.isupper():
                 result += chr((ord(letter) - 65 + n) % 26 + 65)
             else:
                 result += chr((ord(letter) - 97 + n) % 26 + 97)
-        
         else:
             result += letter
     
