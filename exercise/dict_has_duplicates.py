@@ -11,7 +11,7 @@ def has_duplicates(list_input):
     """
     Check if there are any duplicate elements
 
-    Input: list
+    list_input: list
 
     return: True if list has any element appears more than once. 
     """
