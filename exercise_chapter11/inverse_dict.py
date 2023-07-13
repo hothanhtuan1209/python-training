@@ -24,4 +24,4 @@ def invert_dict(dict_in):
     
     return inverse
 
-invert_dict(dict_in=())
+print(invert_dict(dict_in={}))
