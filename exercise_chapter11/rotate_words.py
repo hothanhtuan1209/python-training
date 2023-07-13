@@ -28,7 +28,7 @@ def make_word_dict():
 
 word_dict = make_word_dict()
 
-def caesar_cipher(word, n):
+def caesar_cipher(word, shift):
     """
     Apply Caesar cipher to a word by shifting the characters by n positions.
     
@@ -43,9 +43,9 @@ def caesar_cipher(word, n):
     for letter in word:
         if letter.isalpha():
             if letter.isupper():
-                result += chr((ord(letter) - 65 + n) % 26 + 65)
+                result += chr((ord(letter) - 65 + shift) % 26 + 65)
             else:
-                result += chr((ord(letter) - 97 + n) % 26 + 97)
+                result += chr((ord(letter) - 97 + shift) % 26 + 97)
         else:
             result += letter
     
