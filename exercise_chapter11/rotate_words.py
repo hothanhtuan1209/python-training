@@ -33,7 +33,7 @@ def caesar_cipher(word, shift):
     Apply Caesar cipher to a word by shifting the characters by n positions.
     
     word: string
-    n: integer
+    shift: integer
     
     return: string
     """
