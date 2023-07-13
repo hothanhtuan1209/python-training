@@ -62,7 +62,8 @@ def get_homophones(list_word, pronounce):
     """
     Returns words with the same pronunciation
 
-    Input: dict pronounce and list list_word
+    dict pronounce: dict
+    list_word: list
 
     return: list
     """
