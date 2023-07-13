@@ -26,4 +26,4 @@ def has_duplicates(list_input):
     
     return False
 
-has_duplicates()
+print(has_duplicates(['e', 'a', 'r', 't']))
