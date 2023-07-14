@@ -25,6 +25,7 @@ def find_metathesis_pairs(filename):
                 for anagram in anagram_dict[sorted_word]:
                     if are_metathesis_pair(word, anagram):
                         return [(word, anagram)]
+            
             else:
                 anagram_dict[sorted_word] = [word]
 
