@@ -17,7 +17,6 @@ def find_metathesis_pairs(filename):
 
     anagram_dict = {}
     with open(filename, 'r') as file:
-        
         for line in file:
             word = line.strip().lower()
             sorted_word = ''.join(sorted(word))
@@ -31,7 +30,7 @@ def find_metathesis_pairs(filename):
 
     return []
 
-def are_metathesis_pair(word1, word2):
+def are_metathesis_pair(first_word, second_word):
     """
     Checks if two words form a metathesis pair.
 
@@ -40,18 +39,19 @@ def are_metathesis_pair(word1, word2):
     returns: bool
     """
 
-    if len(word1) != len(word2):
+    if len(first_word) != len(second_word):
         return False
 
     # Count the number of different positions between the two words
     count = 0
-    for i in range(len(word1)):
-        if word1[i] != word2[i]:
+    for i in range(len(first_word)):
+        if first_word[i] != second_word[i]:
             count += 1
 
     return count == 2
 
 word_list_file = "word_list.txt"
 metathesis_pairs = find_metathesis_pairs(word_list_file)
+
 for pair in metathesis_pairs:
     print(pair)
