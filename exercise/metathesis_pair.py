@@ -12,7 +12,7 @@ def find_metathesis_pairs(filename):
 
     filename: string filename of the dictionary
 
-    Returns: list of metathesis pairs
+    returns: list of metathesis pairs
     """
 
     anagram_dict = {}
