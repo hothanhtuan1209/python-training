@@ -16,7 +16,7 @@ def make_word_dict():
     """
     
     dict_words = dict()
-    fin = open('D:/forGit/training_python/practice-1/words.txt')
+    fin = open('words.txt')
     for line in fin:
         word = line.strip().lower()
         dict_words[word] = None
