@@ -17,6 +17,7 @@ def make_word_dict():
     
     dict_words = dict()
     fin = open('words.txt')
+    
     for line in fin:
         word = line.strip().lower()
         dict_words[word] = None
@@ -25,13 +26,8 @@ def make_word_dict():
     # also, the empty string is considered a word.
     for letter in ['a', 'i', '']:
         dict_words[letter] = letter
+    
     return dict_words
-
-"""
-memo is a dictionary that maps from each word that is known
-to be reducible to a list of its reducible children.  It starts
-with the empty string.
-"""
 
 memo = {}
 memo[''] = ['']
@@ -43,7 +39,7 @@ def is_reducible(word, word_dict):
     Also adds an entry to the memo dictionary.
 
     A string is reducible if it has at least one child that is 
-    reducible.  The empty string is also reducible.
+    reducible. The empty string is also reducible.
 
     word: string
     word_dict: dictionary with words as keys
@@ -75,8 +71,10 @@ def children(word, word_dict):
     res = []
     for i in range(len(word)):
         child = word[:i] + word[i+1:]
+        
         if child in word_dict:
             res.append(child)
+    
     return res
 
 def all_reducible(word_dict):
@@ -89,8 +87,10 @@ def all_reducible(word_dict):
     res = []
     for word in word_dict:
         word_reduced = is_reducible(word, word_dict)
+        
         if word_reduced != []:
             res.append(word)
+    
     return res
 
 def print_trail(word):
@@ -104,6 +104,7 @@ def print_trail(word):
     
     if len(word) == 0:
         return
+    
     print(word, end=' ')
     word_reduced = is_reducible(word, word_dict)
     print_trail(word_reduced[0])
