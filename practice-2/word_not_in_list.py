@@ -4,6 +4,8 @@ Think Python, 2nd Edition
 Chapter 13: Case Study: Data Structure Selection
 
 Print all the words in the book that are not in the word list.
+
+Dowload file word.txt and file Ebook.txt
 """
 
 def read_word_list(filename):
@@ -14,6 +16,7 @@ def read_word_list(filename):
     
     returns: list
     """
+    
     word_list = []
     with open(filename, 'r', encoding='utf-8') as file:
         
@@ -43,8 +46,8 @@ def find_missing_words(book_filename, words_filename):
     
     return missing_words
 
-book_file = 'D:/forGit/training_python/practice-2/texts/Ebook.txt'
-words_file = 'D:/forGit/training_python/practice-2/texts/words.txt'
+book_file = 'Ebook.txt'
+words_file = 'words.txt'
 
 missing_words = find_missing_words(book_file, words_file)
 for word in missing_words:
