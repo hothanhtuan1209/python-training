@@ -10,7 +10,6 @@ line for each word, in descending order of frequency, with log f and log r.
 import string
 import math
 import collections
-# import matplotlib as plt
 
 def read_file(filename):
     """
