@@ -4,6 +4,8 @@ Think Python, 2nd Edition
 Chapter 13: Case Study: Data Structure Selection
 
 Write a program that uses this algorithm to choose a random word from the book.
+
+Download Ebook.txt file
 """
 
 import string
@@ -60,5 +62,5 @@ def choose_random(hist):
     index = bisect(calculate_sum, random_val)
     return list_word[index]
 
-hist = read_file('D:/forGit/training_python/practice-2/texts/Ebook.txt')
+hist = read_file('Ebook.txt')
 print(choose_random(hist))
