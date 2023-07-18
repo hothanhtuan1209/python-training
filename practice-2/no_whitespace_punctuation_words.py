@@ -5,6 +5,8 @@ Chapter 13: Case Study: Data Structure Selection
 
 Reads a file, breaks each line into words, strips whitespace and
 punctuation from the words, and converts them to lowercase.
+
+Download test.txt file
 """
 
 import string
@@ -15,6 +17,7 @@ def clean_word():
 
     print: list words
     """
+    
     fin = open('test.txt')
     cleaned_words = []
 
