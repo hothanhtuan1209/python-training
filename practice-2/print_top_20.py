@@ -4,6 +4,8 @@ Think Python, 2nd Edition
 Chapter 13: Case Study: Data Structure Selection
 
 Print the 20 most frequently used words in the book.
+
+Dowload Ebook.txt file
 """
 
 import string
@@ -12,11 +14,10 @@ def clean_word():
     """
     Read a file and count its word.
 
-    return: 
-    list words: list and count: int
+    returns: list words: list and count: int
     """
 
-    fin = open('D:/forGit/training_python/practice-2/Ebook.txt',encoding='utf-8')
+    fin = open('Ebook.txt',encoding='utf-8')
     cleaned_words = []
     count = 0
 
