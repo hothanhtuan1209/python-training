@@ -14,7 +14,9 @@ def clean_word():
     """
     Read a file and count its word.
 
-    returns: list words: list and count: int
+    returns: 
+        - list words: list
+        - count: int
     """
 
     fin = open('Ebook.txt',encoding='utf-8')
