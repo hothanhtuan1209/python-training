@@ -34,7 +34,7 @@ def clean_word():
                     cleaned_word += letter.lower()
             
             cleaned_words.append(cleaned_word)
-            count +=1
+            count += 1
     
     return cleaned_words
 
