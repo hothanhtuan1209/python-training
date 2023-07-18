@@ -51,7 +51,7 @@ def count_word_used(cleaned_words):
 
     for word in cleaned_words:
         if word in count_each_word : 
-            count_each_word[word] +=1
+            count_each_word[word] += 1
         else:
             count_each_word[word] = 1
     
