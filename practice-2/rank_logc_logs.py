@@ -5,6 +5,8 @@ Chapter 13: Case Study: Data Structure Selection
 
 Write a program that reads a text from a file, counts word frequencies, and prints one
 line for each word, in descending order of frequency, with log f and log r.
+
+Dowload markov.txt file
 """
 
 import string
