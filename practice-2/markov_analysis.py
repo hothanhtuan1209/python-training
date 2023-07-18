@@ -19,8 +19,9 @@ def read_text(filename):
     returns: string
     """
     
-    with open(filename, 'r',encoding='utf-8') as file:
+    with open(filename, 'r',encoding = 'utf-8') as file:
         text = file.read()
+    
     return text
 
 def markov_analysis(text, prefix_length):
@@ -47,9 +48,9 @@ def markov_analysis(text, prefix_length):
     
     return prefixes
 
-def random_markov(prefixes,prefix_length, num_words):
+def random_markov(prefixes, prefix_length, num_words):
     """
-    randomly generate 1 text from the dictionary
+    Randomly generate 1 text from the dictionary
 
     prefixes: dict
 
@@ -78,5 +79,5 @@ text = read_text(filename)
 print(markov_analysis(text, prefix_length))
 
 prefixes = markov_analysis(text, prefix_length)
-random_text = random_markov(prefixes,prefix_length, num_words)
+random_text = random_markov(prefixes, prefix_length, num_words)
 print(random_text)
