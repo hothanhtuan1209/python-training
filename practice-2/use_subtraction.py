@@ -3,10 +3,19 @@ This module contains a code for exercises 13-6 related to:
 Think Python, 2nd Edition
 Chapter 13: Case Study: Data Structure Selection
 
+Write a program that uses set subtraction to find words in the book
+that are not in the word list.
 
+Dowload file word.txt and file Ebook.txt
 """
 
 def find_word_notin_list(file_book, file_words):
+    """
+    Find word in book but not in words list
+
+    print set words
+    """
+    
     with open(file_book,'r', encoding='utf-8') as book_file, open(file_words, 'r', encoding='utf-8') as words_file:
         book_file = set(book_file.read().lower().split())
         words_file = set(words_file.read().lower().split())
@@ -15,7 +24,7 @@ def find_word_notin_list(file_book, file_words):
     
     print(words_notin_list)
 
-file_book = 'D:/forGit/training_python/practice-2/texts/Ebook.txt'
-file_words = 'D:/forGit/training_python/practice-2/texts/words.txt'
+file_book = 'Ebook.txt'
+file_words = 'words.txt'
 
 find_word_notin_list(file_book,file_words)
