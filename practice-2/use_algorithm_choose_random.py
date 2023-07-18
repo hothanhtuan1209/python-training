@@ -17,8 +17,9 @@ def read_file(filename):
     """
     Reads a file and returns the processed word
 
-    return: dict
+    return: counter object
     """
+    
     hist = collections.Counter()
     fin = open(filename, 'r', encoding='utf8')
 
@@ -35,6 +36,8 @@ def read_file(filename):
 def cumsum(list_word):
     """
     Calculates the cumulative sum of the elements in the list.
+
+    list_word: list
 
     return: list
     """
