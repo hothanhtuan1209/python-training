@@ -5,6 +5,8 @@ Chapter 13: Case Study: Data Structure Selection
 
 Modify the program to count the total number of words in the book, and the
 number of times each word is used. Print the number of different words used in the book.
+
+Download Ebook.txt file
 """
 
 import string
@@ -13,11 +15,10 @@ def clean_word():
     """
     Read a file and count its word.
 
-    return: 
-    list words: list and count: int
+    returns: list words: list and count: int
     """
 
-    fin = open('D:/forGit/training_python/practice-2/Ebook.txt',encoding='utf-8')
+    fin = open('Ebook.txt',encoding='utf-8')
     cleaned_words = []
     count = 0
 
@@ -42,8 +43,7 @@ def count_word_diff(cleaned_words):
 
     cleaned_words: list
 
-    return:
-    word_in_book: list and word_diff: int
+    return: word_in_book: list and word_diff: int
     """
     
     word_in_book = []
