@@ -19,7 +19,6 @@ def read_word_list(filename):
     
     word_list = []
     with open(filename, 'r', encoding='utf-8') as file:
-        
         for line in file:
             word = line.strip()
             word_list.append(word)
