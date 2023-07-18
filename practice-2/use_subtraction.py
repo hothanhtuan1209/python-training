@@ -13,8 +13,8 @@ def find_word_notin_list(file_book, file_words):
     """
     Find word in book but not in words list
 
-    file_book: text file
-    file_words: text file
+    file_book: string, name of the test file
+    file_words: string, name of the test file
 
     print set words
     """
