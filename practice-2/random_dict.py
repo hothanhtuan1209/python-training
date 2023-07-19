@@ -34,6 +34,8 @@ def choose_from_hist(dict_hist):
     Generate 1 list of keys based on occurrences
 
     dict_hist: dict
+
+    returns: list random
     """
     
     list_key = list()
