@@ -20,7 +20,7 @@ def clean_word():
         - count: int
     """
 
-    fin = open('ebook.txt',encoding='utf-8')
+    fin = open('ebook.txt', encoding = 'utf-8')
     cleaned_words = []
     count = 0
 
@@ -56,7 +56,7 @@ def count_word_diff(cleaned_words):
     for word in cleaned_words:
         if word not in word_in_book:
             word_in_book.append(word)
-            word_diff +=1
+            word_diff += 1
     
     return word_in_book,word_diff
 
@@ -73,14 +73,14 @@ def count_word_used(cleaned_words):
 
     for word in cleaned_words:
         if word in count_each_word : 
-            count_each_word[word] +=1
+            count_each_word[word] += 1
         else:
             count_each_word[word] = 1
     
-    sorted_count_each_word = dict(sorted(count_each_word.items(), key=lambda x: x[1], reverse=True)) 
+    sorted_count_each_word = dict(sorted(count_each_word.items(), key = lambda x: x[1], reverse = True)) 
     
     return sorted_count_each_word
 
 cleaned_words, count = clean_word()
-word_in_book = count_word_diff(cleaned_words,count)
+word_in_book = count_word_diff(cleaned_words, count)
 print(count_word_used(cleaned_words))
