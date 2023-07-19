@@ -17,6 +17,8 @@ def read_file(filename):
     """
     Reads a file and returns the processed word
 
+    filename: string, name of the word list file
+
     return: counter object
     """
     
