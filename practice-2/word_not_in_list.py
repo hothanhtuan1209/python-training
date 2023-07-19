@@ -5,7 +5,7 @@ Chapter 13: Case Study: Data Structure Selection
 
 Print all the words in the book that are not in the word list.
 
-Dowload file word.txt and file Ebook.txt
+Dowload file word.txt and file ebook.txt
 """
 
 def read_word_list(filename):
@@ -45,7 +45,7 @@ def find_missing_words(book_filename, words_filename):
     
     return missing_words
 
-book_file = 'Ebook.txt'
+book_file = 'ebook.txt'
 words_file = 'words.txt'
 
 missing_words = find_missing_words(book_file, words_file)
