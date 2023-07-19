@@ -15,6 +15,8 @@ import random
 def read_text(filename):
     """
     Reads a text from a file and returns it as a string.
+
+    filename: string, name of the test file
     
     returns: string
     """
