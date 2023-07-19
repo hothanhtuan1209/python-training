@@ -14,7 +14,6 @@ import string
 def clean_word():
     """
     Reads a file and processes its content.
-    print: list words
     """
     
     fin = open('test.txt')
