@@ -53,6 +53,8 @@ def random_markov(prefixes, prefix_length, num_words):
     Randomly generate 1 text from the dictionary
 
     prefixes: dict
+    prefix_length: int
+    num_words: int
 
     returns: string
     """
