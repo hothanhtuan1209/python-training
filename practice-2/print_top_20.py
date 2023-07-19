@@ -65,5 +65,5 @@ word_counts = count_word_used(cleaned_words)
 top_count = 20
 for i, (word, count) in enumerate(word_counts.items()):
     print(i, word, count)
-    if i+1 == top_count:
+    if i + 1 == top_count:
         break
