@@ -6,7 +6,7 @@ Chapter 13: Case Study: Data Structure Selection
 Write a program that uses set subtraction to find words in the book
 that are not in the word list.
 
-Dowload file word.txt and file Ebook.txt
+Dowload file word.txt and file ebook.txt
 """
 
 def find_word_notin_list(file_book, file_words):
@@ -27,7 +27,7 @@ def find_word_notin_list(file_book, file_words):
     
     print(words_notin_list)
 
-file_book = 'Ebook.txt'
+file_book = 'ebook.txt'
 file_words = 'words.txt'
 
 find_word_notin_list(file_book,file_words)
