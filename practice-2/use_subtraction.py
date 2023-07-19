@@ -15,8 +15,6 @@ def find_word_notin_list(file_book, file_words):
 
     file_book: string, name of the test file
     file_words: string, name of the test file
-
-    print set words
     """
     
     with open(file_book,'r', encoding = 'utf-8') as book_file, open(file_words, 'r', encoding = 'utf-8') as words_file:
