@@ -1,5 +1,5 @@
 """
-This module contains a code for exercises 13-0 related to:
+This module contains a code for exercises 13-9 related to:
 Think Python, 2nd Edition
 Chapter 13: Case Study: Data Structure Selection
 
