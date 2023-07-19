@@ -19,7 +19,7 @@ def read_text(filename):
     returns: string
     """
     
-    with open(filename, 'r',encoding = 'utf-8') as file:
+    with open(filename, 'r', encoding = 'utf-8') as file:
         text = file.read()
     
     return text
@@ -38,8 +38,8 @@ def markov_analysis(text, prefix_length):
     words = text.split()
 
     for i in range(len(words) - prefix_length):
-        prefix = tuple(words[i:i+prefix_length])
-        suffix = words[i+prefix_length]
+        prefix = tuple(words[i : i + prefix_length])
+        suffix = words[i + prefix_length]
         
         if prefix in prefixes:
             prefixes[prefix].append(suffix)
