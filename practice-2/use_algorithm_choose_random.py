@@ -21,7 +21,7 @@ def read_file(filename):
     """
     
     hist = collections.Counter()
-    fin = open(filename, 'r', encoding='utf8')
+    fin = open(filename, 'r', encoding = 'utf8')
 
     for line in fin:
         line = line.replace('-', ' ')
