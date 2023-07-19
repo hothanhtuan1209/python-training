@@ -19,7 +19,7 @@ def clean_word():
         - count: int
     """
 
-    fin = open('Ebook.txt',encoding='utf-8')
+    fin = open('Ebook.txt', encoding = 'utf-8')
     cleaned_words = []
     count = 0
 
@@ -55,7 +55,7 @@ def count_word_used(cleaned_words):
         else:
             count_each_word[word] = 1
     
-    sorted_count_each_word = dict(sorted(count_each_word.items(), key=lambda x: x[1], reverse=True)) 
+    sorted_count_each_word = dict(sorted(count_each_word.items(), key=lambda x: x[1], reverse = True)) 
     
     return sorted_count_each_word
 
