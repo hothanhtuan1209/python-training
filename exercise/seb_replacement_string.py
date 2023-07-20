@@ -32,3 +32,5 @@ def sed(filename_in, filename_out, pattern, replacement):
         
     except:
         print("An error occurred, please check again...")
+
+sed('text_input', 'text_output.txt', 'et', 'zzzzz')
