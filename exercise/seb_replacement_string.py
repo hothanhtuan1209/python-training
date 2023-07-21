@@ -32,4 +32,12 @@ def sed(filename_in, filename_out, pattern, replacement):
     except:
         print("An error occurred, please check again...")
 
-sed('text_input', 'text_output.txt', 'et', 'zzzzz')
+def main():
+    filename_in = 'text_input.txt'
+    filename_out = 'text_output.txt'
+    pattern = 'et'
+    replacement = 'zzzzz'
+    sed(filename_in, filename_out, pattern, replacement)
+
+if __name__ == '__main__':
+   main() 
