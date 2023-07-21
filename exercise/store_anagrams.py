@@ -3,52 +3,13 @@ This module contains a code for exercises 14-2 related to:
 Think Python, 2nd Edition
 Chapter 14: Files
 
-imports anagram_sets and provides two new functions: store_anagrams should 
+Imports anagram_sets and provides two new functions: store_anagrams should 
 store the anagram dictionary in a “shelf ”; read_anagrams
 should look up a word and return a list of its anagrams.
 """
 
 import shelve
-
-def signature(word):
-    """
-    Returns the signature of a word.
-
-    Signature is a string that contains all of the letters in order.
-
-    word: string
-
-    returns: string
-    """
-    
-    return ''.join(sorted(word))
-
-def find_anagrams(filename):
-    """
-    Finds all anagrams in a word list.
-
-    filename: string filename of the word list
-
-    returns: a list of lists of anagrams
-    """
-    
-    anagram_dict = {}
-
-    with open(filename, 'r') as file:
-        for line in file:
-            word = line.strip()
-            word_signature = signature(word)
-
-            # Add the word have same signature to the anagram dictionary
-            if word_signature in anagram_dict:
-                anagram_dict[word_signature].append(word)
-            else:
-                anagram_dict[word_signature] = [word]
-
-    # Filter out sets of words with only one word
-    anagram_sets = [word_list for word_list in anagram_dict.values() if len(word_list) > 1]
-
-    return anagram_sets
+from more_anagrams import signature, find_anagrams
 
 def store_anagrams(word_list_filename,dict_name):
     """
