@@ -91,7 +91,10 @@ def check_duplicates(duplicates):
             for j in range(i + 1, len(file_list)):
                 subprocess.run(['diff', file_list[i], file_list[j]])
 
-directory_to_search = 'path/mp3/files'
-suffix_to_find = '.mp3'
-duplicates = find_duplicates(directory_to_search, suffix_to_find)
-check_duplicates(duplicates)
+def main():
+    directory_to_search = 'path/mp3/files'
+    suffix_to_find = '.mp3'
+    duplicates = find_duplicates(directory_to_search, suffix_to_find)
+    check_duplicates(duplicates)
+if __name__ == '__main__':
+    main()
