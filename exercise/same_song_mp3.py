@@ -1,5 +1,5 @@
 """
-This module contains a code for exercises 14-1 related to:
+This module contains a code for exercises 14-3 related to:
 Think Python, 2nd Edition
 Chapter 14: Files
 
