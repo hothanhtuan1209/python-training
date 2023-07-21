@@ -84,4 +84,3 @@ def read_anagrams(word, dict_name):
 word_list_filename = 'words.txt'
 store_anagrams(word_list_filename,'anagram_dict.db')
 print(read_anagrams('least', 'anagram_dict.db'))
-
