@@ -96,5 +96,6 @@ def main():
     suffix_to_find = '.mp3'
     duplicates = find_duplicates(directory_to_search, suffix_to_find)
     check_duplicates(duplicates)
+
 if __name__ == '__main__':
     main()
