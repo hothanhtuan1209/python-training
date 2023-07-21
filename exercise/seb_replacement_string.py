@@ -18,7 +18,6 @@ def sed(filename_in, filename_out, pattern, replacement):
     filename_out: string, name of the output file
     pattern: string is replaced
     replacement: replacement string
-
     """
     
     try:
