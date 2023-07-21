@@ -42,6 +42,10 @@ def read_anagrams(word, dict_name):
         key = word_signature
         return anagrams_dict.get(key, [])
 
-word_list_filename = 'words.txt'
-store_anagrams(word_list_filename,'anagram_dict.db')
-print(read_anagrams('least', 'anagram_dict.db'))
+def main():
+    word_list_filename = 'words.txt'
+    store_anagrams(word_list_filename,'anagram_dict.db')
+    print(read_anagrams('least', 'anagram_dict.db'))
+
+if __name__ == '__main__':
+    main()
