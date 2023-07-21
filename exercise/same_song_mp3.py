@@ -25,6 +25,7 @@ def find_files_with_suffix(directory, suffix):
     files = []
     
     for root, dirs, filenames in os.walk(directory):
+        
         for filename in filenames:
             if filename.endswith(suffix):
                 files.append(os.path.join(root, filename))
@@ -43,6 +44,7 @@ def compute_checksum(filename):
     hash_md5 = hashlib.md5()
    
     with open(filename, 'rb') as file:
+        
         for chunk in iter(lambda: file.read(4096), b""):
             hash_md5.update(chunk)
     
@@ -64,6 +66,7 @@ def find_duplicates(directory, suffix):
 
     for file in files:
         checksum = compute_checksum(file)
+        
         if checksum in checksum_to_files:
             checksum_to_files[checksum].append(file)
         else:
@@ -84,9 +87,11 @@ def check_duplicates(duplicates):
     """
     for checksum, file_list in duplicates.items():
         print(f"Duplicate files with checksum {checksum}:")
+        
         for file in file_list:
             print(file)
         print("Checking for differences...")
+        
         for i in range(len(file_list)):
             for j in range(i + 1, len(file_list)):
                 subprocess.run(['diff', file_list[i], file_list[j]])
