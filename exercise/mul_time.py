@@ -1,5 +1,5 @@
 """
-This module contains a code for exercises 16-2 related to:
+This module contains a code for exercises 16-1 related to:
 Think Python, 2nd Edition
 Chapter 16: Classes and Functions
 
