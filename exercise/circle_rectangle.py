@@ -12,32 +12,55 @@ Chapter 15: Classes and Objects
 import math
 
 class Circle:
+    """
+    Represents a circle with attributes center and radius.
+    """
+
     def __init__(self, center, radius):
+        """
+        Initializes a Circle object.
+
+        center (Point): The center of the circle.
+        radius (float): The radius of the circle.
+        """
+        
         self.center = center
         self.radius = radius
 
 class Point:
+    """
+    Represents a point with attributes x and y.
+    """
+    
     def __init__(self, x, y):
+        """
+        Initializes a Point object.
+
+        x (float): represent coordinates in 2D space
+        y (float): represent coordinates in 2D space 
+        """
+        
         self.x = x
         self.y = y
 
-def distance(point1, point2):
+def distance(point_1, point_2):
     """
-    Calculate distance between 2 points
+    Calculate distance between 2 points in 2D space.
 
-    point1: 1 point has 2 parameters: x, y
-    point2: 1 point has 2 parameters: x, y
+    point_1: Coordinates of a point in 2D space.
+    point_2: Coordinates of a point in 2D space.
 
     returns: int, distance of two point
     """
-    return math.sqrt((point1.x - point2.x)**2 + (point1.y - point2.y)**2)
+    
+    return math.sqrt((point_1.x - point_2.x)**2 + (point_1.y - point_2.y)**2)
 
 def point_in_circle(circle, point):
     """
     Check position of 1 point relative to circle
 
     circle: 1 circle with two parameters center and radius
-    point: 1 point has 2 parameters: x, y
+    point: Coordinates of a point in 2D space.
     """
     
     if distance(circle.center, point) <= circle.radius:
@@ -46,7 +69,19 @@ def point_in_circle(circle, point):
         return False
 
 class Rectangle:
+    """
+    Represents a rectangle with attributes conner, width, height.
+    """
+    
     def __init__(self, corner, width, height):
+        """
+        Initializes a rectangle object.
+
+        conner (Point): The conner of the rectangle.
+        width (float): The width of the rectangle.
+        height (float): The height of the rectangle.
+        """
+        
         self.corner = corner
         self.width = width
         self.height = height
@@ -119,6 +154,6 @@ def main():
     rectangle = Rectangle(rectangle_corner, rectangle_width, rectangle_height)
     print(rect_in_circle(circle, rectangle))
     print(rect_circle_overlap(circle, rectangle))
-     
+ 
 if __name__ == '__main__':
     main()
