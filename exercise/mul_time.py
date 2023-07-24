@@ -76,12 +76,12 @@ def main():
     time = Time(2, 30, 45)
     number = 6.5
     result_time = mul_time(time, number)
-    print(result_time.hour, ':', result_time.minute, ':',result_time.second)
+    print("{:02.0f}:{:02.0f}:{:02.0f}".format(result_time.hour, result_time.minute, result_time.second))
 
     finishing_time = Time(1, 30, 15)
     distance = 50
     average_pace_time = time_distance(finishing_time, distance)
-    print(average_pace_time.hour, ':', average_pace_time.minute, ':', average_pace_time.second)
+    print("{:02.0f}:{:02.0f}:{:02.0f}".format(average_pace_time.hour, average_pace_time.minute, average_pace_time.second))
 
 if __name__ == '__main__':
     main()
