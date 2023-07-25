@@ -12,7 +12,7 @@ Time object
 
 class Time:
     """
-    Represents a circle with attributes center and radius.
+    Represents time with hour, minute, second.
     """
     
     def __init__(self, hour, minute, second):
