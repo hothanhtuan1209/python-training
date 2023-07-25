@@ -32,11 +32,11 @@ def mul_time(time, number):
     """
     Multiplies a Time object by a given number.
 
-    parameters:
+    Parameters:
         time (Time): The Time object to be multiplied.
         number (int or float): The number to multiply the Time object with.
 
-    returns:
+    Returns:
         Time: A new Time object
     """
 
@@ -54,11 +54,11 @@ def time_distance(finishing_time, distance):
     """
     Calculate average time per mile.
 
-    parameters:
+    Parameters:
         finishing_time (Time): Time goes all the way.
         distance (int or float): The number represent distance
 
-    returns:
+    Returns:
         Time: A new Time object
     """
 
