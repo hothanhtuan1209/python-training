@@ -118,17 +118,18 @@ def main():
 
     print('Next birthday will be in:', birthday_countdown(5, 12))
 
+    DATE_FORMAT = "%Y-%m-%d"
     birthday_input1 = input('Enter the birthday of the first person (format YYYY-MM-DD): ')
     birthday_input2 = input('Enter the birthday of the second person (format YYYY-MM-DD): ')
     ratio = int(input('Enter the age ratio: '))
-    birthday_1 = datetime.strptime(birthday_input1, '%Y-%m-%d')
-    birthday_2 = datetime.strptime(birthday_input2, '%Y-%m-%d')
+    birthday_1 = datetime.strptime(birthday_input1, DATE_FORMAT)
+    birthday_2 = datetime.strptime(birthday_input2, DATE_FORMAT)
     
     result_double = double_day(birthday_1, birthday_2)
-    print('Double Day is:', result_double.strftime('%Y-%m-%d'))
+    print('Double Day is:', result_double.strftime(DATE_FORMAT))
 
     result_ratio = n_times_older_day(birthday_1, birthday_2, ratio)
-    print('The day when one person is n times older than the other is', result_ratio.strftime('%Y-%m-%d'))
+    print('The day when one person is n times older than the other is', result_ratio.strftime(DATE_FORMAT))
 
 if __name__ == '__main__':
     main()
