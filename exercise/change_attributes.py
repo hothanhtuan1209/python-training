@@ -104,8 +104,11 @@ class Time(object):
         """
 
         increment_second = seconds + self.total_seconds
-
-        return Time(increment_second)
+        
+        if self.is_valid():
+            return int_to_time(increment_second)
+        else:
+            raise ValueError("Invalid time.")
 
     def is_valid(self):
         """
@@ -134,7 +137,7 @@ def int_to_time(seconds):
     return time
 
 def main():
-    start = Time(-9, 45, 00)
+    start = Time(11, 45, 00)
     print("Start time")
     start.print_time()
 
@@ -160,7 +163,6 @@ def main():
     time_3 = Time(7, 37)
     total = sum([time_1, time_2, time_3])
     print(total)
-
 
 if __name__ == "__main__":
     main()
