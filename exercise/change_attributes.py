@@ -57,9 +57,14 @@ class Time(object):
 
     def is_after(self, other):
         """
-        Returns True if t1 is after t2; false otherwise
-        """
+        Checks if the time represented by this Time object is after the time represented by another Time object.
 
+        other: Time object or number of seconds
+
+        Returns:
+        bool: True if the time represented by this Time object is after the time represented by the 'other' Time object, False otherwise.
+        """
+    
         return self.total_seconds > other.total_seconds
 
     def __add__(self, other):
