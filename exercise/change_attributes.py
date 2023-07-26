@@ -35,6 +35,7 @@ class Time(object):
         
         minutes, second = divmod(self.total_seconds, 60)
         hour, minute = divmod(minutes, 60)
+        
         return "%.2d:%.2d:%.2d" % (hour, minute, second)
 
     def print_time(self):
@@ -51,6 +52,7 @@ class Time(object):
 
         minutes = self.hour * 60 + self.minute
         seconds = minutes * 60 + self.second
+        
         return seconds
 
     def is_after(self, other):
@@ -86,6 +88,7 @@ class Time(object):
 
         assert self.is_valid() and other.is_valid()
         seconds = self.total_seconds + other.total_seconds
+        
         return seconds
 
     def increment(self, seconds):
@@ -102,6 +105,7 @@ class Time(object):
 
         if self.total_seconds < 0:
             return False
+        
         return True
 
 
@@ -115,6 +119,7 @@ def int_to_time(seconds):
     minutes, second = divmod(seconds, 60)
     hour, minute = divmod(minutes, 60)
     time = Time(hour, minute, second)
+    
     return time
 
 def main():
