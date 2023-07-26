@@ -12,11 +12,14 @@ class Time(object):
     Represents the time of day.
     """
 
-    def __init__(self, hour=0, minute=0, second=0):
+    def __init__(self, hour = 0, minute = 0, second = 0):
         """
         Initializes a Time object.
 
-        Attributes: hour, minute, second
+        Parameter:
+            hour (int): The hour of the time (default is 0).
+            minute (int): The minute of the time (default is 0).
+            second (int): The second of the time (default is 0).
         """
         
         minutes = hour * 60 + minute
