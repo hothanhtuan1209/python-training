@@ -23,7 +23,7 @@ class Time(object):
         """
         
         minutes = hour * 60 + minute
-        self.int_time = (minutes * 60) + second
+        self.total_seconds = (minutes * 60) + second
 
     def __str__(self):
         """
@@ -33,7 +33,7 @@ class Time(object):
             str: A formatted string representing the time.
         """
         
-        minutes, second = divmod(self.int_time, 60)
+        minutes, second = divmod(self.total_seconds, 60)
         hour, minute = divmod(minutes, 60)
         return "%.2d:%.2d:%.2d" % (hour, minute, second)
 
@@ -42,7 +42,7 @@ class Time(object):
         Prints the time in the form of an integer representing the total seconds.
         """
         
-        print(str(self.int_time))
+        print(str(self.total_seconds))
 
     def time_to_int(self):
         """
@@ -58,7 +58,7 @@ class Time(object):
         Returns True if t1 is after t2; false otherwise
         """
 
-        return self.int_time > other.int_time
+        return self.total_seconds > other.total_seconds
 
     def __add__(self, other):
         """
@@ -85,7 +85,7 @@ class Time(object):
         """
 
         assert self.is_valid() and other.is_valid()
-        seconds = self.int_time + other.int_time
+        seconds = self.total_seconds + other.total_seconds
         return seconds
 
     def increment(self, seconds):
@@ -93,14 +93,14 @@ class Time(object):
         Returns a new Time that is the sum of this time and seconds.
         """
 
-        return Time(seconds + self.int_time)
+        return Time(seconds + self.total_seconds)
 
     def is_valid(self):
         """
         Checks whether a Time object satisfies the invariants.
         """
 
-        if self.int_time < 0:
+        if self.total_seconds < 0:
             return False
         return True
 
