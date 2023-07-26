@@ -154,10 +154,10 @@ def main():
     print(1337 + start)
 
     print("Example of polymorphism")
-    t1 = Time(7, 43)
-    t2 = Time(7, 41)
-    t3 = Time(7, 37)
-    total = sum([t1, t2, t3])
+    time_1 = Time(7, 43)
+    time_2 = Time(7, 41)
+    time_3 = Time(7, 37)
+    total = sum([time_1, time_2, time_3])
     print(total)
 
 
