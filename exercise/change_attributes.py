@@ -25,7 +25,7 @@ class Time(object):
         self.minute = minute
         self.second = second
         minutes = hour * 60 + minute
-        self.total_seconds = (minutes * 60) + second
+        self.total_seconds = minutes * 60 + second
 
     def __str__(self):
         """
