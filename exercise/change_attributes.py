@@ -96,7 +96,9 @@ class Time(object):
         Returns a new Time that is the sum of this time and seconds.
         """
 
-        return Time(seconds + self.total_seconds)
+        increment_second = seconds + self.total_seconds
+
+        return Time(increment_second)
 
     def is_valid(self):
         """
