@@ -20,6 +20,7 @@ class Time(object):
             minute (int): The minute of the time (default is 0).
             second (int): The second of the time (default is 0).
         """
+        
         self.hour = hour
         self.minute = minute
         self.second = second
