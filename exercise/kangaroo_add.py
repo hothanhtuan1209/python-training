@@ -14,8 +14,9 @@ and the contents of the pouch.
 class Kangaroo:
     """
     Represents a Kangaroo with a pouch to hold items.
+    
     Attributes:
-    pouch_contents (list): A list to hold items in the kangaroo's pouch.
+        pouch_contents (list): A list to hold items in the kangaroo's pouch.
     """
     
     def __init__(self):
@@ -28,8 +29,9 @@ class Kangaroo:
     def put_in_pouch(self, item):
         """
         Adds the given item to the pouch_contents list.
-        Args:
-        item: Any object to be added to the kangaroo's pouch.
+        
+        Parameter:
+            item: Any object to be added to the kangaroo's pouch.
         """
         
         self.pouch_contents.append(item)
@@ -37,8 +39,9 @@ class Kangaroo:
     def __str__(self):
         """
         Returns a string representation of the Kangaroo object and its pouch contents.
+        
         Returns:
-        str: A formatted string showing the pouch_contents list.
+            str: A formatted string showing the pouch_contents list.
         """
         
         return f"Kangaroo object with pouch contents: {self.pouch_contents}"
