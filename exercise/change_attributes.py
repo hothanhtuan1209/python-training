@@ -108,11 +108,11 @@ def int_to_time(seconds):
 
     seconds: int seconds since midnight.
     """
+    
     minutes, second = divmod(seconds, 60)
     hour, minute = divmod(minutes, 60)
     time = Time(hour, minute, second)
     return time
-
 
 def main():
     start = Time(9, 45, 00)
