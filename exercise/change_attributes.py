@@ -2,7 +2,6 @@
 This module contains a code for exercises 17-1 related to:
 Think Python, 2nd Edition
 Chapter 17: Classes and Methods
-
 Modify the methods (and the function int_to_time) to work with the
 new implementation.
 """
@@ -21,7 +20,9 @@ class Time(object):
             minute (int): The minute of the time (default is 0).
             second (int): The second of the time (default is 0).
         """
-        
+        self.hour = hour
+        self.minute = minute
+        self.second = second
         minutes = hour * 60 + minute
         self.total_seconds = (minutes * 60) + second
 
@@ -62,7 +63,7 @@ class Time(object):
         other: Time object or number of seconds
 
         Returns:
-        bool: True if the time represented by this Time object is after the time represented by the 'other' Time object, False otherwise.
+            bool: True if the time represented by this Time object is after the time represented by the 'other' Time object, False otherwise.
         """
     
         return self.total_seconds > other.total_seconds
@@ -110,7 +111,9 @@ class Time(object):
         Checks whether a Time object satisfies the invariants.
         """
 
-        if self.total_seconds < 0:
+        if self.hour < 0 or self.minute < 0 or self.second < 0:
+            return False
+        if self.minute >= 60 or self.second >= 60:
             return False
         
         return True
@@ -130,7 +133,7 @@ def int_to_time(seconds):
     return time
 
 def main():
-    start = Time(9, 45, 00)
+    start = Time(-9, 45, 00)
     print("Start time")
     start.print_time()
 
