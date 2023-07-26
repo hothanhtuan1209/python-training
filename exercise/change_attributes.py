@@ -47,16 +47,6 @@ class Time(object):
         
         print(str(self.total_seconds))
 
-    def time_to_int(self):
-        """
-        Computes the number of seconds since midnight
-        """
-
-        minutes = self.hour * 60 + self.minute
-        seconds = minutes * 60 + self.second
-        
-        return seconds
-
     def is_after(self, other):
         """
         Checks if the time represented by this Time object is after the time represented by another Time object.
