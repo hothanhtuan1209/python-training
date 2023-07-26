@@ -105,13 +105,10 @@ class Time(object):
         Checks whether a Time object satisfies the invariants.
         """
 
-        if self.hour < 0 or self.minute < 0 or self.second < 0:
-            return False
-        if self.minute >= 60 or self.second >= 60:
-            return False
+        if 0 <= self.hour <=23 and 0 <= self.minute <= 59 and 0 <= self.second <= 59:
+            return True
         
-        return True
-
+        return False
 
 def int_to_time(seconds):
     """
