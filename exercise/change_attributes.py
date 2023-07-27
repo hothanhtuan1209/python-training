@@ -84,9 +84,9 @@ class Time(object):
         """
 
         assert self.is_valid() and other.is_valid()
-        seconds = self.total_seconds + other.total_seconds
+        total_seconds = self.total_seconds + other.total_seconds
         
-        return seconds
+        return int_to_time(total_seconds)
 
     def increment(self, seconds):
         """
@@ -147,9 +147,9 @@ def main():
     print("Example of polymorphism")
     time_1 = Time(7, 43, 44)
     time_2 = Time(7, 41, 55)
-    time_3 = Time(7, 37, 12)
-    total = sum([time_1, time_2, time_3])
+    total = sum([time_1, time_2])
     print(total)
 
 if __name__ == "__main__":
     main()
+    
