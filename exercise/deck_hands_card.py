@@ -140,10 +140,6 @@ class Hand:
         return f"--------\n{hand_str}\n"
 
 def main():
-    """
-    Main function to demonstrate dealing hands of playing cards from a shuffled deck.
-    """
-    
     deck = Deck()
     num_hands = 5
     cards_per_hand = 13
