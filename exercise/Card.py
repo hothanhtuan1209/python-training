@@ -6,7 +6,6 @@ Chapter 18: Inheritance
 A complete version of the Card, Deck and Hand classes in this chapter.
 """
 
-
 import random
 
 class Card(object):
