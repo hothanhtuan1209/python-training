@@ -68,7 +68,7 @@ class PokerHand(Hand):
         
         return False
 
-    def has_twopair(self):
+    def has_two_pair(self):
         """
         Checks if the hand has two pairs.
 
@@ -102,34 +102,6 @@ class PokerHand(Hand):
                 return True
         
         return False
-
-    def has_flush(self):
-        """
-        Returns True if the hand has a flush.
-        
-        Works correctly for hands with 5 or more cards. @
-        """
-        
-        self.suit_hist()
-        
-        for val in self.suits.values():
-            if val >= 5:
-                return True
-        
-        return False
-    
-    def has_pair(self):
-        """
-        Returns True if the hand has a pair. @
-        """
-        
-        self.rank_hist()
-        
-        for val in self.ranks.values():
-            if val == 2:
-                return True
-        
-        return False
     
     def has_two_pairs(self):
         """
@@ -148,18 +120,6 @@ class PokerHand(Hand):
         
         return False
     
-    def has_three_of_a_kind(self):
-        """
-        Returns True if the hand has a three of a kind.
-        """
-        
-        self.rank_hist()
-        
-        for val in self.ranks.values():
-            if val == 3:
-                return True
-        
-        return False
     
     def has_straight(self):
         """
