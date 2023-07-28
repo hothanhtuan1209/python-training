@@ -99,7 +99,7 @@ class Deck(object):
         
         self.cards.remove(card)
 
-    def pop_card(self, i=-1):
+    def pop_card(self, last_card = -1):
         """
         Removes and returns a card from the deck.
 
@@ -110,7 +110,7 @@ class Deck(object):
             Card: The popped Card object.
         """
         
-        return self.cards.pop(i)
+        return self.cards.pop(last_card)
 
     def shuffle(self):
         """
