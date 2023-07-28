@@ -184,7 +184,6 @@ class PokerHand(Hand):
         return False
          
     def has_straight_flush(self):
-        
         """
         Returns True if the hand has a straight flush.
         """
