@@ -35,7 +35,7 @@ class PokerHand(Hand):
         """
         
         self.suit_hist()
-        
+
         for val in self.suits.values():
             if val >= 5:
                 return True
@@ -63,7 +63,7 @@ class PokerHand(Hand):
         
         self.rank_hist()
         
-        for rank, count in self.ranks.items():
+        for _, count in self.ranks.items():
             if count > 1:
                 return True
         
