@@ -82,27 +82,18 @@ class Deck:
         """
         
         hands = []
-        shuffled_decks = []
-
-        while len(shuffled_decks) < num_hands:
-            shuffled_deck = self.cards.copy()
-            random.shuffle(shuffled_deck)
-            shuffled_decks.append(shuffled_deck)
-
+                    
         for i in range(num_hands):
             hand_cards = []
-            
-            for i in range(cards_per_hand):
-                if shuffled_decks:
-                    hand_cards.append(shuffled_decks[0].pop())
-                    
-                    if not shuffled_decks[0]:
-                        shuffled_decks.pop(0)
+                        
+            for j in range(cards_per_hand):
+                if self.cards:
+                    hand_cards.append(self.cards.pop())
                 else:
                     break
-            
+                        
             hands.append(Hand(hand_cards))
-        
+                    
         return hands
 
 class Hand:
@@ -141,8 +132,8 @@ class Hand:
 
 def main():
     deck = Deck()
-    num_hands = 5
-    cards_per_hand = 13
+    num_hands = 10
+    cards_per_hand = 2
     hands = deck.deal_hands(num_hands, cards_per_hand)
 
     for i, hand in enumerate(hands, 1):
