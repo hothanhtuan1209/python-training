@@ -35,6 +35,7 @@ class PokerHand(Hand):
         """
         
         self.suit_hist()
+        
         for val in self.suits.values():
             if val >= 5:
                 return True
