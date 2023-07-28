@@ -260,7 +260,7 @@ def main():
         print (hand)
         print ("Hand has flush"), hand.has_flush()
         print ("Hand has pair"), hand.has_pair()
-        print ("Has has at least two pair"), hand.has_twopair()
+        print ("Has has at least two pair"), hand.has_two_pair()
         print ("Hand has 3 of a kind"), hand.has_three_of_a_kind()
 
 if __name__ == '__main__':
