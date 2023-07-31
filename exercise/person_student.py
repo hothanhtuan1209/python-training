@@ -3,10 +3,7 @@ Create class Person and class Student, class Student inherrits from person class
 and adds score attribute, compare scores of 2 students
 """
 
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+from person import Person
 
 class Student(Person):
     def __init__(self, name, age, score):
