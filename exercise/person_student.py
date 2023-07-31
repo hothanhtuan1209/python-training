@@ -14,10 +14,15 @@ class Student(Person):
 
         self.score = score
 
-    def compare_score(self, other):
+    def __gt__(self, other):
         return self.score > other.score
     
 student_1 = Student('Nam', 6, 7)
 student_2 = Student('Hai', 10, 5)
 
-print(student_1.compare_score(student_2))
+if student_1 > student_2:
+    print(student_1.name)
+else:
+    print(student_2.name)
+
+print(Student.__gt__(student_1, student_2))
