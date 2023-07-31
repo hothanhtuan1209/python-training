@@ -7,13 +7,15 @@ class Person:
         self.name = name
         self.age = age
 
-def age():
-    if person_1.age > person_2.age:
-        return True
-    else:
-        return False
+    def __gt__(self, other):
+        return self.age > other.age
 
 person_1 = Person('Hieu', 20)
 person_2 = Person('Hien', 30)
 
-print(age())
+if person_1 > person_2:
+    print('Person 1')
+else:
+    print('Person 2')
+
+print(Person.__gt__(person_1, person_2))
