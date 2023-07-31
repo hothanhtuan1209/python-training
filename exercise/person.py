@@ -47,5 +47,3 @@ if person_1 > person_2:
     print('Person 1')
 else:
     print('Person 2')
-
-print(Person.__gt__(person_1, person_2))
