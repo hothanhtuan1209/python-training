@@ -40,7 +40,6 @@ class Person:
         
         return self.age > other.age
 
-
 person_1 = Person('Hieu', 20)
 person_2 = Person('Hien', 30)
 
