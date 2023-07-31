@@ -75,4 +75,3 @@ if student_1 > student_2:
 else:
     print(student_2.name)
 
-print(Student.__gt__(student_1, student_2))
