@@ -14,13 +14,13 @@ class Student(Person):
 
         self.score = score
 
-def compare_score():
-    if student_1.score > student_2.score:
-        return True    
-    else:
-        return False
+    def compare_score():
+        if student_1.score > student_2.score:
+            return True    
+        else:
+            return False
     
 student_1 = Student('Nam', 6, 7)
 student_2 = Student('Hai', 10, 5)
 
-print(compare_score())
+print(Student.compare_score())
