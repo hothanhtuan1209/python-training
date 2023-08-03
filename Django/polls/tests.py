@@ -36,7 +36,6 @@ class QuestionModelTests(TestCase):
         recent_question = Question(pub_date=time)
         self.assertIs(recent_question.was_published_recently(), True)
 
-
 def create_question(question_text, days):
     """
     Create a question with the given `question_text` and published the
@@ -115,6 +114,7 @@ class QuestionDetailViewTests(TestCase):
         The detail view of a question with a pub_date in the future
         returns a 404 not found.
         """
+        
         future_question = create_question(question_text="Future question.", days=5)
         url = reverse("polls:detail", args=(future_question.id,))
         response = self.client.get(url)
@@ -125,6 +125,7 @@ class QuestionDetailViewTests(TestCase):
         The detail view of a question with a pub_date in the past
         displays the question's text.
         """
+        
         past_question = create_question(question_text="Past Question.", days=-5)
         url = reverse("polls:detail", args=(past_question.id,))
         response = self.client.get(url)
