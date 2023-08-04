@@ -1,11 +1,12 @@
 from django.apps import AppConfig
 
+
 class PollsConfig(AppConfig):
     """
     Configuration class for the 'polls' app.
 
     Attributes:
-        default_auto_field (str): The name of the default auto-generated primary key field.
+        default_auto_field (str): Auto-generated primary key field.
         name (str): The name of the app ('polls' in this case).
     """
 

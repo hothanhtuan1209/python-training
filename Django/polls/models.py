@@ -2,6 +2,7 @@ from django.db import models
 import datetime
 from django.utils import timezone
 
+
 class Question(models.Model):
     """
     Represents a question in the poll app.
@@ -18,17 +19,21 @@ class Question(models.Model):
         """
         Returns a string representation of the Question object.
         """
-        
-        return self.question_text
+
+        if isinstance(self.question_text, str):
+            return self.question_text
+        else:
+            return str(self.question_text)
 
     def was_published_recently(self):
         """
         Returns True if the Question was published within the last 1 day;
         otherwise, returns False.
         """
-        
+
         now = timezone.now()
         return now - datetime.timedelta(days=1) <= self.pub_date <= now
+
 
 class Choice(models.Model):
     """
@@ -48,5 +53,8 @@ class Choice(models.Model):
         """
         Returns a string representation of the Choice object.
         """
-        
-        return self.choice_text
+
+        if isinstance(self.choice_text, str):
+            return self.choice_text
+        else:
+            return str(self.choice_text)
