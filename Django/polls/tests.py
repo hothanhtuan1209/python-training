@@ -60,7 +60,7 @@ def create_question(question_text, days):
 
 
 class QuestionIndexViewTests(TestCase):
-        """
+    """
     Test case for the Question Index View.
 
     This test case contains test methods to test the behavior of the Question Index View.
@@ -68,7 +68,7 @@ class QuestionIndexViewTests(TestCase):
     Attributes:
         TestCase (class): The base test case class provided by Django.
     """
-        
+
     def test_no_questions(self):
         """
         If no questions exist, an appropriate message is displayed.
@@ -122,12 +122,12 @@ class QuestionIndexViewTests(TestCase):
         The questions index page may display multiple questions.
         """
 
-        question1 = create_question(question_text="Past question 1.", days=-30)
-        question2 = create_question(question_text="Past question 2.", days=-5)
+        question_1 = create_question(question_text="Past question 1.", days=-30)
+        question_2 = create_question(question_text="Past question 2.", days=-5)
         response = self.client.get(reverse("polls:index"))
         self.assertQuerySetEqual(
             response.context["latest_question_list"],
-            [question2, question1],
+            [question_2, question_1],
         )
 
 
