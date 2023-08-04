@@ -60,7 +60,7 @@ class ResultsView(generic.DetailView):
     template_name = "polls/results.html"
 
 
-def vote(question_id):
+def vote(request, question_id):
     """
     View for voting on a specific question.
 
@@ -81,6 +81,4 @@ def get_queryset():
     published in the future).
     """
 
-    return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")[
-        :5
-    ]
+    return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")[:5]
