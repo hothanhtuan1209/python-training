@@ -16,7 +16,13 @@ This is a simple project to learn Django, the project includes 2 models:
  >cd training_python
  >cd Django
 
-3. Running server
+3. Checkout to branch feature/learn-Django
+> git checkout feature/learn-Django
+
+4. Create database
+> py manage.py migrate
+
+5. Running server
  >py manage.py server
  - Go to Web browser and search localhost:8000
  
