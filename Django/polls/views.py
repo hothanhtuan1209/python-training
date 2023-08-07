@@ -71,7 +71,7 @@ def vote(request, question_id):
     """
     View for voting on a specific question.
 
-    Args:
+    Parameters:
         request (HttpRequest): The HTTP request object.
         question_id (int): The ID of the question to vote on.
 
