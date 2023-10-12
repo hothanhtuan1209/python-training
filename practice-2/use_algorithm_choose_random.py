@@ -8,10 +8,12 @@ Write a program that uses this algorithm to choose a random word from the book.
 Download ebook.txt file
 """
 
+
 import string
 from random import randint
 from bisect import bisect
 import collections
+
 
 def read_file(filename):
     """
@@ -21,9 +23,9 @@ def read_file(filename):
 
     return: counter object
     """
-    
+
     hist = collections.Counter()
-    fin = open(filename, 'r', encoding = 'utf8')
+    fin = open(filename, 'r', encoding='utf8')
 
     for line in fin:
         line = line.replace('-', ' ')
@@ -35,6 +37,7 @@ def read_file(filename):
 
     return hist
 
+
 def cumsum(list_word):
     """
     Calculates the cumulative sum of the elements in the list.
@@ -43,13 +46,14 @@ def cumsum(list_word):
 
     return: list
     """
-    
+
     total = 0
     for i in range(len(list_word)):
         total += list_word[i]
         list_word[i] = total
 
     return list_word
+
 
 def choose_random(hist):
     """
@@ -59,13 +63,14 @@ def choose_random(hist):
 
     return: string
     """
-    
+
     list_word = list(hist.keys())
     calculate_sum = cumsum(list(int(i) for i in hist.values()))
     total = calculate_sum[-1]
     random_val = randint(0, total - 1)
     index = bisect(calculate_sum, random_val)
     return list_word[index]
+
 
 hist = read_file('ebook.txt')
 print(choose_random(hist))
