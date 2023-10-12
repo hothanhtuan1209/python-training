@@ -1,10 +1,12 @@
 """
 1. Write a function named avoids that takes a word and a string of forbidden
-letters, and that returns True if the word doesn't use any of the forbidden letters.
+letters, and that returns True if the word doesn't use any of the forbidden
+letters.
 2. Modify your program to prompt the user to enter a string of forbidden
 letters and
 then print the number of words that don't contain any of them. Can you find a
-combination of five forbidden letters that excludes the smallest number of words?
+combination of five forbidden letters that excludes the smallest number of
+words?
 
 def avoids():
     words = 'hello@'
@@ -19,7 +21,11 @@ print(results)
 
 
 def avoids():
-    # Count total words not have forbidden letters 
+    """
+    Count the total number of words that do not contain any of the forbidden
+    letters.
+    """
+
     words = input('Enter words separated by space:').split()
     letters = input('Enter a string of forbidden letters:')
     total = 0
