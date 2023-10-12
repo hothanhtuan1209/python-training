@@ -2,7 +2,8 @@
 1. Write a function called has_no_e that returns True if the given word doesn't
 have the letter “e” in it.
 2. Modify your program from the previous section to print only the words that
-have no “e” and compute the percentage of the words in the list that have no “e”.
+have no “e” and compute the percentage of the words in the list that have 
+no “e”.
 """
 
 
@@ -11,7 +12,7 @@ def has_no_e():
     word = input('Enter a word or string:')
 
     for letter in word:
-        if letter == 'e' or letter == 'E':
+        if letter in ('e', 'E'):
             return False
 
     return True
