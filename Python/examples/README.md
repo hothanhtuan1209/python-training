@@ -12,9 +12,12 @@ This is the folder containing examples from chapters 3 to 8 of Think Python book
 > cd python-training
 > cd python
 > cd examples
+> cd chapter_name 
 
 3. Checkout to branch develop
 > git checkout develop
+
+4. From here, you can access each exercise by opening the respective files in your code editor.
 
 ## Contribute
  * If you want to contribute to this project, please create a pull request and clearly describe the changes you propose.
