@@ -12,9 +12,12 @@ This is the folder containing exercises from chapters 3 to 18 of Think Python bo
 > cd python-training
 > cd python
 > cd exercises
+> cd chapter_name 
 
 3. Checkout to branch develop
 > git checkout develop
+
+4. From here, you can access each exercise by opening the respective files in your code editor.
 
 ## Contribute
  * If you want to contribute to this project, please create a pull request and clearly describe the changes you propose.
