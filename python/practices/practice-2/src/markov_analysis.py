@@ -43,7 +43,7 @@ def markov_analysis(text, prefix_length):
     words = text.split()
 
     for i in range(len(words) - prefix_length):
-        prefix = tuple(words[i : i + prefix_length])
+        prefix = tuple(words[i: i + prefix_length])
         suffix = words[i + prefix_length]
 
         if prefix in prefixes:
