@@ -17,7 +17,8 @@ This is the folder containing exercises from chapters 3 to 18 of Think Python bo
 3. Checkout to branch develop
 > git checkout develop
 
-4. From here, you can access each exercise by opening the respective files in your code editor.
+4. From here, you can run each exercise by opening the corresponding files in your code editor and using the command.
+> python file_name
 
 ## Contribute
  * If you want to contribute to this project, please create a pull request and clearly describe the changes you propose.
