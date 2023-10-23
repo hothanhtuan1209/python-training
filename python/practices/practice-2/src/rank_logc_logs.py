@@ -3,10 +3,9 @@ This module contains a code for exercises 13-9 related to:
 Think Python, 2nd Edition
 Chapter 13: Case Study: Data Structure Selection
 
-Write a program that reads a text from a file, counts word frequencies, and prints one
-line for each word, in descending order of frequency, with log f and log r.
-
-Dowload markov.txt file
+Write a program that reads a text from a file, counts word frequencies, and
+prints one line for each word, in descending order of frequency, with log f
+and log r.
 """
 
 
