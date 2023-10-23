@@ -1,25 +1,34 @@
 """
-Write a function called is_abecedarian that returns True if the letters in a word
-appear in alphabetical order (double letters are okay). How many abecedarian words
-are there?
+Write a function called is_abecedarian that returns True if the letters in a
+word
+appear in alphabetical order (double letters are okay). How many abecedarian
+words are there?
 """
+
+
 def is_abecedarian(word):
-    # Check alphabetical order
-    index = 0
+    """
+    Check if a word is in alphabetical order.
 
-    while index < len(word) -1:
-        if word[index] > word[index+1]:
+    Parameters:
+        word (str): The word to check for alphabetical order.
+
+    Returns:
+        bool: True if the word is in alphabetical order, False otherwise.
+    """
+
+    for i in range(len(word) - 1):
+        if word[i] > word[i + 1]:
             return False
-        else:
-            index +=1
-    return True 
 
-list_word = input('Enter a list word:').split()
-count = 0
+    return True
 
-for word in list_word:
+
+list_word = input("Enter a list word:").split()
+
+for count, word in enumerate(list_word):
     # Check and count the number of letters that satisfy the condition
     if is_abecedarian(word):
         count += 1
 
-print('Abecedarian words:',count)   
+print("Abecedarian words:", count)
