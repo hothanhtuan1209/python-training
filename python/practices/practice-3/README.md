@@ -2,7 +2,13 @@
 This is the folder containing exercises for practice three of plan training Think Python book
 
 ## Required
-* To do the above exercises, you need to install python version 3.11 or higher and install the environments to use python.
+* To do the above exercises, you need to install python version 3.11 or higher and install pyenv to manager python version
+- Install pyenv for Ubuntu or MacOS
+> curl https://pyenv.run | bash
+or 
+> wget -q https://pyenv.run -O - | bash
+
+- Install pyenv for Windows https://k0nze.dev/posts/install-pyenv-venv-vscode/
 
 ## How to use
 1. First, clone this repository on your computer
@@ -18,8 +24,8 @@ This is the folder containing exercises for practice three of plan training Thin
 > git checkout develop
 
 4. You should create virtual environment and install pyenv
-- Create virtual environment
-> python -m venv <virtual_name>
+- Create virtual environment named 'venv'
+> python -m venv venv
 
 - Run virtual environment for Windows
 > .\venv\Scripts\activate
@@ -30,15 +36,8 @@ This is the folder containing exercises for practice three of plan training Thin
 - Deactivate a virtual environment
 > deactivate
 
-- Create file requirements.txt
-> python -m pip freeze > requirements.txt 
-
-- Install pyenv for Ubuntu or MacOS
-> curl https://pyenv.run | bash
-or 
-> wget -q https://pyenv.run -O - | bash
-
-- Install pyenv for Windows https://k0nze.dev/posts/install-pyenv-venv-vscode/
+- To install all packages and extensions in project
+> pip install -r requirements.txt 
 
 5. From here, you can run each exercise by opening the corresponding files in your code editor and using the command.
 > python file_name
