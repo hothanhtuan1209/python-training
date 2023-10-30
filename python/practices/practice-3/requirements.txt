@@ -2,4 +2,3 @@ requests==2.6.0
 pip==23.3.1
 black==22.10.0
 Markdown==3.4.4
-pipx==1.2.0
