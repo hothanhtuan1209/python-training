@@ -1,8 +1,7 @@
 """
 Write a function called is_abecedarian that returns True if the letters in a
-word
-appear in alphabetical order (double letters are okay). How many abecedarian
-words are there?
+word appear in alphabetical order (double letters are okay). How many
+abecedarian words are there?
 """
 
 
