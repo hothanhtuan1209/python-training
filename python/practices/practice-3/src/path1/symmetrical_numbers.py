@@ -28,7 +28,11 @@ def check_odometer():
         digits = list(str(number))
 
         # Call function is_palindrome to check condition
-        if is_palindrome(digits[2:]) or is_palindrome(digits[1:]) or is_palindrome(digits):
+        if (
+            is_palindrome(digits[2:])
+            or is_palindrome(digits[1:])
+            or is_palindrome(digits)
+        ):
             print(number)
 
 
