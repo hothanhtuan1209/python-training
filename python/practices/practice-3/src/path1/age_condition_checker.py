@@ -12,7 +12,7 @@ def check_condition_number(number):
     This function prints a number if it adds 36 to its inverse
 
     Parameters:
-        - number (int): a number to check condition.
+        - number (string): a string of number to check condition.
     """
 
     list_of_digits = list(number)
