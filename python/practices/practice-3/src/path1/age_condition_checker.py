@@ -30,15 +30,14 @@ def find_age_pairs():
 
     for age in range(0, 100):
         # Convert all 1 digit ages to 2 character strings
-        string_of_digits_age = str(age).zfill(2)
-        check_condition_number(string_of_digits_age)
+        string_of_digits = str(age).zfill(2)
+        check_condition_number(string_of_digits)
 
 
 def main():
     """
-    It calls the 'reverse_age' function to check each number from 0 to 99 for
-    satisfying the condition specified in the
-    'check_condition_number' function.
+    Find and print the numbers in the first 100 natural numbers such that
+    adding to 36 forms its inverse.
     """
 
     print(os.path.basename(__file__))
