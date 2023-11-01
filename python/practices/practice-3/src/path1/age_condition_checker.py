@@ -1,45 +1,45 @@
 """
-This exercise shows that the mother is 36 years older than the child,
-when the child is 37 years old, the mother is 73 years old, the mother's
-age is the opposite of the child's age, find the same cases as above
+This exercise's purpose is to find a number between 0 and 99,
+that number, after adding 36, will be equal to its inverse.
 """
 
 
-def check_age(number):
+import os
+
+
+def check_condition_number(number):
     """
-    Check the age condition for two people.
-    This function takes an integer `number` as an age and checks if there
-    exists another integer (its reverse) such that when added to `number`,
-    the result is `36`.
+    This function prints a number if it adds 36 to its inverse
+
     Parameters:
-        - number (int): The age of the first person.
+        - number (int): a number to check condition.
     """
 
-    age_as_list = list(str(number))
-    age_reverse = int(''.join(age_as_list[::-1]))
+    list_of_digits = list(number)
+    number_reverse = int(''.join(list_of_digits[::-1]))
 
-    if int(number) + 36 == age_reverse:
+    if int(number) + 36 == number_reverse:
         print(number)
 
 
 def reverse_age():
     """
-    Check the age of pairs of people under certain conditions.
-    This function iterates through numbers from 0 to 99 and checks if there
-    exist pairs of people whose ages satisfy the condition in the `check_age`
-    function.
+    Check each age from 0-99 to satisfy the condition of
+    function check_condition_number
     """
 
     for age in range(0, 100):
         # Convert all 1 digit ages to 2 character strings
-        age_str = str(age).zfill(2)
-        check_age(age_str)
+        string_of_digits_age = str(age).zfill(2)
+        check_condition_number(string_of_digits_age)
 
 
 def main():
     """
-    To run code through main.py file
+    It calls the 'reverse_age' function to check each number from 0 to 99 for
+    satisfying the condition specified in the
+    'check_condition_number' function.
     """
 
-    print('age_condition_checker.py')
+    print(os.path.basename(__file__))
     reverse_age()
