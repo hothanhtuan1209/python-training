@@ -22,7 +22,7 @@ def check_condition_number(number):
         print(number)
 
 
-def reverse_age():
+def find_age_pairs():
     """
     Check each age from 0-99 to satisfy the condition of
     function check_condition_number
@@ -42,4 +42,4 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    reverse_age()
+    find_age_pairs()
