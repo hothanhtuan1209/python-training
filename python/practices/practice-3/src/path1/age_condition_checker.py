@@ -29,9 +29,10 @@ def find_age_pairs():
     """
 
     for age in range(0, 100):
-        # Convert all 1 digit ages to 2 character strings
-        string_of_digits = str(age).zfill(2)
-        check_condition_number(string_of_digits)
+        # Convert single-digit age to a two-character string
+        string_of_age = str(age)
+        padded_number = string_of_age.zfill(2)
+        check_condition_number(padded_number)
 
 
 def main():
