@@ -1,10 +1,6 @@
 """
 This is the main entry point for the program.
 It calls the main function from modules.
-
-Modules:
-    - age_condition_checker: Module for checking age conditions and finding
-    pairs of ages satisfying the condition.
 """
 
 
