@@ -15,10 +15,10 @@ def check_age(number):
         - number (int): The age of the first person.
     """
 
-    age_reverse = list(str(number))
-    reversed_number = int(''.join(age_reverse[::-1]))
+    age_as_list = list(str(number))
+    age_reverse = int(''.join(age_as_list[::-1]))
 
-    if int(number) + 36 == reversed_number:
+    if int(number) + 36 == age_reverse:
         print(number)
 
 
@@ -30,10 +30,10 @@ def reverse_age():
     function.
     """
 
-    for number in range(0, 100):
-        # Convert all 1 digit numbers to 2 character strings
-        add_number_0 = str(number).zfill(2)
-        check_age(add_number_0)
+    for age in range(0, 100):
+        # Convert all 1 digit ages to 2 character strings
+        age_str = str(age).zfill(2)
+        check_age(age_str)
 
 
 def main():
