@@ -7,7 +7,7 @@ alphabetical order
 import os
 
 
-def check_abecedarian(word):
+def check_alphabetical_order(word):
     """
     Check if a word is in alphabetical order.
 
@@ -35,7 +35,7 @@ def main():
     count = 0
 
     for word in list_word:
-        if check_abecedarian(word):
+        if check_alphabetical_order(word):
             count += 1
 
     print(os.path.basename(__file__))
