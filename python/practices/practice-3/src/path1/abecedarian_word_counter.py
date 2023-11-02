@@ -27,8 +27,8 @@ def check_abecedarian(word):
 
 def main():
     """
-    This function calls function check_abecedarian to check a list of words
-    and print words that satisfy the condition
+    Prints the words in the list with the letters in the words arranged
+    in alphabetical order
     """
 
     list_word = input('Enter a list word:').split()
