@@ -5,14 +5,12 @@ It calls the main function from modules.
 
 
 from path1 import (
-    abecedarian_word_counter,
     age_condition_checker,
     forbidden_letter_counter,
 )
 
 
 modules = [
-    abecedarian_word_counter,
     age_condition_checker,
     forbidden_letter_counter,
 ]
