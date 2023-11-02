@@ -31,6 +31,7 @@ def main():
     in alphabetical order
     """
 
+    print(os.path.basename(__file__))
     list_word = input('Enter a list word:').split()
     count = 0
 
@@ -38,5 +39,4 @@ def main():
         if check_alphabetical_order(word):
             count += 1
 
-    print(os.path.basename(__file__))
     print('Abecedarian words:', count)
