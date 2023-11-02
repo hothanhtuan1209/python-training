@@ -7,14 +7,16 @@ It calls the main function from modules.
 from path1 import (
     age_condition_checker,
     abecedarian_word_counter,
-    forbidden_letter_counter
+    forbidden_letter_counter,
+    word_e_checker
 )
 
 
 modules = [
     age_condition_checker,
     abecedarian_word_counter,
-    forbidden_letter_counter
+    forbidden_letter_counter,
+    word_e_checker
 ]
 
 
