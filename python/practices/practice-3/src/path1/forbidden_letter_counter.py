@@ -7,14 +7,11 @@ forbidden letters.
 import os
 
 
-def avoids():
+def avoids(words, letters):
     """
     Count the total number of words that do not contain any of the forbidden
     letters.
     """
-
-    words = input('Enter words separated by space:').split()
-    letters = input('Enter a string of forbidden letters:')
 
     total = 0
 
@@ -31,6 +28,9 @@ def main():
     forbidden letters.
     """
 
-    total = avoids()
     print(os.path.basename(__file__))
+    words = input('Enter words separated by space:').split()
+    letters = input('Enter a string of forbidden letters:')
+    total = avoids(words, letters)
+
     print('Total words without forbidden letters:', total)
