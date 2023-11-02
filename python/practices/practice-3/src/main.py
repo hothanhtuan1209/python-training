@@ -4,7 +4,13 @@ It calls the main function from modules.
 """
 
 
-from path1 import age_condition_checker
+from path1 import (
+    age_condition_checker,
+    abecedarian_word_counter,
+)
+
+
+modules = [age_condition_checker, abecedarian_word_counter]
 
 
 def main():
@@ -12,7 +18,8 @@ def main():
     To run all files code in practice-3 through main.py file
     """
 
-    age_condition_checker.main()
+    for module in modules:
+        module.main()
 
 
 if __name__ == "__main__":
