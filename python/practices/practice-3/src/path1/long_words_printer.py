@@ -1,5 +1,6 @@
 """
-Check and print words with more than 20 letters from a word file
+Read the words file and check the words, print the word if the word has more
+than 20 letters excluding spaces
 """
 
 
