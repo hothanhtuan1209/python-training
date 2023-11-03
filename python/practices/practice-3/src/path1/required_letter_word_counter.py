@@ -1,5 +1,6 @@
 """
-Check and print all word that uses all the letters in a string
+Takes in a list of words and a string of characters, checks and counts the
+words using all the characters in the string and prints the result.
 """
 
 
@@ -31,9 +32,10 @@ def count_words(words, required_letters):
     """
     Count the number of words in a list that contain all the required letters.
 
-    Parameters:
+   Parameters:
+        - words (list): A list of words to be checked.
         - required_letters (str): A string containing the letters that must be
-        present in each word.
+          present in each word.
 
     Returns:
         - int: The count of words that contain all the required letters.
