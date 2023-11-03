@@ -7,15 +7,15 @@ that are symmetrical.
 import os
 
 
-def reverse_digits(digits):
+def is_symmetric(digits):
     """
-    Reverse a list of digits
+    Check if a list of digits is symmetric.
 
     Parameters:
-        digits (list): A list of digits representing the number.
+        digits (list): A list of digits to check for symmetry.
 
     Returns:
-        Returns a list that has been reversed compared to the original list
+        bool: True if the list of digits is symmetric
     """
 
     return digits == digits[::-1]
@@ -31,9 +31,9 @@ def check_palindrome():
         list_of_digits = list(str(number))
 
         if (
-            reverse_digits(list_of_digits[2:])
-            or reverse_digits(list_of_digits[1:])
-            or reverse_digits(list_of_digits)
+            is_symmetric(list_of_digits[2:])
+            or is_symmetric(list_of_digits[1:])
+            or is_symmetric(list_of_digits)
         ):
             print(number)
 
