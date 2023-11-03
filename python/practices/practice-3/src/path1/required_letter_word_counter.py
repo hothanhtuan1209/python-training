@@ -27,7 +27,7 @@ def uses_all(word, required_letters):
     return True
 
 
-def count_words_vowel(required_letters):
+def count_words(words, required_letters):
     """
     Count the number of words in a list that contain all the required letters.
 
@@ -39,7 +39,6 @@ def count_words_vowel(required_letters):
         - int: The count of words that contain all the required letters.
     """
 
-    words = input("Enter a list of words: ").split()
     count = 0
 
     for word in words:
@@ -55,4 +54,6 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    print(count_words_vowel("aeiou"))
+    words = input("Enter a list of words: ").split()
+    required_letters = input("Enter a string required letters:")
+    print(count_words(words, required_letters))
