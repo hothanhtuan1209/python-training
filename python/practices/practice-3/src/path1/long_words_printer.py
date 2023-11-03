@@ -5,9 +5,11 @@ than 20 letters excluding spaces
 
 
 import os
+from helpers.file_reader import read_file_content
+from constant.constant_file import word_file
 
 
-def print_words(file):
+def print_words(file_content):
     """
     Print words from a file that have a length greater than 20 characters.
 
@@ -15,9 +17,8 @@ def print_words(file):
         - file (str): The path to the input file containing a list of words.
     """
 
-    fin = open(file, encoding='utf-8')
-
-    for line in fin:
+    lines = file_content.split('\n')
+    for line in lines:
         word = line.strip()
 
         if len(word) > 20:
@@ -30,4 +31,7 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    print_words('words.txt')
+    file_content = read_file_content(word_file)
+
+    if file_content is not None:
+        print_words(file_content)
