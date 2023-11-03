@@ -6,7 +6,7 @@ Check and prints words containing three consecutive double letters
 import os
 
 
-def is_triple_double(word):
+def contains_three_double(word):
     """
     Check if a word contains three consecutive double letters.
 
@@ -18,16 +18,16 @@ def is_triple_double(word):
         False otherwise.
     """
 
-    i = 0
+    index = 0
 
-    while i < len(word) - 5:
+    while index < len(word) - 5:
         if (
-            word[i] == word[i + 1]
-            and word[i + 2] == word[i + 3]
-            and word[i + 4] == word[i + 5]
+            word[index] == word[index + 1]
+            and word[index + 2] == word[index + 3]
+            and word[index + 4] == word[index + 5]
         ):
             return True
-        i += 1
+        index += 1
 
     return False
 
@@ -42,7 +42,7 @@ def find_triple_double():
     for line in fin:
         word = line.strip()
 
-        if is_triple_double(word):
+        if contains_three_double(word):
             print(word)
 
 
