@@ -4,6 +4,8 @@ Check and prints words containing three consecutive double letters
 
 
 import os
+from helpers.file_reader import read_file_content
+from constant.constant_file import word_file
 
 
 def contains_three_double(word):
@@ -32,14 +34,14 @@ def contains_three_double(word):
     return False
 
 
-def find_triple_double():
+def find_triple_double(file_content):
     """
     Prints words with triple double letters from word list.
     """
 
-    fin = open('words.txt', encoding='utf-8')
+    lines = file_content.split('\n')
 
-    for line in fin:
+    for line in lines:
         word = line.strip()
 
         if contains_three_double(word):
@@ -52,4 +54,7 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    find_triple_double()
+    file_content = read_file_content(word_file)
+
+    if file_content is not None:
+        find_triple_double(file_content)
