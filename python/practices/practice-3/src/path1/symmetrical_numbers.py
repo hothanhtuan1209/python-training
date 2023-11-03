@@ -21,7 +21,7 @@ def is_symmetric(digits):
     return digits == digits[::-1]
 
 
-def check_palindrome():
+def find_palindromic_numbers():
     """
     Check and print 6-digit numbers to find palindromic numbers among the last
     4 digits, last 5 digits, and all 6 digits.
@@ -45,4 +45,4 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    check_palindrome()
+    find_palindromic_numbers()
