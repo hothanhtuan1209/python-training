@@ -7,7 +7,7 @@ letters in the string
 import os
 
 
-def used_only_letters(word, string_letter):
+def uses_only(word, allowed_letter):
     """
     Check if a word contains only the specified letters.
 
@@ -21,7 +21,7 @@ def used_only_letters(word, string_letter):
     """
 
     for letter in word:
-        if letter not in string_letter:
+        if letter not in allowed_letter:
             return False
 
     return True
@@ -34,7 +34,7 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    word = input('Enter a word:')
-    string_letters = input('Enter a string letters:')
+    word_input = input('Enter a word:')
+    letters_input = input('Enter a string letters:')
 
-    print(used_only_letters(word, string_letters))
+    print(uses_only(word_input, letters_input))
