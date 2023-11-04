@@ -12,7 +12,7 @@ def count_words(words):
     in a list of words.
     """
 
-    count_word = len(words)
+    total_number_of_words = len(words)
     words_has_no_e = 0
 
     for word in words:
@@ -20,7 +20,7 @@ def count_words(words):
             print(word)
             words_has_no_e += 1
 
-    percentage = (words_has_no_e/count_word) * 100
+    percentage = (words_has_no_e/total_number_of_words) * 100
     print('Percentage of words without the letter e', percentage)
 
 
