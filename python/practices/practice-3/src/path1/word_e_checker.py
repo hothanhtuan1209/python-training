@@ -25,7 +25,7 @@ def count_words(words):
     return words_has_no_e
 
 
-def percentage_words(words, words_has_no_e):
+def percentage_words(words):
     """
     Calculate the percentage of words that do not contain 'E' or 'e'
     in a list of words
@@ -36,8 +36,10 @@ def percentage_words(words, words_has_no_e):
     """
 
     total_number_of_words = len(words)
+    words_has_no_e = count_words(words)
     percentage = (words_has_no_e/total_number_of_words) * 100
-    print('Percentage of words without the letter e', percentage)
+
+    print('Percentage of words without the letter e:', percentage)
 
 
 def main():
@@ -47,5 +49,5 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    words = input("Enter the list of words: ").split()
-    count_words(words)
+    words = input("Enter the list of words:").split()
+    percentage_words(words)
