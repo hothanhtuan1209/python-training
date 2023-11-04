@@ -2,37 +2,26 @@
 Write a program to read a text from a file and perform Markov analysis. The
 result should be a dictionary that maps from prefixes to a collection of
 possible suffixes.
-
-Download markov.txt file
 """
 
 
 import random
+import os
+from helpers.file_reader import read_file_content
+from constant.constant_file import markov_file
 
 
-def read_text(filename):
+def perform_markov_analysis(text, prefix_length):
     """
-    Reads a text from a file and returns it as a string.
+    Perform Markov analysis on the given text.
 
-    filename: string, name of the test file
+    Parameters:
+        text (str): The input text to be analyzed.
+        prefix_length (int): The length of the prefix for Markov analysis.
 
-    returns: string
-    """
-
-    with open(filename, 'r', encoding='utf-8') as file:
-        text = file.read()
-
-    return text
-
-
-def markov_analysis(text, prefix_length):
-    """
-    Performs Markov analysis on the given text.
-
-    text: string
-    prefix_length: int
-
-    returns: dict
+    Returns:
+        dict: A dictionary mapping from prefixes to a collection of possible
+        suffixes.
     """
 
     prefixes = {}
@@ -50,15 +39,17 @@ def markov_analysis(text, prefix_length):
     return prefixes
 
 
-def random_markov(prefixes, prefix_length, num_words):
+def generate_random_text(prefixes, prefix_length, num_words):
     """
-    Randomly generate 1 text from the dictionary
+    Generate random text using the Markov analysis results.
 
-    prefixes: dict
-    prefix_length: int
-    num_words: int
+    Parameters:
+        prefixes (dict): Markov analysis results represented as a dictionary.
+        prefix_length (int): The length of the prefix for Markov analysis.
+        num_words (int): The number of words in the generated text.
 
-    returns: string
+    Returns:
+        str: A randomly generated text.
     """
 
     random_text = ''
@@ -77,12 +68,22 @@ def random_markov(prefixes, prefix_length, num_words):
     return random_text.strip()
 
 
-num_words = 50
-prefix_length = 5
-filename = 'markov.txt'
-text = read_text(filename)
-print(markov_analysis(text, prefix_length))
+def main():
+    """
+    Main function of the program.
+    """
 
-prefixes = markov_analysis(text, prefix_length)
-random_text = random_markov(prefixes, prefix_length, num_words)
-print(random_text)
+    print(os.path.basename(__file__))
+    file_content = read_file_content(markov_file)
+
+    if file_content is not None:
+        number_of_words = int(input('Enter number of words:'))
+        prefix_length = int(input("Enter prefix length:"))
+        prefixes = perform_markov_analysis(file_content, prefix_length)
+        random_text = generate_random_text(
+            prefixes,
+            prefix_length,
+            number_of_words
+        )
+
+        print(random_text)
