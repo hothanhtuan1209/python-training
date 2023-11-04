@@ -10,11 +10,16 @@ from path1 import (
     forbidden_letter_counter
 )
 
+from path2 import (
+    markov_analysis
+)
+
 
 modules = [
     age_condition_checker,
     abecedarian_word_counter,
-    forbidden_letter_counter
+    forbidden_letter_counter,
+    markov_analysis
 ]
 
 
