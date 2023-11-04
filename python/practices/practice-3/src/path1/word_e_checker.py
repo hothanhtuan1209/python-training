@@ -6,13 +6,12 @@ Count and print percentage word in word list not contains the letter 'e' or 'E'
 import os
 
 
-def count_words():
+def count_words(words):
     """
     Count and calculate the percentage of words that do not contain 'E' or 'e'
     in a list of words.
     """
 
-    words = input("Enter the list of words: ").split()
     count_word = len(words)
     words_has_no_e = 0
 
@@ -32,4 +31,5 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    count_words()
+    words = input("Enter the list of words: ").split()
+    count_words(words)
