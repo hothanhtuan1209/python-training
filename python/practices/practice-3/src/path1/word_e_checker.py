@@ -32,7 +32,6 @@ def percentage_words(words):
 
     Parameters:
         - words: list of words input
-        - words_has_no_e: list of words not contain letter 'e' or 'E'
     """
 
     total_number_of_words = len(words)
