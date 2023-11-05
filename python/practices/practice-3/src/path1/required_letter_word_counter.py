@@ -14,10 +14,10 @@ def uses_all(word, required_letters):
     Parameters:
         - word (str): The word to check.
         - required_letters (str): A string containing the letters that must be
-        present in 'word'.
+        present in the word.
 
     Returns:
-        - bool: True if 'word' contains all the required letters, False
+        - bool: True if the word contains all the required letters, False
         otherwise.
     """
 
@@ -32,7 +32,7 @@ def count_words(words, required_letters):
     """
     Count the number of words in a list that contain all the required letters.
 
-   Parameters:
+    Parameters:
         - words (list): A list of words to be checked.
         - required_letters (str): A string containing the letters that must be
           present in each word.
