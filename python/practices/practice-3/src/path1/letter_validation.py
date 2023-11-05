@@ -5,6 +5,7 @@ letters in the string
 
 
 import os
+from helpers.user_input import get_user_input
 
 
 def uses_only(word, allowed_letter):
@@ -34,7 +35,7 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    word_input = input('Enter a word:')
-    letters_input = input('Enter a string letters:')
+    word_input = get_user_input('Enter a word:')
+    letters_input = get_user_input('Enter a string letters:')
 
     print(uses_only(word_input, letters_input))
