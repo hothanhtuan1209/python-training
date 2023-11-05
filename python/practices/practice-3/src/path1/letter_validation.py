@@ -13,7 +13,7 @@ def uses_only(word, allowed_letter):
 
     Parameters:
         - word (str): The word to check.
-        - string_letter (str): A string containing the allowed letters.
+        - allowed_letter (str): A string containing the allowed letters.
 
     Returns:
         - bool: True if 'word' contains only letters from 'string_letter',
