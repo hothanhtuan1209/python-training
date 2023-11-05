@@ -1,26 +1,28 @@
 """
-This module contains a code for exercises 13-1 related to:
-Think Python, 2nd Edition
-Chapter 13: Case Study: Data Structure Selection
-
 Reads a file, breaks each line into words, strips whitespace and
 punctuation from the words, and converts them to lowercase.
-
-Download test.txt file
 """
 
 import string
+import os
+from helpers.file_reader import read_file
+from constants.constants import path_of_test_file
 
 
-def clean_word():
+def clean_word(test):
     """
-    Reads a file and processes its content.
+    Clean and process the content of a file.
+
+    Parameters:
+        - test (list of str): The lines of text to be cleaned.
+
+    Returns:
+        - list of str: A list of cleaned words.
     """
 
-    fin = open('test.txt')
     cleaned_words = []
 
-    for line in fin:
+    for line in test:
         line = line.strip().split()
 
         for word in line:
@@ -35,4 +37,13 @@ def clean_word():
     print(cleaned_words)
 
 
-clean_word()
+def main():
+    """
+    Clean and print words in file.
+    """
+
+    print(os.path.basename(__file__))
+    file_content = read_file(path_of_test_file)
+
+    if file_content:
+        clean_word(file_content)
