@@ -5,6 +5,7 @@ words using all the characters in the string and prints the result.
 
 
 import os
+from helpers.user_input import get_user_input
 
 
 def uses_all(word, required_letters):
@@ -56,6 +57,6 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    words = input("Enter a list of words: ").split()
-    required_letters = input("Enter a string required letters:")
+    words = get_user_input("Enter a list of words: ").split()
+    required_letters = get_user_input("Enter a string required letters:")
     print(count_words(words, required_letters))
