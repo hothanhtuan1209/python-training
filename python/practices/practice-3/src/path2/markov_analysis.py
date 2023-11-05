@@ -8,7 +8,7 @@ possible suffixes.
 import random
 import os
 from helpers.file_reader import read_file_content
-from constant.constant_file import markov_file
+from constant.constant_file import path_of_markov_file
 
 
 def perform_markov_analysis(text, prefix_length):
@@ -74,7 +74,7 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    file_content = read_file_content(markov_file)
+    file_content = read_file_content(path_of_markov_file)
 
     if file_content is not None:
         number_of_words = int(input('Enter number of words:'))
