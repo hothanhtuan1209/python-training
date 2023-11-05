@@ -8,6 +8,7 @@ possible suffixes.
 import random
 import os
 from helpers.file_reader import read_file_content
+from helpers.user_input import get_user_input
 from constant.constant_file import path_of_markov_file
 
 
@@ -77,8 +78,8 @@ def main():
     file_content = read_file_content(path_of_markov_file)
 
     if file_content is not None:
-        number_of_words = int(input('Enter number of words:'))
-        prefix_length = int(input("Enter prefix length:"))
+        number_of_words = int(get_user_input('Enter number of words:'))
+        prefix_length = int(get_user_input("Enter prefix length:"))
         prefixes = perform_markov_analysis(file_content, prefix_length)
         random_text = generate_random_text(
             prefixes,
