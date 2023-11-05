@@ -80,6 +80,7 @@ def main():
     if file_content is not None:
         number_of_words = int(get_user_input('Enter number of words:'))
         prefix_length = int(get_user_input("Enter prefix length:"))
+
         prefixes = perform_markov_analysis(file_content, prefix_length)
         random_text = generate_random_text(
             prefixes,
