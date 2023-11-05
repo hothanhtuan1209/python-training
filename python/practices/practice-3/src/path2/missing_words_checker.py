@@ -4,7 +4,7 @@ Uses set subtraction to find words in the book that are not in the word list.
 
 
 import os
-from constant.constant_file import markov_file, ebook_file
+from constants.constants import path_of_markov_file, path_of_ebook_file
 from helpers.file_reader import read_file_content
 
 
@@ -36,8 +36,8 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    content_of_markov = read_file_content(markov_file)
-    content_of_ebook = read_file_content(ebook_file)
+    content_of_markov = read_file_content(path_of_markov_file)
+    content_of_ebook = read_file_content(path_of_ebook_file)
 
     if content_of_markov and content_of_ebook:
         find_word_notin_list(content_of_ebook, content_of_markov)
