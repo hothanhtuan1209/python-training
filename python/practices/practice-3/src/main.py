@@ -7,6 +7,7 @@ It calls the main function from modules.
 from path1 import (
     age_condition_checker,
     abecedarian_word_counter,
+    symmetrical_numbers,
     forbidden_letter_counter
 )
 
@@ -14,6 +15,7 @@ from path1 import (
 modules = [
     age_condition_checker,
     abecedarian_word_counter,
+    symmetrical_numbers,
     forbidden_letter_counter
 ]
 
