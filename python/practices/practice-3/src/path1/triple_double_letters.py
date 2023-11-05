@@ -37,24 +37,28 @@ def contains_three_double(word):
 def find_triple_double(file_content):
     """
     Prints words with triple double letters from word list.
+
+    Parameters:
+        - file_content (str): The content of the word list.
+
+    Returns:
+        None
     """
 
-    lines = file_content.split('\n')
+    if file_content:
+        lines = file_content.split('\n')
 
-    for line in lines:
-        word = line.strip()
+        for line in lines:
+            word = line.strip()
 
-        if contains_three_double(word):
-            print(word)
+            if contains_three_double(word):
+                print(word)
 
 
 def main():
     """
-    Prints words containing three consecutive double letters
+    Main function to print words containing three consecutive double letters.
     """
-
     print(os.path.basename(__file__))
     file_content = read_file_content(word_file)
-
-    if file_content is not None:
-        find_triple_double(file_content)
+    find_triple_double(file_content)
