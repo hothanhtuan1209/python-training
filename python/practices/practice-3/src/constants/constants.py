@@ -5,4 +5,4 @@ used throughout the program.
 
 
 # Constant of file words.txt
-word_file = 'words.txt'
+path_of_word_file = 'words.txt'
