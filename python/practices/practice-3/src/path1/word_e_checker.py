@@ -33,10 +33,14 @@ def percentage_words(words):
     Parameters:
         - words: list of words input
     """
-
     total_number_of_words = len(words)
+
+    if total_number_of_words == 0:
+        print("The word list is empty.")
+        return
+
     words_has_no_e = count_words(words)
-    percentage = (words_has_no_e/total_number_of_words) * 100
+    percentage = (words_has_no_e / total_number_of_words) * 100
 
     print('Percentage of words without the letter e:', percentage)
 
