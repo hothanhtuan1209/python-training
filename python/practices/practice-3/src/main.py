@@ -6,6 +6,7 @@ It calls the main function from modules.
 
 from path1 import (
     age_condition_checker,
+    required_letter_word_counter,
     long_words_printer,
     letter_validation,
     abecedarian_word_counter,
@@ -16,6 +17,7 @@ from path1 import (
 
 modules = [
     age_condition_checker,
+    required_letter_word_counter,
     long_words_printer,
     letter_validation,
     abecedarian_word_counter,
