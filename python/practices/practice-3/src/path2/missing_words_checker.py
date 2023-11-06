@@ -8,23 +8,23 @@ from constants.constants import MARKOV, EBOOK
 from helpers.file_reader import read_file
 
 
-def find_word_notin_list(file_ebook, file_markov):
+def find_word_notin_list(ebook_content, markov_content):
     """
     Find words in the ebook content that are not in the markov content.
 
     Parameters:
-        - file_ebook (file): The ebook content file.
-        - file_markov (file): The markov content file.
+        - ebook_content (str): The content of the ebook file.
+        - markov_content (str): The content of the markov file.
 
     Returns:
         - set: A set of words found in the ebook content but not in the
         markov content.
     """
 
-    ebook_content = set(file_ebook.read().lower().split())
-    markov_content = set(file_markov.read().lower().split())
+    ebook_words = set(ebook_content.lower().split())
+    markov_words = set(markov_content.lower().split())
 
-    words_notin_list = ebook_content - markov_content
+    words_notin_list = ebook_words - markov_words
 
     print(words_notin_list)
 
