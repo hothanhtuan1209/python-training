@@ -5,4 +5,4 @@ used throughout the program.
 
 
 # File path
-WORD = '../python/practices/practice-3/src/text/words.txt'
+WORD = './words.txt'
