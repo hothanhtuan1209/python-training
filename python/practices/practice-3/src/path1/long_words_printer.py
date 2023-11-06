@@ -6,7 +6,7 @@ than 20 letters excluding spaces
 
 import os
 from helpers.file_reader import read_file
-from constants.constants import path_of_word_file
+from constants.constants import WORD
 
 
 def print_words(file_content):
@@ -31,7 +31,7 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    file_content = read_file(path_of_word_file)
+    file_content = read_file(WORD)
 
     if file_content:
         print_words(file_content)
