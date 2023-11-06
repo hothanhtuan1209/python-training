@@ -3,11 +3,13 @@ This module has the function of reading and retrieving the content of a file
 """
 
 
-def read_file_content(file_path):
+def read_file(file_path):
     """
     Read and return the content of a text file.
+
     Args:
         file_path (str): The path to the input file to be read.
+
     Returns:
         str or None: The content of the file if successful, or None if there
         was an error.

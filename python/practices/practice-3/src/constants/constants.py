@@ -1,5 +1,10 @@
-# Constant of file markov.txt
-path_of_markov_file = 'markov.txt'
+"""
+This module defines constants for file texts in practice-3
+used throughout the program.
+"""
 
-# Constant of file ebook.txt
-path_of_ebook_file = "ebook.txt"
+
+# File path
+WORD = './texts/words.txt'
+MARKOV = './text/markov.txt'
+EBOOK = './text/ebook.txt'
