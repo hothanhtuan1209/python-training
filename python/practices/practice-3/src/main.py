@@ -10,11 +10,15 @@ from path1 import (
     forbidden_letter_counter
 )
 
+from path2 import (
+    no_whitespace_punctuation_words
+)
 
 modules = [
     age_condition_checker,
     abecedarian_word_counter,
-    forbidden_letter_counter
+    forbidden_letter_counter,
+    no_whitespace_punctuation_words
 ]
 
 
