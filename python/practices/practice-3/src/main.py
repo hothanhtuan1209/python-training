@@ -10,8 +10,10 @@ from path1 import (
     long_words_printer,
     letter_validation,
     abecedarian_word_counter,
+    forbidden_letter_counter,
+    triple_double_letters,
     symmetrical_numbers,
-    forbidden_letter_counter
+
 )
 
 
@@ -21,8 +23,9 @@ modules = [
     long_words_printer,
     letter_validation,
     abecedarian_word_counter,
+    forbidden_letter_counter,
+    triple_double_letters,
     symmetrical_numbers,
-    forbidden_letter_counter
 ]
 
 
