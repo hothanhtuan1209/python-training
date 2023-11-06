@@ -1,0 +1,84 @@
+"""
+Write a program that uses this algorithm to choose a random word from the book.
+"""
+
+
+import string
+import collections
+import os
+from random import randint
+from bisect import bisect
+from constants.constants import path_of_ebook_file
+from helpers.file_reader import read_file
+
+
+def clean_file(file_content):
+    """
+    Read a file and return a histogram of cleaned and processed words.
+
+    Parameters:
+        - file_content (list): A list of text lines from the file.
+
+    Returns:
+        - dict: A histogram where keys are cleaned words and values are
+        word frequencies.
+    """
+
+    hist = collections.Counter()
+
+    for line in file_content:
+        line = line.replace('-', ' ')
+
+        for word in line.split():
+            word = word.strip(string.punctuation + string.whitespace)
+            word = word.lower()
+            hist[word] = hist.get(word, 0) + 1
+
+    return hist
+
+
+def cumsum(list_word):
+    """
+    Calculate the cumulative sum of the elements in a list.
+
+    Parameters:
+        - list_word (list): A list of integers.
+
+    Returns:
+        - list: A list of cumulative sums of the input list.
+    """
+
+    total = 0
+    for i in range(len(list_word)):
+        total += list_word[i]
+        list_word[i] = total
+
+    return list_word
+
+
+def choose_random(hist):
+    """
+    Randomly generate a number and get the letter corresponding to that number
+
+    hist: dict
+
+    return: string
+    """
+
+    list_word = list(hist.keys())
+    calculate_sum = cumsum(list(int(i) for i in hist.values()))
+    total = calculate_sum[-1]
+    random_val = randint(0, total - 1)
+    index = bisect(calculate_sum, random_val)
+
+    return list_word[index]
+
+
+def main():
+    """
+    """
+
+    print(os.path.basename(__file__))
+    file_content = read_file(path_of_ebook_file)
+
+    print(choose_random(clean_file(file_content)))
