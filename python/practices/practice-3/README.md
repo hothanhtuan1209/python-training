@@ -12,7 +12,8 @@ This is the folder containing exercises for practice three of plan training Thin
 > cd python-training
 > cd python
 > cd practices
-> cd practice-3 
+> cd practice-3
+> cd src 
 
 3. Checkout to branch develop
 > git checkout develop
@@ -33,5 +34,8 @@ This is the folder containing exercises for practice three of plan training Thin
 - To install all packages and extensions in project
 > pip install -r requirements.txt 
 
+5. To run all files code
+- You must double-check all file paths included in the code files to avoid errors
+> python main.py
 ## Contribute
  * If you want to contribute to this project, please create a pull request and clearly describe the changes you propose.
