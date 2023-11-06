@@ -5,4 +5,4 @@ used throughout the program.
 
 
 # File path
-WORD = './words.txt'
+WORD = './texts/words.txt'
