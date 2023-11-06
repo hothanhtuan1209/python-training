@@ -11,8 +11,9 @@ from path1 import (
     letter_validation,
     abecedarian_word_counter,
     forbidden_letter_counter,
-    triple_double_letters,
+    word_e_checker,
     symmetrical_numbers,
+    triple_double_letters,
 
 )
 
@@ -24,6 +25,7 @@ modules = [
     letter_validation,
     abecedarian_word_counter,
     forbidden_letter_counter,
+    word_e_checker,
     triple_double_letters,
     symmetrical_numbers,
 ]
