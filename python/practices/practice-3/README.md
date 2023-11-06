@@ -13,7 +13,6 @@ This is the folder containing exercises for practice three of plan training Thin
 > cd python
 > cd practices
 > cd practice-3
-> cd src 
 
 3. Checkout to branch develop
 > git checkout develop
