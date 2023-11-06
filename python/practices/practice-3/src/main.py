@@ -8,7 +8,9 @@ from path1 import (
     age_condition_checker,
     abecedarian_word_counter,
     forbidden_letter_counter,
-    triple_double_letters
+    triple_double_letters,
+    symmetrical_numbers,
+
 )
 
 
@@ -16,7 +18,8 @@ modules = [
     age_condition_checker,
     abecedarian_word_counter,
     forbidden_letter_counter,
-    triple_double_letters
+    triple_double_letters,
+    symmetrical_numbers,
 ]
 
 
