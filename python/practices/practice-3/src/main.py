@@ -17,6 +17,10 @@ from path1 import (
 
 )
 
+from path2 import (
+    markov_analysis
+)
+
 
 modules = [
     age_condition_checker,
@@ -25,6 +29,7 @@ modules = [
     letter_validation,
     abecedarian_word_counter,
     forbidden_letter_counter,
+    markov_analysis,
     word_e_checker,
     triple_double_letters,
     symmetrical_numbers,
