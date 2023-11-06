@@ -6,3 +6,5 @@ used throughout the program.
 
 # File path
 WORD = './texts/words.txt'
+MARKOV = './text/markov.txt'
+EBOOK = './text/ebook.txt'
