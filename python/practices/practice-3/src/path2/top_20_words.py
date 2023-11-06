@@ -9,34 +9,8 @@ then counts and prints the 20 most frequently used words in the ebook.
 import os
 import collections
 from constants.constants import EBOOK
+from helpers.content_cleaner import clean_words
 from helpers.file_reader import read_file
-
-
-def clean_words(text):
-    """
-    Clean a text by removing punctuation, converting words to lowercase,
-    and counting the frequency of each word.
-
-    Args:
-        - text (str): The input text to be processed.
-
-    Returns:
-        - list of str: A list of cleaned words without punctuation and in
-        lowercase.
-
-    """
-
-    cleaned_words = []
-
-    for line in text:
-        words = line.strip().split()
-
-        for word in words:
-            cleaned_word = "".join(c.lower() for c in word if c.isalnum())
-            if cleaned_word:
-                cleaned_words.append(cleaned_word)
-
-    return cleaned_words
 
 
 def count_words(cleaned_words):
@@ -64,7 +38,6 @@ def count_words(cleaned_words):
 def main():
     """
     Read a text file, clean the words, and print the 20 most frequently
-    
     used words in the ebook.
     """
 
