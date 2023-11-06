@@ -18,7 +18,8 @@ from path1 import (
 )
 
 from path2 import (
-    markov_analysis
+    markov_analysis,
+    missing_words_checker
 )
 
 
@@ -33,6 +34,7 @@ modules = [
     word_e_checker,
     triple_double_letters,
     symmetrical_numbers,
+    missing_words_checker
 ]
 
 
