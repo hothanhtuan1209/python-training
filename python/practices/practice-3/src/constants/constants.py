@@ -4,5 +4,5 @@ used throughout the program.
 """
 
 
-# Constant of file words.txt
-word_file_path = 'words.txt'
+# File path
+WORD = '../python/practices/practice-3/src/text/words.txt'
