@@ -10,21 +10,20 @@ import os
 from helpers.user_input import get_user_input
 
 
-def histogram(list_input):
+def histogram(input_string):
     """
-    Create 1 dictionary with letter as key and number of occurrences as value
+    Create a dictionary with letters as keys and their frequencies as values.
 
     Parameters:
-        - list_input (list): A list of input letters.
+        - input_string (str): A string of input letters.
 
     Returns:
         - dict: A dictionary containing letters as keys and their frequencies
         as values.
     """
+    dict_hist = {}
 
-    dict_hist = dict()
-
-    for letter in list_input:
+    for letter in input_string:
         if letter not in dict_hist:
             dict_hist[letter] = 1
         else:
@@ -46,8 +45,7 @@ def choose_from_hist(dict_hist):
         - str: A randomly chosen item from the histogram, selected with
         probability proportional to its frequency.
     """
-
-    list_key = list()
+    list_key = []
 
     for key, value in dict_hist.items():
         for i in range(value):
@@ -62,10 +60,8 @@ def main():
     frequency of each letter, allowing the user to choose a random letter
     with probability in proportion to its frequency.
     """
-
     print(os.path.basename(__file__))
     user_input = get_user_input("Enter a string of letters: ")
-    user_input_list = user_input.split()
 
-    dict_histogram = histogram(user_input_list)
+    dict_histogram = histogram(user_input)
     print(choose_from_hist(dict_histogram))

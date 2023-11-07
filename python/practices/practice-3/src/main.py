@@ -4,12 +4,12 @@ It calls the main function from modules.
 """
 
 
-from path1 import (
-    age_condition_checker,
-    abecedarian_word_counter,
-    symmetrical_numbers,
-    forbidden_letter_counter
-)
+# from path1 import (
+#     age_condition_checker,
+#     abecedarian_word_counter,
+#     symmetrical_numbers,
+#     forbidden_letter_counter
+# )
 
 from path2 import (
     random_dict
@@ -17,10 +17,10 @@ from path2 import (
 
 
 modules = [
-    age_condition_checker,
-    abecedarian_word_counter,
-    symmetrical_numbers,
-    forbidden_letter_counter,
+    # age_condition_checker,
+    # abecedarian_word_counter,
+    # symmetrical_numbers,
+    # forbidden_letter_counter,
     random_dict
 ]
 
