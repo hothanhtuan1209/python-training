@@ -39,6 +39,6 @@ def main():
     file_content = read_file(TEST)
 
     if file_content:
-        cleaned_words = clean_text_and_split(file_content)
+        cleaned_words = clean_and_split_text(file_content)
         for word in cleaned_words:
             print(word)
