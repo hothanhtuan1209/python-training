@@ -25,8 +25,10 @@ def extract_words_from_content(content):
 
     for word in content.split():
         cleaned_word = word.strip()
+
         if cleaned_word:
             word_list.append(cleaned_word)
+
     return word_list
 
 
