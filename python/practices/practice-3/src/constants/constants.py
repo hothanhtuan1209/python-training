@@ -7,4 +7,4 @@ used throughout the program.
 # File path
 WORD = './src/texts/words.txt'
 MARKOV = './src/texts/markov.txt'
-EBOOK = '.src/texts/ebook.txt'
+EBOOK = './src/texts/ebook.txt'
