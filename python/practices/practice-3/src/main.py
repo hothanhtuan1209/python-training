@@ -19,12 +19,11 @@ from path1 import (
 
 from path2 import (
     markov_analysis,
-    missing_words_checker
-)
-
-from path2 import (
+    missing_words_checker,
+    random_dict,
     random_word_selector
 )
+
 
 modules = [
     age_condition_checker,
@@ -39,7 +38,8 @@ modules = [
     symmetrical_numbers,
     forbidden_letter_counter,
     random_word_selector,
-    missing_words_checker
+    missing_words_checker,
+    random_dict
 ]
 
 
