@@ -35,6 +35,6 @@ This is the folder containing exercises for practice three of plan training Thin
 
 5. To run all files code
 - You must double-check all file paths included in the code files to avoid errors
-> python main.py
+> python src/main.py
 ## Contribute
  * If you want to contribute to this project, please create a pull request and clearly describe the changes you propose.
