@@ -14,17 +14,14 @@ from path1 import (
     word_e_checker,
     symmetrical_numbers,
     triple_double_letters,
-
 )
 
 from path2 import (
     markov_analysis,
-    missing_words_checker
-)
-
-from path2 import (
+    missing_words_checker,
     no_whitespace_punctuation_words
 )
+
 
 modules = [
     age_condition_checker,
