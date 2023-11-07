@@ -5,4 +5,4 @@ used throughout the program.
 
 
 # Constant of file words.txt
-path_of_ebook_file = 'ebook.txt'
+EBOOK = './texts/ebook.txt'
