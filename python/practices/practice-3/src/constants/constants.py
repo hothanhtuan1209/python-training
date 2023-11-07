@@ -8,3 +8,7 @@ used throughout the program.
 WORD = './src/texts/words.txt'
 MARKOV = './src/texts/markov.txt'
 EBOOK = './src/texts/ebook.txt'
+
+
+# Constant for counts top
+TOP_COUNT = 20
