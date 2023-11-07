@@ -38,23 +38,23 @@ def clean_file(file_content):
     return hist
 
 
-def calculate_cumulative_sums(list_word):
+def calculate_cumulative_sums(elements):
     """
     Calculate the cumulative sum of the elements in a list.
 
     Args:
-        list_word (list): A list of integers.
+        elements (list): A list of integers.
 
     Returns:
         list: A list of cumulative sums of the input list.
     """
 
     total = 0
-    for i in range(len(list_word)):
-        total += list_word[i]
-        list_word[i] = total
+    for i in range(len(elements)):
+        total += elements[i]
+        elements[i] = total
 
-    return list_word
+    return elements
 
 
 def choose_random(hist):
@@ -69,14 +69,14 @@ def choose_random(hist):
     """
 
     list_word = list(hist.keys())
-    calculate_sum = calculate_cumulative_sums(
+    cumulative_sums = calculate_cumulative_sums(
         list(int(i) for i in hist.values())
     )
-    total = calculate_sum[-1]
+    total = cumulative_sums[-1]
 
     if total > 0:
         random_val = randint(0, total - 1)
-        index = bisect(calculate_sum, random_val)
+        index = bisect(cumulative_sums, random_val)
         return list_word[index]
     else:
         return "Histogram is empty."
