@@ -30,7 +30,7 @@ def count_words(cleaned_words):
     word_counts = collections.Counter(cleaned_words)
     sorted_word_counts = dict(
         sorted(word_counts.items(), key=lambda x: x[1], reverse=True)
-        )
+    )
 
     return sorted_word_counts
 
@@ -47,6 +47,7 @@ def main():
     word_counts = count_words(cleaned_words)
 
     top_count = 20
+
     for i, (word, count) in enumerate(word_counts.items()):
         print(i + 1, word, count)
         if i + 1 == top_count:
