@@ -14,7 +14,6 @@ from path1 import (
     word_e_checker,
     symmetrical_numbers,
     triple_double_letters,
-
 )
 
 from path2 import (
