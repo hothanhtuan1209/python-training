@@ -20,12 +20,13 @@ def extract_words_from_content(content):
     Returns:
         list: A list of words extracted from the content.
     """
+
     word_list = []
 
-    for line in content:
-        word = line.strip()
-        word_list.append(word)
-
+    for word in content.split():
+        cleaned_word = word.strip()
+        if cleaned_word:
+            word_list.append(cleaned_word)
     return word_list
 
 
