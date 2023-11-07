@@ -4,5 +4,7 @@ used throughout the program.
 """
 
 
-# Constant of file words.txt
-EBOOK = './texts/ebook.txt'
+# File path
+WORD = './src/texts/words.txt'
+MARKOV = './src/text/markov.txt'
+EBOOK = '.src/text/ebook.txt'
