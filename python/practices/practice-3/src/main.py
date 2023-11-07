@@ -6,8 +6,20 @@ It calls the main function from modules.
 
 from path1 import (
     age_condition_checker,
+    required_letter_word_counter,
+    long_words_printer,
+    letter_validation,
     abecedarian_word_counter,
-    forbidden_letter_counter
+    forbidden_letter_counter,
+    word_e_checker,
+    symmetrical_numbers,
+    triple_double_letters,
+
+)
+
+from path2 import (
+    markov_analysis,
+    missing_words_checker
 )
 
 from path2 import (
@@ -16,9 +28,17 @@ from path2 import (
 
 modules = [
     age_condition_checker,
+    required_letter_word_counter,
+    long_words_printer,
+    letter_validation,
     abecedarian_word_counter,
     forbidden_letter_counter,
-    no_whitespace_punctuation_words
+    no_whitespace_punctuation_words,
+    markov_analysis,
+    word_e_checker,
+    triple_double_letters,
+    symmetrical_numbers,
+    missing_words_checker
 ]
 
 
