@@ -44,11 +44,11 @@ def main():
     print(os.path.basename(__file__))
     ebook_text = read_file(EBOOK)
     cleaned_words = clean_words(ebook_text)
-    word_counts = count_words(cleaned_words)
+    total_number_of_words = count_words(cleaned_words)
 
     top_count = 20
 
-    for i, (word, count) in enumerate(word_counts.items()):
+    for i, (word, count) in enumerate(total_number_of_words.items()):
         print(i + 1, word, count)
         if i + 1 == top_count:
             break
