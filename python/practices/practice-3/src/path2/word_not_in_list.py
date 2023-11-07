@@ -10,7 +10,7 @@ from constants.constants import EBOOK, WORD
 from helpers.file_reader import read_file
 
 
-def extract_words_from_content(content):
+def extract_words(content):
     """
     Extracts words from a content string and returns a list of words.
 
@@ -42,8 +42,8 @@ def find_missing_words(book_content, words_content):
     returns: list of missing words
     """
 
-    test_words = extract_words_from_content(book_content)
-    words_list = extract_words_from_content(words_content)
+    test_words = extract_words(book_content)
+    words_list = extract_words(words_content)
     missing_words = []
 
     for word in test_words:
