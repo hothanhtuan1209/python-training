@@ -19,7 +19,7 @@ from path1 import (
 from path2 import (
     markov_analysis,
     missing_words_checker,
-    top_20_words
+    top_twenty_words
 )
 
 
@@ -35,7 +35,7 @@ modules = [
     triple_double_letters,
     symmetrical_numbers,
     missing_words_checker,
-    top_20_words
+    top_twenty_words
 ]
 
 
