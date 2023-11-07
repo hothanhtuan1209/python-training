@@ -32,8 +32,7 @@ def clean_file(file_content):
         line = line.replace('-', ' ')
 
         for word in line.split():
-            word = word.strip(string.punctuation + string.whitespace)
-            word = word.lower()
+            word = word.strip(string.punctuation + string.whitespace).lower()
             hist[word] = hist.get(word, 0) + 1
 
     return hist
