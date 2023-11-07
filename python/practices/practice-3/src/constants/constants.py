@@ -5,6 +5,6 @@ used throughout the program.
 
 
 # File path
-WORD = './texts/words.txt'
-MARKOV = './text/markov.txt'
-EBOOK = './text/ebook.txt'
+WORD = './src/texts/words.txt'
+MARKOV = './src/texts/markov.txt'
+EBOOK = '.src/texts/ebook.txt'
