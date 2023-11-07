@@ -21,6 +21,7 @@ def histogram(input_string):
         - dict: A dictionary containing letters as keys and their frequencies
         as values.
     """
+
     dict_hist = {}
 
     for letter in input_string:
@@ -45,6 +46,7 @@ def choose_from_hist(dict_hist):
         - str: A randomly chosen item from the histogram, selected with
         probability proportional to its frequency.
     """
+
     list_key = []
 
     for key, value in dict_hist.items():
@@ -60,6 +62,7 @@ def main():
     frequency of each letter, allowing the user to choose a random letter
     with probability in proportion to its frequency.
     """
+
     print(os.path.basename(__file__))
     user_input = get_user_input("Enter a string of letters: ")
 
