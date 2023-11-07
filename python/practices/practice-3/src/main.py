@@ -11,12 +11,16 @@ from path1 import (
     forbidden_letter_counter
 )
 
+from path2 import (
+    random_word_selector
+)
 
 modules = [
     age_condition_checker,
     abecedarian_word_counter,
     symmetrical_numbers,
-    forbidden_letter_counter
+    forbidden_letter_counter,
+    random_word_selector
 ]
 
 
