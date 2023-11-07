@@ -19,7 +19,8 @@ from path1 import (
 from path2 import (
     markov_analysis,
     missing_words_checker,
-    no_whitespace_punctuation_words
+    no_whitespace_punctuation_words,
+    random_dict
 )
 
 
@@ -35,7 +36,8 @@ modules = [
     word_e_checker,
     triple_double_letters,
     symmetrical_numbers,
-    missing_words_checker
+    missing_words_checker,
+    random_dict
 ]
 
 
