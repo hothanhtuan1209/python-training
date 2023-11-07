@@ -9,7 +9,7 @@ from helpers.file_reader import read_file
 from constants.constants import TEST
 
 
-def clean_text_and_split(test):
+def clean_and_split_text(test):
     """
     Cleans and splits a text into words, removing whitespace and punctuation.
 
