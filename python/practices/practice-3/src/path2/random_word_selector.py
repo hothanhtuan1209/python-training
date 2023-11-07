@@ -8,7 +8,7 @@ import collections
 import os
 from random import randint
 from bisect import bisect
-from constants.constants import path_of_ebook_file
+from constants.constants import EBOOK
 from helpers.file_reader import read_file
 
 
@@ -16,11 +16,11 @@ def clean_file(file_content):
     """
     Read a file and return a histogram of cleaned and processed words.
 
-    Parameters:
-        - file_content (list): A list of text lines from the file.
+    Args:
+        file_content (list): A list of text lines from the file.
 
     Returns:
-        - dict: A histogram where keys are cleaned words and values are
+        dict: A histogram where keys are cleaned words and values are
         word frequencies.
     """
 
@@ -37,15 +37,15 @@ def clean_file(file_content):
     return hist
 
 
-def cumsum(list_word):
+def calculate_cumulative_sums(list_word):
     """
     Calculate the cumulative sum of the elements in a list.
 
-    Parameters:
-        - list_word (list): A list of integers.
+    Args:
+        list_word (list): A list of integers.
 
     Returns:
-        - list: A list of cumulative sums of the input list.
+        list: A list of cumulative sums of the input list.
     """
 
     total = 0
@@ -60,25 +60,33 @@ def choose_random(hist):
     """
     Randomly generate a number and get the letter corresponding to that number
 
-    hist: dict
+    Args:
+        hist (dict): A histogram of word frequencies.
 
-    return: string
+    Returns:
+        str: A randomly selected word from the histogram.
     """
 
     list_word = list(hist.keys())
-    calculate_sum = cumsum(list(int(i) for i in hist.values()))
+    calculate_sum = calculate_cumulative_sums(
+        list(int(i) for i in hist.values())
+    )
     total = calculate_sum[-1]
-    random_val = randint(0, total - 1)
-    index = bisect(calculate_sum, random_val)
 
-    return list_word[index]
+    if total > 0:
+        random_val = randint(0, total - 1)
+        index = bisect(calculate_sum, random_val)
+        return list_word[index]
+    else:
+        return "Histogram is empty."
 
 
 def main():
     """
+    Reads an ebook file, processes it to choose a random word, and prints the
+    word.
     """
 
     print(os.path.basename(__file__))
-    file_content = read_file(path_of_ebook_file)
-
+    file_content = read_file(EBOOK).splitlines()
     print(choose_random(clean_file(file_content)))
