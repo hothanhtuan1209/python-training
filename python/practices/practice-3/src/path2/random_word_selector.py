@@ -1,5 +1,7 @@
 """
-Write a program that uses this algorithm to choose a random word from the book.
+This program randomly selects a word from a given ebook. It cleans and
+processes the text, creating a histogram of word frequencies. Then, it selects
+a random word with a probability proportional to its frequency.
 """
 
 
