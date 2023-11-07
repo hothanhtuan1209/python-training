@@ -34,12 +34,15 @@ def extract_words(content):
 
 def find_missing_words(book_content, words_content):
     """
-    Finds all words in book file that do not appear in words file.
+    Find words in the book_content that do not appear in the words_content.
 
-    book_filename: string, name of the test file
-    words_filename: string, name of the words file
+    Args:
+        book_content (str): The content of the book, as a string.
+        words_content (str): The content of the words file, as a string.
 
-    returns: list of missing words
+    Returns:
+        list: A list of missing words found in the book_content but not in the
+              words_content.
     """
 
     test_words = extract_words(book_content)
