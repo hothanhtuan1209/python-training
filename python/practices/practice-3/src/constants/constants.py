@@ -8,3 +8,4 @@ used throughout the program.
 WORD = './src/texts/words.txt'
 MARKOV = './src/text/markov.txt'
 EBOOK = '.src/text/ebook.txt'
+TEST = '.src/texts/test.txt'
