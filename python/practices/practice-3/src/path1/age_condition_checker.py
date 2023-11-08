@@ -5,6 +5,7 @@ that number, after adding 36, will be equal to its inverse.
 
 
 import os
+from constants.constants import CONDITION_NUMBER
 
 
 def check_condition_number(number):
@@ -18,7 +19,7 @@ def check_condition_number(number):
     list_of_digits = list(number)
     number_reverse = int(''.join(list_of_digits[::-1]))
 
-    if int(number) + 36 == number_reverse:
+    if int(number) + CONDITION_NUMBER == number_reverse:
         print(number)
 
 
