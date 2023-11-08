@@ -5,61 +5,87 @@ possible suffixes.
 """
 
 
+import random
 import os
-import collections
-from constants.constants import EBOOK, TOP_COUNT
-from helpers.content_cleaner import clean_words
 from helpers.file_reader import read_file
+from helpers.user_input import get_user_input
+from constants.constants import MARKOV
 
 
-def count_words(cleaned_words):
+def perform_markov_analysis(text, prefix_length):
     """
-    Count the occurrences of each word in a list of cleaned words and sort
-    them by frequency.
+    Perform Markov analysis on the given text.
 
-    Args:
-        - cleaned_words (list of str): A list of cleaned words.
+    Parameters:
+        text (str): The input text to be analyzed.
+        prefix_length (int): The length of the prefix for Markov analysis.
 
     Returns:
-        - dict: A dictionary where keys are unique words and values are their
-        frequencies.
+        dict: A dictionary mapping from prefixes to a collection of possible
+        suffixes.
     """
 
-    word_counts = collections.Counter(cleaned_words)
-    sorted_word_counts = dict(
-        sorted(word_counts.items(), key=lambda x: x[1], reverse=True)
-    )
+    prefixes = {}
+    words = text.split()
 
-    return sorted_word_counts
+    for i in range(len(words) - prefix_length):
+        prefix = tuple(words[i: i + prefix_length])
+        suffix = words[i + prefix_length]
+
+        if prefix in prefixes:
+            prefixes[prefix].append(suffix)
+        else:
+            prefixes[prefix] = [suffix]
+
+    return prefixes
 
 
-def print_top_words(ebook_text):
+def generate_random_text(prefixes, prefix_length, num_words):
     """
-    Read a text file, clean the words, and print the 20 most frequently
-    used words in the ebook.
+    Generate random text using the Markov analysis results.
 
-    Args:
-        - ebook_text (str): The content of the ebook.
+    Parameters:
+        prefixes (dict): Markov analysis results represented as a dictionary.
+        prefix_length (int): The length of the prefix for Markov analysis.
+        num_words (int): The number of words in the generated text.
 
     Returns:
-        None
+        str: A randomly generated text.
     """
-    cleaned_words = clean_words(ebook_text)
-    total_number_of_words = count_words(cleaned_words)
 
-    top_count = TOP_COUNT
+    random_text = ''
+    prefix_list = list(random.choice(list(prefixes.keys())))
 
-    for i, (word, count) in enumerate(total_number_of_words.items()):
-        print(i + 1, word, count)
-        if i + 1 == top_count:
+    for _ in range(num_words):
+        prefix = tuple(prefix_list[-prefix_length:])
+
+        if prefix in prefixes:
+            suffix = random.choice(prefixes[prefix])
+            random_text += suffix + ' '
+            prefix_list.append(suffix)
+        else:
             break
+
+    return random_text.strip()
 
 
 def main():
     """
-    Print the 20 most frequently used words in the ebook.
+    Main function of the program.
     """
 
     print(os.path.basename(__file__))
-    ebook_text = read_file(EBOOK)
-    print_top_words(ebook_text)
+    file_content = read_file(MARKOV)
+
+    if file_content is not None:
+        number_of_words = int(get_user_input('Enter number of words:'))
+        prefix_length = int(get_user_input("Enter prefix length:"))
+
+        prefixes = perform_markov_analysis(file_content, prefix_length)
+        random_text = generate_random_text(
+            prefixes,
+            prefix_length,
+            number_of_words
+        )
+
+        print(random_text)
