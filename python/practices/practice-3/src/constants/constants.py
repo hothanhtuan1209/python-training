@@ -15,7 +15,7 @@ TEST = './src/texts/test.txt'
 TOP_COUNT = 20
 
 # Constant for condition number
-CONDITION_NUMBER = 36
+REVERSE_ADDITION_NUMBER = 36
 
 # Constant for condition about word length
 WORD_LENGTH = 20
