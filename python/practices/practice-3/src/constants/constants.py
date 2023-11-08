@@ -13,3 +13,9 @@ TEST_PATH = './src/texts/test.txt'
 
 # Constant representing the number of top words to display in the results.
 TOP_COUNT = 20
+
+# Constant for condition number
+REVERSE_ADDITION_NUMBER = 36
+
+# Constant for condition about word length
+WORD_LENGTH = 20

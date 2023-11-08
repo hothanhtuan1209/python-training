@@ -6,12 +6,13 @@ than 20 letters excluding spaces
 
 import os
 from helpers.file_reader import read_file
-from constants.constants import WORD_PATH
+from constants.constants import WORD_PATH, WORD_LENGTH
 
 
 def print_words(file_content):
     """
-    Print words from a file that have a length greater than 20 characters.
+    Print words from a file that have a length greater
+    than number of WORD_LENGTH.
 
     Args:
         - file_content (str): content of file word
@@ -21,13 +22,14 @@ def print_words(file_content):
     for line in lines:
         word = line.strip()
 
-        if len(word) > 20:
+        if len(word) > WORD_LENGTH:
             print(word)
 
 
 def main():
     """
-    Check and print words with more than 20 letters from a word file
+    Check and print words with more than number of WORD_LENGTH letter
+    from a word file
     """
 
     print(os.path.basename(__file__))
