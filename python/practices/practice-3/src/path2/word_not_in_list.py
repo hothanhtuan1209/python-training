@@ -23,11 +23,7 @@ def extract_words(content):
 
     word_list = []
 
-    for word in content.split():
-        cleaned_word = word.strip()
-
-        if cleaned_word:
-            word_list.append(cleaned_word)
+    word_list = [word.strip() for word in content.split() if word.strip()]
 
     return word_list
 
@@ -49,9 +45,7 @@ def find_missing_words(book_content, words_content):
     words_list = extract_words(words_content)
     missing_words = []
 
-    for word in test_words:
-        if word not in words_list:
-            missing_words.append(word)
+    missing_words = [word for word in test_words if word not in words_list]
 
     return missing_words
 
