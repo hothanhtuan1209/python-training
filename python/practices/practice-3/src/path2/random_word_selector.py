@@ -10,7 +10,7 @@ import collections
 import os
 from random import randint
 from bisect import bisect
-from constants.constants import EBOOK
+from constants.constants import EBOOK_PATH
 from helpers.file_reader import read_file
 
 
@@ -91,7 +91,7 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    file_content = read_file(EBOOK).splitlines()
+    file_content = read_file(EBOOK_PATH).splitlines()
     histogram = create_word_histogram(file_content)
     random_word = choose_random(histogram)
 

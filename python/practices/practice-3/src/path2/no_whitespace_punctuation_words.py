@@ -6,7 +6,7 @@ punctuation from the words, and converts them to lowercase.
 
 import os
 from helpers.file_reader import read_file
-from constants.constants import TEST
+from constants.constants import TEST_PATH
 
 
 def clean_and_split_text(content_text):
@@ -39,7 +39,7 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    file_content = read_file(TEST)
+    file_content = read_file(TEST_PATH)
     cleaned_words = clean_and_split_text(file_content)
 
     for word in cleaned_words:

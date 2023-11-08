@@ -6,7 +6,7 @@ prints all the words from the ebook that do not appear in the word list.
 
 
 import os
-from constants.constants import EBOOK, WORD
+from constants.constants import EBOOK_PATH, WORD_PATH
 from helpers.file_reader import read_file
 
 
@@ -56,8 +56,8 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    book_content = read_file(EBOOK)
-    words_content = read_file(WORD)
+    book_content = read_file(EBOOK_PATH)
+    words_content = read_file(WORD_PATH)
 
     missing_words = find_missing_words(book_content, words_content)
 
