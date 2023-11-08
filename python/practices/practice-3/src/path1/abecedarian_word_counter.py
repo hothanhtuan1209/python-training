@@ -41,6 +41,7 @@ def count_abecedarian_words(word_list):
     for word in word_list:
         if check_alphabetical_order(word):
             count += 1
+
     return count
 
 
