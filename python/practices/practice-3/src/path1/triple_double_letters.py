@@ -5,7 +5,7 @@ Check and prints words containing three consecutive double letters
 
 import os
 from helpers.file_reader import read_file
-from constants.constants import WORD
+from constants.constants import WORD_PATH
 
 
 def contains_three_double(word):
@@ -60,5 +60,5 @@ def main():
     Main function to print words containing three consecutive double letters.
     """
     print(os.path.basename(__file__))
-    file_content = read_file(WORD)
+    file_content = read_file(WORD_PATH)
     find_triple_double(file_content)

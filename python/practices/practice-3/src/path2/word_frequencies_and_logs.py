@@ -10,7 +10,7 @@ import string
 import math
 import collections
 from helpers.file_reader import read_file
-from constants.constants import MARKOV
+from constants.constants import MARKOV_PATH
 
 
 def count_word_frequencies(text):
@@ -65,7 +65,7 @@ def main():
     with log f and log r.
     """
 
-    text = read_file(MARKOV)
+    text = read_file(MARKOV_PATH)
     hist = count_word_frequencies(text)
     log_frequencies = calculate_log_frequencies(hist)
     print(os.path.basename(__file__))
