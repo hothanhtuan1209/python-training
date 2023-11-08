@@ -27,15 +27,40 @@ def create_word_histogram(text_lines):
     """
 
     hist = collections.Counter()
-
     for line in text_lines:
         line = line.replace('-', ' ')
 
         for word in line.split():
-            word = word.strip(string.punctuation + string.whitespace).lower()
-            hist[word] = hist.get(word, 0) + 1
+            cleaned_word = word.strip(
+                string.punctuation + string.whitespace
+            ).lower()
+            hist[cleaned_word] += 1
 
     return hist
+
+
+def choose_random(hist):
+    """
+    Randomly select a word from a histogram based on word frequencies.
+
+    Args:
+        hist (dict): A histogram of word frequencies.
+
+    Returns:
+        str: A randomly selected word from the histogram. If the histogram
+        is empty, it returns an empty string.
+    """
+
+    if not hist:
+        return ''
+
+    list_word = list(hist.keys())
+    cumulative_sums = calculate_cumulative_sums(hist.values())
+    total = cumulative_sums[-1]
+    random_val = randint(0, total - 1)
+    index = bisect(cumulative_sums, random_val)
+
+    return list_word[index]
 
 
 def calculate_cumulative_sums(elements):
@@ -50,39 +75,13 @@ def calculate_cumulative_sums(elements):
     """
 
     total = 0
-    for i in range(len(elements)):
-        total += elements[i]
-        elements[i] = total
+    cumulative_sums = []
 
-    return elements
+    for element in elements:
+        total += element
+        cumulative_sums.append(total)
 
-
-def choose_random(hist):
-    """
-    Randomly generate a number and get the letter corresponding to that number
-
-    Args:
-        hist (dict): A histogram of word frequencies.
-
-    Returns:
-        str: A randomly selected word from the histogram.
-    """
-
-    list_word = list(hist.keys())
-    cumulative_sums = calculate_cumulative_sums(
-        list(int(i) for i in hist.values())
-    )
-
-    total = cumulative_sums[-1]
-
-    if total > 0:
-        random_val = randint(0, total - 1)
-        index = bisect(cumulative_sums, random_val)
-
-        return list_word[index]
-
-    else:
-        return ''
+    return cumulative_sums
 
 
 def main():
@@ -93,4 +92,7 @@ def main():
 
     print(os.path.basename(__file__))
     file_content = read_file(EBOOK).splitlines()
-    print(choose_random(create_word_histogram(file_content)))
+    histogram = create_word_histogram(file_content)
+    random_word = choose_random(histogram)
+
+    print(random_word)
