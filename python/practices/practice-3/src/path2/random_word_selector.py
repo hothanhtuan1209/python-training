@@ -14,21 +14,21 @@ from constants.constants import EBOOK
 from helpers.file_reader import read_file
 
 
-def clean_file(file_content):
+def create_word_histogram(text_lines):
     """
-    Read a file and return a histogram of cleaned and processed words.
+    Create a word histogram from a list of text lines.
 
     Args:
-        file_content (list): A list of text lines from the file.
+        text_lines (list): A list of text lines to process.
 
     Returns:
-        dict: A histogram where keys are cleaned words and values are
-        word frequencies.
+        dict: A histogram where keys represent cleaned words, and values
+        represent word frequencies.
     """
 
     hist = collections.Counter()
 
-    for line in file_content:
+    for line in text_lines:
         line = line.replace('-', ' ')
 
         for word in line.split():
@@ -90,4 +90,4 @@ def main():
 
     print(os.path.basename(__file__))
     file_content = read_file(EBOOK).splitlines()
-    print(choose_random(clean_file(file_content)))
+    print(choose_random(create_word_histogram(file_content)))
