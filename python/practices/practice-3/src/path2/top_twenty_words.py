@@ -24,7 +24,6 @@ def count_words(cleaned_words):
     Returns:
         - dict: A dictionary where keys are unique words and values are their
         frequencies.
-
     """
 
     word_counts = collections.Counter(cleaned_words)
@@ -35,14 +34,17 @@ def count_words(cleaned_words):
     return sorted_word_counts
 
 
-def main():
+def print_top_words(ebook_text):
     """
     Read a text file, clean the words, and print the 20 most frequently
     used words in the ebook.
-    """
 
-    print(os.path.basename(__file__))
-    ebook_text = read_file(EBOOK)
+    Args:
+        - ebook_text (str): The content of the ebook.
+
+    Returns:
+        None
+    """
     cleaned_words = clean_words(ebook_text)
     total_number_of_words = count_words(cleaned_words)
 
@@ -52,3 +54,13 @@ def main():
         print(i + 1, word, count)
         if i + 1 == top_count:
             break
+
+
+def main():
+    """
+    Print the 20 most frequently used words in the ebook.
+    """
+
+    print(os.path.basename(__file__))
+    ebook_text = read_file(EBOOK)
+    print_top_words(ebook_text)
