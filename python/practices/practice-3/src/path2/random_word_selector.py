@@ -72,14 +72,17 @@ def choose_random(hist):
     cumulative_sums = calculate_cumulative_sums(
         list(int(i) for i in hist.values())
     )
+
     total = cumulative_sums[-1]
 
     if total > 0:
         random_val = randint(0, total - 1)
         index = bisect(cumulative_sums, random_val)
+
         return list_word[index]
+
     else:
-        return "Histogram is empty."
+        return None
 
 
 def main():
