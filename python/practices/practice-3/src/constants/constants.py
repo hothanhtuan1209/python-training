@@ -10,5 +10,5 @@ MARKOV = './src/texts/markov.txt'
 EBOOK = './src/texts/ebook.txt'
 
 
-# Constant for counts top
+# Constant representing the number of top words to display in the results.
 TOP_COUNT = 20
