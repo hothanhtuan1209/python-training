@@ -9,3 +9,7 @@ WORD = './src/texts/words.txt'
 MARKOV = './src/texts/markov.txt'
 EBOOK = './src/texts/ebook.txt'
 TEST = './src/texts/test.txt'
+
+
+# Constant representing the number of top words to display in the results.
+TOP_COUNT = 20
