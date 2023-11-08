@@ -16,8 +16,10 @@ def avoids(word, letters):
         - letters (str): A string of forbidden letters.
 
     Returns:
-        - bool: True if the word does not contain any forbidden letters, False otherwise.
+        - bool: True if the word does not contain any forbidden letters,
+        False otherwise.
     """
+
     return all(letter not in word for letter in letters)
 
 
@@ -33,6 +35,7 @@ def count_avoided_words(words, letters):
     Returns:
         - int: The total number of words without forbidden letters.
     """
+
     return sum(1 for word in words if avoids(word, letters))
 
 
