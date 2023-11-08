@@ -14,13 +14,13 @@ from path1 import (
     word_e_checker,
     symmetrical_numbers,
     triple_double_letters,
-
 )
 
 from path2 import (
     markov_analysis,
     missing_words_checker,
     word_frequencies_and_logs,
+    no_whitespace_punctuation_words,
     random_dict
 )
 
@@ -32,6 +32,7 @@ modules = [
     letter_validation,
     abecedarian_word_counter,
     forbidden_letter_counter,
+    no_whitespace_punctuation_words,
     markov_analysis,
     word_e_checker,
     triple_double_letters,
