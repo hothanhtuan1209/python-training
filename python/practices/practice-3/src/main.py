@@ -20,6 +20,8 @@ from path2 import (
     markov_analysis,
     missing_words_checker,
     word_not_in_list,
+    word_frequencies_and_logs,
+    no_whitespace_punctuation_words,
     random_dict
 )
 
@@ -31,12 +33,14 @@ modules = [
     letter_validation,
     abecedarian_word_counter,
     forbidden_letter_counter,
+    no_whitespace_punctuation_words,
     markov_analysis,
     word_e_checker,
     triple_double_letters,
     symmetrical_numbers,
     missing_words_checker,
     word_not_in_list,
+    word_frequencies_and_logs,
     random_dict
 ]
 
