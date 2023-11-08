@@ -9,7 +9,7 @@ import random
 import os
 from helpers.file_reader import read_file
 from helpers.user_input import get_user_input
-from constants.constants import MARKOV
+from constants.constants import MARKOV_PATH
 
 
 def perform_markov_analysis(text, prefix_length):
@@ -75,7 +75,7 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    file_content = read_file(MARKOV)
+    file_content = read_file(MARKOV_PATH)
 
     if file_content is not None:
         number_of_words = int(get_user_input('Enter number of words:'))
