@@ -13,3 +13,9 @@ TEST = './src/texts/test.txt'
 
 # Constant representing the number of top words to display in the results.
 TOP_COUNT = 20
+
+# Constant for condition number
+CONDITION_NUMBER = 36
+
+# Constant for condition about word length
+WORD_LENGTH = 20
