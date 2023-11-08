@@ -82,7 +82,7 @@ def choose_random(hist):
         return list_word[index]
 
     else:
-        return None
+        return ''
 
 
 def main():
