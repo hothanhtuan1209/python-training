@@ -26,7 +26,7 @@ def get_long_words(file_content):
     for line in lines:
         word = line.strip()
 
-        if len(word) > 20:
+        if len(word) > WORD_LENGTH:
             long_words.append(word)
 
     return long_words
