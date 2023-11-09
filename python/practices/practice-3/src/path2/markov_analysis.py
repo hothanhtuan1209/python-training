@@ -69,7 +69,7 @@ def generate_random_text(prefixes, prefix_length, num_words):
     return random_text.strip()
 
 
-def perform_markov_analysis_and_generate_text():
+def generate_text():
     """
     Perform Markov analysis on the content from a file and generate random
     text.
@@ -101,6 +101,6 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    random_text = perform_markov_analysis_and_generate_text()
+    random_text = generate_text()
     if random_text is not None:
         print(random_text)
