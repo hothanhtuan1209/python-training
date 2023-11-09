@@ -80,7 +80,7 @@ def generate_text():
 
     file_content = read_file(MARKOV)
 
-    if file_content is not None:
+    if file_content:
         number_of_words = int(get_user_input('Enter number of words:'))
         prefix_length = int(get_user_input("Enter prefix length:"))
 
@@ -102,5 +102,5 @@ def main():
 
     print(os.path.basename(__file__))
     random_text = generate_text()
-    if random_text is not None:
+    if random_text:
         print(random_text)
