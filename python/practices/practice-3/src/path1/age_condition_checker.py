@@ -23,10 +23,7 @@ def check_condition_number(number):
     list_of_digits = list(number)
     number_reverse = int(''.join(list_of_digits[::-1]))
 
-    if int(number) + REVERSE_ADDITION_NUMBER == number_reverse:
-        return number
-    else:
-        return None
+    return number if int(number) + REVERSE_ADDITION_NUMBER == number_reverse else None
 
 
 def find_age_pairs():
