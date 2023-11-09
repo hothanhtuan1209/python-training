@@ -69,12 +69,15 @@ def generate_random_text(prefixes, prefix_length, num_words):
     return random_text.strip()
 
 
-def main():
+def perform_markov_analysis_and_generate_text():
     """
-    Main function of the program.
+    Perform Markov analysis on the content from a file and generate random
+    text.
+
+    Returns:
+        str: A randomly generated text.
     """
 
-    print(os.path.basename(__file__))
     file_content = read_file(MARKOV)
 
     if file_content is not None:
@@ -82,10 +85,22 @@ def main():
         prefix_length = int(get_user_input("Enter prefix length:"))
 
         prefixes = perform_markov_analysis(file_content, prefix_length)
-        random_text = generate_random_text(
-            prefixes,
-            prefix_length,
-            number_of_words
-        )
+        random_text = generate_random_text(prefixes, prefix_length, number_of_words)
 
+        return random_text
+
+    else:
+        return None
+
+
+def main():
+    """
+    Prints the name of the current file and then calls the
+    perform_markov_analysis_and_generate_text function to perform Markov
+    analysis on a text file and generate random text
+    """
+
+    print(os.path.basename(__file__))
+    random_text = perform_markov_analysis_and_generate_text()
+    if random_text is not None:
         print(random_text)
