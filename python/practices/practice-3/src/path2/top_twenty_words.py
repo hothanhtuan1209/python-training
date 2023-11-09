@@ -8,7 +8,7 @@ then counts and prints the 20 most frequently used words in the ebook.
 
 import os
 import collections
-from constants.constants import EBOOK, TOP_COUNT
+from constants.constants import EBOOK_PATH, TOP_COUNT
 from helpers.content_cleaner import clean_words
 from helpers.file_reader import read_file
 
@@ -34,25 +34,25 @@ def count_words(cleaned_words):
     return sorted_word_counts
 
 
-def print_top_words(ebook_text):
+def process_and_print_top_words():
     """
     Read a text file, clean the words, and print the 20 most frequently
     used words in the ebook.
 
-    Args:
-        - ebook_text (str): The content of the ebook.
-
     Returns:
         None
     """
+
+    print(os.path.basename(__file__))
+    ebook_text = read_file(EBOOK_PATH)
     cleaned_words = clean_words(ebook_text)
     total_number_of_words = count_words(cleaned_words)
 
-    top_count = TOP_COUNT
+    top_count_limit = TOP_COUNT
 
     for i, (word, count) in enumerate(total_number_of_words.items()):
         print(i + 1, word, count)
-        if i + 1 == top_count:
+        if i + 1 == top_count_limit:
             break
 
 
@@ -61,6 +61,4 @@ def main():
     Print the 20 most frequently used words in the ebook.
     """
 
-    print(os.path.basename(__file__))
-    ebook_text = read_file(EBOOK)
-    print_top_words(ebook_text)
+    process_and_print_top_words()
