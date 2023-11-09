@@ -25,6 +25,24 @@ def check_alphabetical_order(word):
     return True
 
 
+def count_abecedarian_words(word_list):
+    """
+    Count the number of words in a list that have letters in alphabetical
+    order.
+
+    Parameters:
+        word_list (list of str): A list of words.
+
+    Returns:
+        int: The count of abecedarian words.
+    """
+
+    count = 0
+    count = sum(check_alphabetical_order(word) for word in word_list)
+
+    return count
+
+
 def main():
     """
     Prints the words in the list with the letters in the words arranged
@@ -32,11 +50,8 @@ def main():
     """
 
     print(os.path.basename(__file__))
-    list_word = input('Enter a list word:').split()
-    count = 0
-
-    for word in list_word:
-        if check_alphabetical_order(word):
-            count += 1
+    input_text = input('Enter a list of words: ')
+    list_word = input_text.split()
+    count = count_abecedarian_words(list_word)
 
     print('Abecedarian words:', count)
