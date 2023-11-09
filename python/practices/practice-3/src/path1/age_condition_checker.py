@@ -25,7 +25,6 @@ def check_condition_number(number):
 
     if int(number) + REVERSE_ADDITION_NUMBER == number_reverse:
         return number
-
     else:
         return None
 
