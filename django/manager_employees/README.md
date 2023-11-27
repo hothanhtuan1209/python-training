@@ -45,7 +45,7 @@ https://docs.google.com/document/d/1G9_XDtGplCehl8lkdVY0qSYwiFesZ7KSunpsyyPerMo/
 > pip install -r requirements.txt 
 
 5. Create database
-> py manage.py makemigrations supermarket_manager 
+> py manage.py makemigrations manager_employees
 > py manage.py migrate
 
 6. Running server
