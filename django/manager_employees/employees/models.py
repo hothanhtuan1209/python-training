@@ -44,7 +44,9 @@ class Employee(models.Model):
         choices=[(status.value, status.value) for status in ActiveStatus],
         default=ActiveStatus.ACTIVE.value,
     )
-    Department.id = models.ForeignKey(on_delete=models.CASCADE)
+    department = models.ForeignKey(
+        Department, on_delete=models.CASCADE
+    )
 
     def get_full_name(self):
         """
