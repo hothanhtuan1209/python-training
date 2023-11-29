@@ -14,7 +14,8 @@ class Contact(models.Model):
         id (UUIDField): The primary key for the employee.
         phone_number (CharField): The employee's phone number.
         address (CharField): The user's address
-        Employee.id (ForeignKey): the employee to whom the contact belongs.
+        employee (ForeignKey): the instance of employee whom the
+        contact belongs.
     """
 
     id = models.UUIDField(
