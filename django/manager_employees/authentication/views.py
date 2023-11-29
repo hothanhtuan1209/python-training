@@ -15,7 +15,7 @@ def user_login(request):
 
         if user is not None:
             login(request, user)
-            return redirect('home_page')
+            return redirect('departments_list')
 
         else:
             return render(
@@ -27,12 +27,12 @@ def user_login(request):
 
 
 @login_required
-def home(request):
+def departments_list(request):
     """
     Render the home page for authenticated users.
     """
 
-    return render(request, 'home.html')
+    return render(request, 'departments_list.html')
 
 
 @login_required
