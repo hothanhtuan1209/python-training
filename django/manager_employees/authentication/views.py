@@ -15,7 +15,7 @@ def user_login(request):
 
         if user is not None:
             login(request, user)
-            return redirect('user_logout')
+            return redirect('home_page')
 
         else:
             return render(
@@ -27,6 +27,19 @@ def user_login(request):
 
 
 @login_required
+def home(request):
+    """
+    Render the home page for authenticated users.
+    """
+
+    return render(request, 'home.html')
+
+
+@login_required
 def user_logout(request):
+    """
+    Logout the user and redirect to the login page.
+    """
+
     logout(request)
     return redirect('user_login')
