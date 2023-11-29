@@ -48,8 +48,15 @@ https://docs.google.com/document/d/1G9_XDtGplCehl8lkdVY0qSYwiFesZ7KSunpsyyPerMo/
 > py manage.py makemigrations manager_employees
 > py manage.py migrate
 
-6. Running server
+6. Create superuser
+> py manage.py createsuperuser
+
+7. Running server
 >py manage.py runserver
+
+8. In web browser, access
+> localhost:8000/authentication/login/
+use superuser account to login.
 
 ## Contribute
  - If you want to contribute to this project, please create a pull request and clearly describe the changes you propose
