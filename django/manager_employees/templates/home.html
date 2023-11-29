@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logout</title>
+    <title>Home</title>
 </head>
 <body>
+    {% csrf_token %}
     <p>Hi, {{ user.username }}!</p>
-    <a href="{% url 'user_logout' %}">Logout</a>
+    <form method="post" action="{% url 'user_logout' %}">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
 </body>
 </html>
