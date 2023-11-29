@@ -24,8 +24,7 @@ class Employee(models.Model):
         birthday (DateField): The employee's birth date.
         email(CharField): The employee's email.
         status (CharField): The status of the employee in company.
-        department.id (ForeignKey): This is the department in which
-        the employee works
+        department (ForeignKey): This is the instance of department.
     """
 
     id = models.UUIDField(
