@@ -60,4 +60,4 @@ class Employee(models.Model):
         Return a string representation of the Employee object.
         """
 
-        return str(self.get_full_name)
+        return str(self.get_full_name())
