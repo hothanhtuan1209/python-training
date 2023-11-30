@@ -13,7 +13,7 @@ class Contact(models.Model):
     Attributes:
         id (UUIDField): The primary key for the employee.
         phone_number (CharField): The employee's phone number.
-        address (CharField): The user's address
+        address (CharField): The employee's address
         employee (ForeignKey): the instance of employee whom the
         contact belongs.
     """
