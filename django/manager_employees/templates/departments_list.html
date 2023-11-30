@@ -1,64 +1,12 @@
 <!DOCTYPE html>
+{% load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department_list</title>
+    <link rel="stylesheet" href="{% static 'css/navigator.css' %}">
 </head>
-
-<style>
-    html,
-    body {
-        height: 100%;
-        margin: 0;
-    }
-
-    .sidebar {
-        background-color: grey;
-        padding: 16px 0 0;
-        height: 100%;
-        width: 15%;
-        z-index: 600;
-    }
-
-    .sidebar-list {
-        list-style: none;
-    }
-
-    .sidebar-item {
-        margin-bottom: 20px;
-    }
-
-    .item-link {
-        color: white;
-        text-decoration: none;
-        margin-bottom: 20px;
-    }
-
-    .header{
-        background-color: black;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .header-wrapper{
-        display: flex;
-        align-items: center;
-    }
-
-    .header-button {
-        border-radius: 8px;
-        width: 70px;
-        height: 32px;
-        border: none;
-        margin: 0 15px;
-    }
-
-    .header-notify{
-        color: white 
-    }
-</style>
-
 <body>
 
     <header class="header">
