@@ -8,10 +8,10 @@ from employees.models import Employee
 
 class Contact(models.Model):
     """
-    A class representing different roles within the system.
+    A class representing different contact within the system.
 
     Attributes:
-        id (UUIDField): The primary key for the employee.
+        id (UUIDField): The primary key for the contact.
         phone_number (CharField): The employee's phone number.
         address (CharField): The employee's address
         employee (ForeignKey): the instance of employee whom the
