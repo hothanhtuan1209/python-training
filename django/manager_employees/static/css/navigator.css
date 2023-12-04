@@ -18,12 +18,15 @@ html,
 
     .sidebar-item {
         margin-bottom: 20px;
+        padding: 10px;
+        margin-left: -45px;
     }
 
     .item-link {
         color: white;
         text-decoration: none;
         margin-bottom: 20px;
+        margin-left: 100px;
     }
 
     .header{
@@ -48,3 +51,11 @@ html,
     .header-notify{
         color: white 
     }
+
+    .sidebar-item.active {
+        background-color: #6c6d6e;
+        color: rgb(9, 49, 226);
+        padding: 10px;
+        margin-left: -45px;
+    }
+
