@@ -10,4 +10,4 @@ def departments_list(request):
     """
     
     departments = Department.objects.all()
-    return render(request, 'departments_list.html', {'departments': departments})
+    return render(request, 'departments/departments_list.html', {'departments': departments})
