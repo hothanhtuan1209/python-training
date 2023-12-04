@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
-{% load static%}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,27 +10,26 @@
 </head>
 <body>
     {% block content %}
-    <h2>Department List</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for department in departments %}
+      <h2>Department List</h2>
+      <table>
+        <thead>
           <tr>
-            <td>{{ department.name }}</td>
-            <td>
-              <button class="detail-button" href="#">Detail</button>
-              <button class="delete-button" herf="#">Delete</button>
-            </td>
+            <th>Name</th>
+            <th>Actions</th>
           </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  {% endblock %}
+        </thead>
+        <tbody>
+          {% for department in departments %}
+            <tr>
+              <td>{{ department.name }}</td>
+              <td>
+                <button class="detail-button" href="#">Detail</button>
+                <button class="delete-button" herf="#">Delete</button>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% endblock %}
 </body>
-
 </html>
