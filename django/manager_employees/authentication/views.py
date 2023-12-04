@@ -27,15 +27,6 @@ def user_login(request):
 
 
 @login_required
-def departments_list(request):
-    """
-    Render the home page for authenticated users.
-    """
-
-    return render(request, 'departments_list.html')
-
-
-@login_required
 def user_logout(request):
     """
     Logout the user and redirect to the login page.
