@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+    <link rel="stylesheet" href="{% static 'css/navigator.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+        {% csrf_token %}
+        <p class="header-notify">Hi, {{ user.username }}!</p>
+        <form method="post" action="{% url 'user_logout' %}">
+        {% csrf_token %}
+        <button class="header-button" type="submit">Logout</button>
+        </div>
+    </header>
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+        <ul class="sidebar-list">
+            <li class="sidebar-item">
+                <a class="item-link" href="{% url 'departments_list' %}">Departments</a>
+            </li>
+            <li class="sidebar-item">
+                <a class="item-link" href="#">Contacts</a>
+            </li>
+            <li class="sidebar-item">
+                <a class="item-link" href="#">Employees</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
