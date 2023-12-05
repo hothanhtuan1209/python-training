@@ -13,7 +13,7 @@ class AuthenticationTestCase(TestCase):
     def test_user_login(self):
         response = self.client.post(reverse('user_login'), {'username': 'manager', 'password': '12345678'})
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, reverse('departments_list'))
+        self.assertRedirects(response, reverse('departments'))
 
     def test_user_login_invalid_credentials(self):
         response = self.client.post(reverse('user_login'), {'username': 'manager1', 'password': '12345678'})
