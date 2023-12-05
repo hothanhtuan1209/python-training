@@ -60,5 +60,13 @@ use superuser:
     username: Admin
     password: 12345678
 
+## How to test
+To perform functional testing, you must run the tests.py files inside the applications
+> cd python-training
+> cd django
+> cd manager_employees
+> py manage.py test (app name)
+- example:
+> py manage.py test authentication
 ## Contribute
  - If you want to contribute to this project, please create a pull request and clearly describe the changes you propose
