@@ -14,6 +14,7 @@ form {
 .container {
     padding: 16px;
     width: auto;
+    background-color:#f1f1f1
 }
 
 input[type=text],
@@ -38,4 +39,8 @@ button {
 
 button:hover {
     opacity: 0.8;
+}
+
+.error {
+    color: red;
 }
