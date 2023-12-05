@@ -25,3 +25,9 @@ class AuthenticationTestCase(TestCase):
         response = self.client.get(reverse('user_logout'))
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse('user_login'))
+
+    def test_login_required_for_logout(self):
+        self.client.login(username='manager', password='12345678')
+        response = self.client.get(reverse('user_logout'))
+        self.assertRedirects(response, reverse('user_login'), status_code=302, target_status_code=200)
+        self.assertFalse(self.client.session.get('_auth_user_id'))
