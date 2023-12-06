@@ -18,7 +18,7 @@ class AuthenticationTestCase(TestCase):
     def test_user_login_invalid_credentials(self):
         response = self.client.post(reverse('user_login'), {'username': 'manager1', 'password': '12345678'})
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'Invalid login credentials')
+        self.assertContains(response, 'Username or password is incorrect, please re-enter')
 
     def test_user_logout(self):
         self.client.login(username='manager', password='12345678')
