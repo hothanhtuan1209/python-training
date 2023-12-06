@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'departments',
     'employees',
-    'contacts'
+    'contacts',
+    'tests'
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+TEST_RUNNER = 'manager_employees.test_runner.CustomTestRunner'
