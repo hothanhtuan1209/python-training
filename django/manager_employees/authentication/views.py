@@ -8,22 +8,24 @@ def user_login(request):
     This is function to login and authenticate user
     """
 
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
+    if request.method == "POST":
+        username = request.POST["username"]
+        password = request.POST["password"]
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
             login(request, user)
-            return redirect('departments')
+            return redirect("departments")
 
         else:
             return render(
-                request, 'login.html', {'error': 'Invalid login credentials'}
+                request,
+                "login.html",
+                {"error": "Username or password is incorrect, please re-enter"},
             )
 
     else:
-        return render(request, 'login.html')
+        return render(request, "login.html")
 
 
 @login_required
@@ -33,4 +35,4 @@ def user_logout(request):
     """
 
     logout(request)
-    return redirect('user_login')
+    return redirect("user_login")
