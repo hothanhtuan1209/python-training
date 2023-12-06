@@ -24,12 +24,12 @@
                 <input type="password" placeholder="Enter Password" name="password" required>
             
                 <button type="submit">Login</button>
+
+                {% if error %}
+                    <p class="error">{{ error }}</p>
+                {% endif %}
             </div>
-        
         </form>
-        {% if error %}
-        <p class="error">{{ error }}</p>
-        {% endif %}
     </div>
 </body>
 </html>
