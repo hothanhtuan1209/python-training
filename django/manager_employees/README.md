@@ -68,5 +68,13 @@ To perform functional testing, you must run the tests.py files inside the applic
 > py manage.py test (app name)
 - example:
 > py manage.py test authentication
+
+## Deploy in vercel
+Link vercel
+https://manager-employees.vercel.app/
+
+Account to test:
+- Username: Admin
+- Password: 12345678
 ## Contribute
  - If you want to contribute to this project, please create a pull request and clearly describe the changes you propose
