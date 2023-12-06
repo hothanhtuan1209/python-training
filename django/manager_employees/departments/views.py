@@ -11,6 +11,6 @@ def departments(request):
 
     context = {'current_page': 'departments'}
     departments = Department.objects.all()
-    return render(request, 'departments/departments_list.html', {
+    return render(request, 'list.html', {
         'departments': departments, 'context': context
     })
