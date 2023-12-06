@@ -61,9 +61,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'authentication/templates'),
-            os.path.join(BASE_DIR, 'employees/templates'),
             os.path.join(BASE_DIR, 'departments/templates'),
-            os.path.join(BASE_DIR, 'contacts/templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -130,8 +128,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     os.path.join(BASE_DIR, "authentication/static"),
     os.path.join(BASE_DIR, "departments/static"),
-    os.path.join(BASE_DIR, "employees/static"),
-    os.path.join(BASE_DIR, "contacts/static")
 ]
 
 # Default primary key field type
