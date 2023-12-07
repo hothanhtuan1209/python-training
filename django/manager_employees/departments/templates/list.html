@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/actions-button.css' %}">
+<link rel="stylesheet" href="{% static 'css/department.css' %}">
+
+{% block page_name %}Departments{% endblock %}
+{% block add_new_url %}{% url 'create-department' %}{% endblock %}
 
 {% block content %}
   <h2>Department List</h2>
