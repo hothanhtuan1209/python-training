@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'departments',
     'employees',
     'contacts',
-    'tests'
 ]
 
 MIDDLEWARE = [
