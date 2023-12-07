@@ -61,13 +61,11 @@ use superuser:
     password: 12345678
 
 ## How to test
-To perform functional testing, you must run the tests.py files inside the applications
+To test the functions, you can do the following:
 > cd python-training
 > cd django
 > cd manager_employees
-> py manage.py test (app name)
-- example:
-> py manage.py test authentication
+> py manage.py test
 
 ## Deploy in vercel
 Link vercel
