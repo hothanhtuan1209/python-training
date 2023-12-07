@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/actions-button.css' %}">
+
+{% block content %}
+  <h2>Department List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for department in departments %}
+        <tr>
+          <td>{{ department.name }}</td>
+          <td>
+            <button class="detail-button" href="#">Detail</button>
+            <button class="delete-button" herf="#">Delete</button>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
