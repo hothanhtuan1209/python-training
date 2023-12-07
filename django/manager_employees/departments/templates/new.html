@@ -8,7 +8,7 @@
 <body>
     <h2>New Department</h2>
     
-    <form method="post" action="{% url 'create_department' %}">
+    <form method="post" action="{% url 'create-department' %}">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Create</button>
