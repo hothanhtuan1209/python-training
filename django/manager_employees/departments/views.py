@@ -37,17 +37,16 @@ def create_department(request):
         description = form.cleaned_data["description"]
 
         if Department.objects.filter(name=name).exists():
-            messages.error(
-                "Department's name is already exists"
-                )
-            return redirect('create_department')
+            messages.error(request, "Department's name is already exists")
+            return redirect('create-department')
 
         department = Department(name=name, description=description)
         department.save()
 
-        messages.success(
-            "Create department successfully"
-        )
-        return redirect('create_department')
+        messages.success(request, "Create department successfully")
+        return redirect('departments')
+
+    else:
+        form = NewDepartmentForm()
 
     return render(request, 'new.html', {'form': form})
