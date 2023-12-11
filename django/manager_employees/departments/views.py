@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Department
@@ -11,6 +11,7 @@ def departments(request):
     """
 
     context = {'current_page': 'departments'}
+    departments = Department.objects.all()
     return render(request, 'list.html', {
         'departments': departments, 'context': context
     })
