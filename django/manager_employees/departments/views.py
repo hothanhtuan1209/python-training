@@ -1,7 +1,6 @@
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import NewDepartmentForm
 from .models import Department
 
 
@@ -27,26 +26,20 @@ def create_department(request):
     form submission.
     """
 
-    if request.method != 'POST':
-        form = NewDepartmentForm()
-
-    form = NewDepartmentForm(request.POST)
-
-    if form.is_valid():
-        name = form.cleaned_data["name"]
-        description = form.cleaned_data["description"]
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        description = request.POST.get('description')
+        print(f"Name: {name}, Description: {description}")
 
         if Department.objects.filter(name=name).exists():
             messages.error(request, "Department's name is already exists")
-            return redirect('create-department')
 
-        department = Department(name=name, description=description)
-        department.save()
+        else:
+            department = Department(name=name, description=description)
+            try:
+                department.save()
+                messages.success(request, "Create department successfully")
+            except Exception as e:
+                messages.error(request, f"Error saving department: {e}")
 
-        messages.success(request, "Create department successfully")
-        return redirect('departments')
-
-    else:
-        form = NewDepartmentForm()
-
-    return render(request, 'new.html', {'form': form})
+    return render(request, 'list.html')
