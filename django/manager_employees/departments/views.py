@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Department
@@ -27,20 +27,21 @@ def create_department(request):
     form submission.
     """
 
+    error_message = None
+
     if request.method == 'POST':
         name = request.POST.get('name')
         description = request.POST.get('description')
-        print(f"Name: {name}, Description: {description}")
 
         if Department.objects.filter(name=name).exists():
-            messages.error(request, "Department's name is already exists")
-
+            error_message = "Department's name is already exists"
         else:
             department = Department(name=name, description=description)
             try:
                 department.save()
                 messages.success(request, "Create department successfully")
+                return redirect('departments')
             except Exception as e:
-                messages.error(request, f"Error saving department: {e}")
+                error_message = f"Error saving department: {e}"
 
-    return render(request, 'list.html')
+    return render(request, 'list.html', {'error_message': error_message})
