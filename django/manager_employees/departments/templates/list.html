@@ -1,29 +1,50 @@
 {% extends 'base.html' %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/department.css' %}">
 
 {% block page_name %}Departments{% endblock %}
-{% block add_new_url %}{% url 'create-department' %}{% endblock %}
 
 {% block content %}
-  <h2>Department List</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for department in departments %}
-        <tr>
-          <td>{{ department.name }}</td>
-          <td>
-            <button class="detail-button" href="#">Detail</button>
-            <button class="delete-button" herf="#">Delete</button>
-          </td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<link rel="stylesheet" href="{% static 'css/department.css' %}">
+
+<h2>Department List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <div class="form-new" id="formNew" style="display: none;">
+    <form method="post" action="{% url 'create-department' %}">
+      {% csrf_token %}
+      <h2>New Department</h2>
+      {% if error_message %}
+      <p class="error-message">{{ error_message }}</p>
+      {% endif %}
+      <label class="name">Name
+        <input type="text" name="name">
+      </label>
+      <label class="description">Description
+        <input type="text" name="description">
+      </label>
+      <div class="button-action">
+        <button type="submit" class="create">Create</button>
+        <button type="button" class="cancel">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <tbody>
+    {% for department in departments %}
+    <tr>
+      <td>{{ department.name }}</td>
+      <td>
+        <button class="detail-button" href="#">Detail</button>
+        <button class="delete-button" herf="#">Delete</button>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock %}
