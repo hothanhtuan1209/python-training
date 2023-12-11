@@ -8,7 +8,7 @@
 
 .form-new {
   position: absolute;
-  top: 150px;
+  top: 120px;
   transform: translateX(50px);
   border: 1px solid black;
   max-width: 500px;
@@ -16,6 +16,9 @@
   gap: 5px;
   /* width: 100vw; */
   background-color: antiquewhite;
+  padding: 20px;
+  right:500px;
+
 }
 
 .error-message {
@@ -24,4 +27,13 @@
 
 .button-action {
   display: flex;
+  margin: 10px
+}
+
+.container mt-3 {
+  position: relative;
+}
+
+.btn btn-primary {
+  margin-right: 5px;
 }
