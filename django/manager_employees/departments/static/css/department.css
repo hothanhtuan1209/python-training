@@ -1,10 +1,10 @@
-/* .detail-button {
+.detail-button {
     background-color: blue;
-} */
+}
 
-/* .delete-button {
+.delete-button {
     background-color: red;
-} */
+}
 
 .form-new {
   position: absolute;
@@ -15,6 +15,7 @@
   flex-direction: column;
   gap: 5px;
   /* width: 100vw; */
+  background-color: antiquewhite;
 }
 
 .error-message {
