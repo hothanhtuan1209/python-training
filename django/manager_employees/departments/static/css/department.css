@@ -1,8 +1,29 @@
-html,
-.detail-button {
+/* .detail-button {
     background-color: blue;
+} */
+
+/* .delete-button {
+    background-color: red;
+} */
+
+.form-new {
+  position: absolute;
+  top: 150px;
+  transform: translateX(50px);
+  border: 1px solid black;
+  max-width: 500px;
+  flex-direction: column;
+  gap: 5px;
+  /* width: 100vw; */
 }
 
-.delete-button {
-    background-color: red;
+.error-message {
+  color: red
+}
+
+.name {
+}
+
+.button-action {
+  display: flex;
 }
