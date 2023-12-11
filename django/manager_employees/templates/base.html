@@ -40,15 +40,11 @@
       <div class="content">
         <div class="page-bar">
           <p class="page-name">{% block page_name %}{% endblock %}</p>
-          <button
-            class="add-button"
-            onclick="location.href='{% block add_new_url %}{% endblock %}'"
-          >
-            Add New
-          </button>
+          <button class="add-button">Add New</button>
         </div>
         {% block content %}{% endblock %}
       </div>
     </main>
+    <script src="{% static 'js/index.js' %}"></script>
   </body>
 </html>
