@@ -5,17 +5,15 @@ from .models import Department
 from django.http import JsonResponse
 
 
-@login_required
 def departments(request):
     """
-    This function get a list of departments from the database.
+    This function gets a list of the 10 most recently created departments from
+    the database.
     """
 
-    context = {"current_page": "departments"}
     departments = Department.objects.all().order_by("-id")[:10]
-    return render(
-        request, "list.html", {"departments": departments, "context": context}
-    )
+    context = {"departments": departments, "current_page": "departments"}
+    return render(request, "list.html", context)
 
 
 @login_required
