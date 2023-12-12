@@ -9,7 +9,6 @@ def departments(request):
     This function get a list of departments from the database.
     """
 
-    context = {'current_page': 'departments'}
-    return render(request, 'list.html', {
-        'departments': departments, 'context': context
-    })
+    departments = Department.objects.all().order_by("-id")[:10]
+    context = {"departments": departments, "current_page": "departments"}
+    return render(request, "list.html", context)
