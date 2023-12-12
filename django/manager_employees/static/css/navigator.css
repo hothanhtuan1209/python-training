@@ -70,9 +70,9 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
   align-items: flex-end;
   padding: 11px;
+  background-color: aliceblue
 }
 
 .page-name {
