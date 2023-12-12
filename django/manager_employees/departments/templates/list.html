@@ -13,6 +13,7 @@
       <thead>
         <tr>
           <th>Name</th>
+          <th>Description</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -20,6 +21,7 @@
         {% for department in departments %}
         <tr>
           <td>{{ department.name }}</td>
+          <td>{{ department.description}}</td>
           <td>
             <button class="btn btn-info detail-button" href="#">Detail</button>
             <button class="btn btn-danger delete-button" href="#">Delete</button>
