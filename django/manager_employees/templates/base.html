@@ -7,16 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Base</title>
     <link rel="stylesheet" href="{% static 'css/navigator.css' %}" />
-    {%load django_bootstrap5%}
+    {% load django_bootstrap5 %}
 
-    {%bootstrap_css%}
+    {% bootstrap_css %}
 
-    {%bootstrap_javascript%}
+    {% bootstrap_javascript %}
   </head>
   <body>
     <header class="header">
       <div class="header-wrapper">
-        {% csrf_token %}
         <p class="header-notify">Hi, {{ user.username }}!</p>
         <form method="post" action="{% url 'user_logout' %}">
           {% csrf_token %}
