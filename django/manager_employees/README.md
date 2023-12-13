@@ -48,8 +48,31 @@ https://docs.google.com/document/d/1G9_XDtGplCehl8lkdVY0qSYwiFesZ7KSunpsyyPerMo/
 > py manage.py makemigrations manager_employees
 > py manage.py migrate
 
-6. Running server
+6. Create superuser
+> py manage.py createsuperuser
+
+7. Running server
 >py manage.py runserver
 
+8. In web browser, access
+> localhost:8000/authentication/login/
+use superuser:
+    username: Admin
+    password: 12345678
+
+## How to test
+To test the functions, you can do the following:
+> cd python-training
+> cd django
+> cd manager_employees
+> py manage.py test
+
+## Deploy in vercel
+Link vercel
+https://manager-employees.vercel.app/
+
+Account to test:
+- Username: Admin
+- Password: 12345678
 ## Contribute
  - If you want to contribute to this project, please create a pull request and clearly describe the changes you propose

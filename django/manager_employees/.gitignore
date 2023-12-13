@@ -2,7 +2,4 @@
 venv/
 
 # Ignore the __pycache__
-__pycache__/    
-
-#Ignore __init__ file
-__init__.py
+__pycache__/
