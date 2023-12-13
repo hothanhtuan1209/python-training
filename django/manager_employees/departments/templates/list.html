@@ -1,14 +1,15 @@
 {% extends 'base.html' %} {% load static %}
 <link rel="stylesheet" href="{% static 'css/list.css.css' %}" />
+
 {% block content %}
-<!-- Title Bar -->
+
 <div
   class="justify-content"
   style="height: 80px; padding: 20px"
 >
   <h3 style="font-weight: 700">Departments</h3>
 </div>
-<!-- Card with Table -->
+
 <div
   style="
     background-color: white;
@@ -59,16 +60,12 @@
             <button
               type="button"
               class="btn btn-primary"
-              data-toggle="modal"
-              data-target="#myModalEdit"
             >
               Details
             </button>
             <button
               type="button"
               class="btn btn-danger"
-              data-toggle="modal"
-              data-target="#myModalDelete"
             >
               Delete
             </button>
