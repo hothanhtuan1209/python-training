@@ -1,33 +1,30 @@
-{% extends 'base.html' %}
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/actions-button.css' %}">
+{% extends 'base.html' %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/actions-button.css' %}" />
 
-{% block page_name %}Departments{% endblock %}
-
-{% block content %}
-<link rel="stylesheet" href="{% static 'css/department.css' %}">
+{% block page_name %}Departments{% endblock %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/department.css' %}" />
 <div class="container mt-3">
   <h2>Department List</h2>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for department in departments %}
-        <tr>
-          <td>{{ department.name }}</td>
-          <td>{{ department.description}}</td>
-          <td>
-            <button class="btn btn-info detail-button" href="#">Detail</button>
-            <button class="btn btn-danger delete-button" href="#">Delete</button>
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
-  {% endblock %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for department in departments %}
+      <tr>
+        <td>{{ department.name }}</td>
+        <td>{{ department.description}}</td>
+        <td>
+          <button class="btn btn-info detail-button" href="#">Detail</button>
+          <button class="btn btn-danger delete-button" href="#">Delete</button>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
