@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'departments',
     'employees',
     'contacts',
+    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
