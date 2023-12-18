@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import departments, create_department
+from .views import departments, department_detail
 
 urlpatterns = [
     path('', departments, name='departments'),
-    path('new/', create_department, name='create_department'),
+    path('<uuid:department_id>', department_detail, name="department_detail"),
 ]
