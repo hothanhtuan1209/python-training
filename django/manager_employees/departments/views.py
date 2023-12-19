@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
-from django.contrib import messages
 from django.http import JsonResponse
 from .models import Department
+from employees.models import Employee
 
 
 @login_required
@@ -30,7 +30,6 @@ def departments(request):
             department = Department(name=name, description=description)
             try:
                 department.save()
-                messages.success(request, "Create department successfully")
                 return JsonResponse({"success": True})
             except Exception as e:
                 return JsonResponse(
@@ -38,20 +37,25 @@ def departments(request):
                 )
 
 
-@login_required
+# @login_required
 @require_http_methods(["GET", "PUT", "PATCH", "DELETE"])
 def department_detail(request, department_id):
     department = get_object_or_404(Department, id=department_id)
 
     if request.method == "GET":
-        return JsonResponse({
-            "id": department.id,
-            "name": department.name,
-            "description": department.description,
-            "created_at": department.created_at,
-        })
+        employees = Employee.objects.filter(department=department)
+        context = {'employees': employees, 'department': department}
+        return render(request, 'employee_list.html', context)
 
-    elif request.method in ["PUT", "PATCH"]:
+    # if request.method == "GET":
+    #     return JsonResponse({
+    #         "id": department.id,
+    #         "name": department.name,
+    #         "description": department.description,
+    #         "created_at": department.created_at,
+    #     })
+
+    elif request.method == "PATCH":
         # Update the department with the data from the request
         data = request.POST if request.method == "PATCH" else request.PUT
         department.name = data.get("name", department.name)
