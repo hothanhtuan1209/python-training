@@ -1,15 +1,15 @@
 html,
-body, 
-ul {
+body {
     height: 100%;
     margin: 0;
-    padding: 0;
 }
 
 .sidebar {
-    background-color: grey;
-    height: 100vh;
+    background-color: rgb(121, 119, 119);
+    padding: 16px 0 0;
+    height: 100%;
     width: 15%;
+    z-index: 600;
 }
 
 .sidebar-list {
@@ -17,7 +17,6 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
 }
 
 .sidebar-item {
@@ -35,14 +34,12 @@ ul {
 .header {
     background-color: black;
     display: flex;
-    flex-direction: column;
     justify-content: flex-end;
 }
 
 .header-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .header-button {
@@ -55,48 +52,27 @@ ul {
 
 .header-notify {
     color: white;
-    padding: 0 10px;
 }
 
 .sidebar-item.active {
-    background-color: #6c6d6e;
+    background-color: #6C6D6E;
     color: rgb(9, 49, 226);
     width: 100%;
     margin: 0 auto;
     text-align: center;
 }
 
-.page-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-items: flex-end;
-    padding: 11px;
-    background-color: aliceblue
+ul {
+    padding: 0;
 }
 
-.page-name {
-    color: black;
-}
-
-.add-button {
-    border-radius: 8px;
-    width: 90px;
-    height: 32px;
-    border: none;
-    margin: 0 15px;
-}
-
-.page-name {
-    font-size: 25px;
-    font-weight: 700;
-    margin: 0;
-}
-
-.container-page {
-    display: flex;
+.body-container {
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
 }
 
 .content {
-    width: 100%;
+    flex: 1;
+    background-color: #EFEFEF;
 }
