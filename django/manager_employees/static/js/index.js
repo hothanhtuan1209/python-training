@@ -1,61 +1,86 @@
 document.addEventListener("DOMContentLoaded", function () {
+  console.log('Tuan')
   var myForm = document.getElementById("myForm");
-  var editForm = document.getElementById("myFormEdit"); // Thêm dòng này
+  var editForm = document.getElementById("myFormEdit");
 
-  myForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    var isValid = validateForm();
-    if (isValid) {
-      var formData = new FormData(myForm);
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", myForm.action, true);
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          var response = JSON.parse(xhr.responseText);
-          if (response.success) {
-            alert("Create department successfully");
-            location.reload();
+  if (myForm) {
+    myForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var isValid = validateForm(myForm);
+      if (isValid) {
+        var formData = new FormData(myForm);
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", myForm.action, true);
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            if (response.success) {
+              alert("Create department successfully");
+              location.reload();
+            } else {
+              alert("Error: " + response.error_message);
+            }
           } else {
+            var response = JSON.parse(xhr.responseText);
             alert("Error: " + response.error_message);
           }
-        } else {
-          var response = JSON.parse(xhr.responseText);
-          alert("Error: " + response.error_message);
-        }
-      };
-      xhr.onerror = function () {
-        console.error("Request failed.");
-      };
-      xhr.send(formData); 
-    }
-  });
-
-  function validateForm() {
+        };
+        xhr.onerror = function () {
+          console.error("Request failed.");
+        };
+        xhr.send(formData);
+      }
+    });
+  
+  }
+  
+  function validateForm(form) {
     var isValid = true;
-    var name = document.getElementById("inputName").value;
-    var description = document.getElementById("inputDescription").value;
+    var name = form.querySelector("#inputName").value;
+    var description = form.querySelector("#inputDescription").value;
+
     if (name.trim() === "") {
       document.getElementById("error-message_name").innerText =
         "Name field is required";
       isValid = false;
     }
+
     if (description.trim() === "") {
       document.getElementById("error-message_description").innerText =
         "Description field is required";
       isValid = false;
     }
+
     return isValid;
   }
 
-  editForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    saveDepartmentChanges();
-  });
+  // 
+  console.log("form", editForm)
+  if (editForm) {
+    editForm.addEventListener("submit", function (event) {
+      console.log("form")
+      event.preventDefault();
+      saveDepartmentChanges();
+    });
+  }
+
+
 
   function saveDepartmentChanges() {
-    var formData = new FormData(editForm);
+    var isValid = validateForm(myFormEdit);
+    if (!isValid) {
+      return;
+    }
+
+    var formData = new FormData(myFormEdit);
     var xhr = new XMLHttpRequest();
-    xhr.open("PATCH", `/departments/${document.getElementById("departmentID").value}/`, true);
+    var url = myFormEdit.getAttribute("action");
+    console.log('sssss',  new FormData(myFormEdit))
+    xhr.open(
+      "PATCH",
+      `${url}`,
+      true
+    );
 
     xhr.onload = function () {
       if (xhr.status === 200) {
@@ -81,41 +106,33 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Error: " + response.error_message);
     }
   }
+
+  function deleteDepartment(departmentId) {
+    fetch(`/departments/${departmentId}/`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': getCookie('csrftoken'),
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          alert('Department deleted successfully');
+          location.reload();
+        } else {
+          alert('Error: ' + data.error_message);
+        }
+      })
+      .catch(error => console.error('Error:', error));
+  }
+  // function setDeleteDepartmentId(departmentId) {
+  //   document.getElementById('deleteDepartmentId').value = departmentId;
+  // }
+  
+  function myConfirmDelete() {
+    console.log('Confirming delete...');
+    var departmentId = document.getElementById('deleteDepartmentId').value;
+    deleteDepartment(departmentId);
+  }
 });
-
-function clearErrorMessageName() {
-  const errorMessageElement =
-    document.getElementById("error-message_name");
-  errorMessageElement.innerText = "";
-}
-
-function clearErrorMessageDes() {
-  const errorMessageElement = document.getElementById(
-    "error-message_description"
-  );
-  errorMessageElement.innerText = "";
-}
-
-function showDepartmentDetails(departmentId) {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", `/departments/${departmentId}`, true);
-
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      var response = JSON.parse(xhr.responseText);
-      document.getElementById("departmentID").value = response.id;
-      document.getElementById("departmentTime").value = response.created_at;
-      document.getElementById("editNameDepartment").value = response.name;
-      document.getElementById("editDescription").value = response.description;
-      $("#myModalEdit").modal("show");
-    } else {
-      console.error("Failed to fetch department details.");
-    }
-  };
-
-  xhr.onerror = function () {
-    console.error("Request failed.");
-  };
-
-  xhr.send();
-}

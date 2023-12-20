@@ -47,14 +47,6 @@ def department_detail(request, department_id):
         context = {'employees': employees, 'department': department}
         return render(request, 'employee_list.html', context)
 
-    # if request.method == "GET":
-    #     return JsonResponse({
-    #         "id": department.id,
-    #         "name": department.name,
-    #         "description": department.description,
-    #         "created_at": department.created_at,
-    #     })
-
     elif request.method == "PATCH":
         # Update the department with the data from the request
         data = request.POST if request.method == "PATCH" else request.PUT
