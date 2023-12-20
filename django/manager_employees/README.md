@@ -55,7 +55,7 @@ https://docs.google.com/document/d/1G9_XDtGplCehl8lkdVY0qSYwiFesZ7KSunpsyyPerMo/
 >py manage.py runserver
 
 8. In web browser, access
-> localhost:8000/authentication/login/
+> localhost:8000
 use superuser:
     username: Admin
     password: 12345678
