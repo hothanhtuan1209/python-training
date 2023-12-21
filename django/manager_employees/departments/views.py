@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import JsonResponse
 from .models import Department
 from employees.models import Employee
@@ -14,7 +15,18 @@ def departments(request):
     """
 
     if request.method == "GET":
-        departments = Department.objects.all().order_by("-created_at")[:10]
+        departments = Department.objects.all().order_by("-created_at")
+        items_in_page = 5
+        paginator = Paginator(departments, items_in_page)
+
+        page = request.GET.get('page')
+        try:
+            departments = paginator.page(page)
+        except PageNotAnInteger:
+            departments = paginator.page(1)
+        except EmptyPage:
+            departments = paginator.page(paginator.num_pages)
+
         context = {"departments": departments, "current_page": "departments"}
         return render(request, "list.html", context)
 
